@@ -16,9 +16,7 @@ function calc() {
     var result = document.getElementById("result");
     
      
-    if (option == "Simples") {
-        alert("hola");
-    }
+    
     
      if (option == "Simples") {
       
