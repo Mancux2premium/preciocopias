@@ -5,7 +5,8 @@ function calc() {
    var precioCopiasSimples = 4;
    var precioCompiasDobleFaz = 5;
    var precioCompiasApaisado = 5; 
-   var correcionPrecioPorHojaImparDoblefaz=  4 ;
+   var correcionPrecioPorHojaImparDoblefaz= 4;
+   
   
    
    var select = document.getElementById("select");
@@ -18,7 +19,7 @@ function calc() {
      if (option == "Simples") {
       
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
-        result.value = "$" + (parseInt(a) * precioCopiasSimples * parseInt(cantidadDecompias) +1  );
+        result.value = "$" + (parseInt(a) * precioCopiasSimples * parseInt(cantidadDecompias) +1);
     } 
 
     if (option == "Doble Faz") {
@@ -36,13 +37,23 @@ function calc() {
        result.value = "$" + (parseInt(a -1) /2  *  precioCompiasDobleFaz * parseInt(cantidadDecompias) + correcionPrecioPorHojaImparDoblefaz  * cantidadDecompias ) ;
    
    }
-      if (option == "Apaisado") {
+     /* if (option == "Apaisado") {
 
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
-          result.value = "$" +(parseInt(a) /4 ) * precioCompiasApaisado  * parseInt(cantidadDecompias);
+          result.value = "$" + (parseInt(a) /4  * precioCompiasApaisado  * parseInt(cantidadDecompias));
       } 
-    
+    */
       
+
+      if (option == "Apaisado" && a / 4 == 1.25 || a / 4 == 2.25 ) {
+
+        document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
+        result.value = "$" + Math.round((parseInt(a) /4 -0.25)  * precioCompiasApaisado  + correcionPrecioPorHojaImparDoblefaz);
+        console.log(result.value);
+       
+    } 
+   
+
   }
   
 
