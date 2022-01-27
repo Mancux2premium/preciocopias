@@ -42,12 +42,12 @@ function calc() {
       
     }
         
-     /* if (option == "Apaisado") {
+      if (option == "Apaisado") {
 
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
           result.value = "$" + (parseInt(a) /4  * precioCompiasApaisado  * parseInt(cantidadDecompias));
       } 
-    */
+    
       
       
      
