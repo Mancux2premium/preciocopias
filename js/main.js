@@ -49,7 +49,7 @@ function calc() {
       
       
      
-      if (option == "Apaisado" && a / 4 == correciondePrecioNumerosImparapaisadosFinalizadosen25[2] ) {
+      if (option == "Apaisado" && a / 4 == correciondePrecioNumerosImparapaisadosFinalizadosen25[3] ) {
 
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
         result.value = "$" + Math.round((parseInt(a) /4 -0.25)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
