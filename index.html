@@ -9,8 +9,8 @@
     </head>
     <body>
         <h1>Averiguar Precio </h1>
-
-        <form oninput="calc()">
+      <form >
+        <label oninput="calc()">
             <label for="">Ingrese la cantidad de hojas que posee el Documento</label>
             <input id="a" type="number" value="">
            
@@ -23,8 +23,9 @@
             <input id="numerodejuegos" type="number" value="1">              <!-- muestra la cantidad de juegos a imprimir--> 
            
             <label for="" id="precioPorHoja"  type="text" value="">  </label> <!-- Muestra el precio por hoja--> 
+            <label for="activarAnillado"></label><input type="checkbox" id="activarAnillado" >Anillado</label>
             <output id="result"></output>                                     <!-- Muestra el precio final de las copias--> 
-        
+            
   
           </form>
         
