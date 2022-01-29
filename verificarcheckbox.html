@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function verificar(){
+                var pais = document.getElementById("pais1").checked;
+                if(!pais){
+                    alert("las cpias estas anilaldos");
+                }
+
+            alert(pais);
+        }
+    </script>
+     <input type="checkbox" onclick="verificar()" id="pais1">Argentina <br>
+     <input type="checkbox" id="pais2">Bolivia <br>
+     <input type="checkbox" id="pais3"> Venezueal <br>
+     <input type="button" value="verificar" onclick="verificar()">
+</body>
+</html>
