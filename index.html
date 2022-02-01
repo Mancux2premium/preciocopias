@@ -3,31 +3,34 @@
     <head>
        <link   rel="shortcut icon" href="img/logo.ico">
        <link rel="stylesheet" href="css/index.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="js/main.js"></script>
         <title>Precio Fotocopias</title>
     </head>
     <body>
-        
-
-                <label oninput="calc()" >
+        <div class="flex-container">
+            <header class="titulo-principal">
+                <h1>PRECIO FOTOCOPIAS</h1>
+            </header>
+            <label oninput="calc()" >
                 <input id="a" type="number" placeholder="Cantidad de Hojas" value="" >
-                   
                     <select id="select">
                          <option>Simples</option>s
                          <option>Doble Faz</option>
                          <option>Apaisado</option>
                     </select>
-
-                    <input id="numerodejuegos" type="number" placeholder="Numero de juegos" value="1">            
-                    <label for="" id="precioPorHoja"  type="text" value="">Precio por hoja $4  </label> 
-                    <label for="activarAnillado"></label><input type="checkbox" id="activarAnillado" >Anillado</label>
-                    <output id="result"></output>                                     
+                <input id="numerodejuegos" type="number" placeholder="Numero de juegos" value="1">            
+                <label for="" id="precioPorHoja"  type="text" value="">Precio por hoja $4  </label> 
+                <label for="activarAnillado"></label><input type="checkbox" id="activarAnillado" >Anillado</label>
+                <output id="result">$0</output>                                     
                     
                   
   
-
+        </div>
     
             
       

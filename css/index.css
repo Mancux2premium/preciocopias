@@ -1,2 +1,20 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.flex-container{
+        background: yellow;
+        
+}
+
+.titulo-principal{
+        background: rgb(243, 6, 6);
+        text-align: center;
+        font-family: 'PT Sans Narrow', sans-serif;
+        color: black
+
+}
 
 
