@@ -26,11 +26,13 @@ function calc() {
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
         activarAnillado()
         if(activaranillado){
+
           result.value = "$" + (parseInt(a) * precioCopiasSimples * cantidadDecompias +1 + precioAnillado * cantidadDecompias)
+
         }else{
+
           result.value = "$" + (parseInt(a) * precioCopiasSimples * cantidadDecompias +1);}
         
-       
     } 
      /************************************************************************************************************************************** */
       
@@ -40,9 +42,13 @@ function calc() {
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
           activarAnillado()
           if(activaranillado){
+
             result.value = "$" + (parseInt(a) /2  *  precioCompiasDobleFaz * cantidadDecompias + precioAnillado * cantidadDecompias)
+
           }else{
+
          result.value = "$" + (parseInt(a) /2  *  precioCompiasDobleFaz * cantidadDecompias)
+
             }  ;
         
        
@@ -58,8 +64,11 @@ function calc() {
         activarAnillado()
 
         if(activaranillado){
+
           result.value = "$" + (parseInt(a -1  ) /2  *  precioCompiasDobleFaz * cantidadDecompias + correcionPrecioPorHojaImparDoblefaz  * cantidadDecompias + precioAnillado * cantidadDecompias );
+
         }else{
+
        result.value = "$" + (parseInt(a -1) /2  *  precioCompiasDobleFaz * cantidadDecompias + correcionPrecioPorHojaImparDoblefaz  * cantidadDecompias);
       }
        
