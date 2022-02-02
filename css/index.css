@@ -25,6 +25,17 @@ body{
         justify-content: center;
        
 }
+
+
+
+.flex-container__label{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+}
+
 output{
         text-align: center;
 
