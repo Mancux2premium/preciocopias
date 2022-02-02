@@ -2,19 +2,28 @@
     margin: 10px;
     padding: 10px;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body{
+        background: rgba(0,0, 0, 0.1);
+ }
+
 .flex-container{
-        background: yellow;
-        
+        background: rgb(241, 241, 241);
+        display: flex;
+        flex-flow: column nowrap;     
 }
 
 .titulo-principal{
-        background: rgb(243, 6, 6);
+        background: rgb(255, 253, 253);
         text-align: center;
         font-family: 'PT Sans Narrow', sans-serif;
         color: black
+}
 
+output{
+        text-align: center;
 }
 
 
