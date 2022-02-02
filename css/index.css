@@ -13,17 +13,21 @@ body{
         background: rgb(241, 241, 241);
         display: flex;
         flex-flow: column nowrap;     
+        
 }
 
-.titulo-principal{
+.flex-item__titulo-principal{
         background: rgb(255, 253, 253);
         text-align: center;
         font-family: 'PT Sans Narrow', sans-serif;
-        color: black
+        color: black;
+        display:flex;
+        justify-content: center;
+       
 }
-
 output{
         text-align: center;
+
 }
 
 
