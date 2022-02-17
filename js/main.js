@@ -17,7 +17,8 @@ function calc() {
     
     var result = document.getElementById("result");
     
-
+     
+      
      /************************************************************************************************************************************** */
       
       //Al ser copias simples, no es necesario descontar nada, solo se le agrega un +1 por el valor de la primera impresion.
