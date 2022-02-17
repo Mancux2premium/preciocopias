@@ -12,18 +12,20 @@ body{
 .flex-container{
         background: rgb(241, 241, 241);
         display: flex;
-        flex-flow: column nowrap;     
+        flex-flow: column nowrap;   
+        
         
 }
-
+/* HEADER*/
 .flex-item__titulo-principal{
         background: rgb(255, 253, 253);
         text-align: center;
         font-family: 'PT Sans Narrow', sans-serif;
         color: black;
         display:flex;
-        justify-content: center;
-       
+        justify-content:space-between;
+        align-items: center;
+
 }
 
 
@@ -40,5 +42,20 @@ output{
         text-align: center;
 
 }
+
+.precio_final{
+
+           font-size: 2.5em;
+           
+}
+
+img{
+        opacity: 0.8;
+}
+img:hover{
+         
+        opacity: 1;
+}
+
 
 
