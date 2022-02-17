@@ -6,13 +6,20 @@
 }
 
 body{
+        display: flex;
         background: rgba(0,0, 0, 0.1);
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0
  }
 
 .flex-container{
         background: rgb(241, 241, 241);
+       
         display: flex;
-        flex-flow: column nowrap;   
+        flex-flow: column nowrap;  
+        width: 95%; 
         
         
 }
@@ -25,7 +32,7 @@ body{
         display:flex;
         justify-content:space-between;
         align-items: center;
-
+        
 }
 
 
@@ -57,5 +64,9 @@ img:hover{
         opacity: 1;
 }
 
-
-
+@media (max-width: 600px){
+        .flex-item__titulo-principal{
+                flex-flow: column wrap;
+        }
+}
+        
