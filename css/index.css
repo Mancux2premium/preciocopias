@@ -11,14 +11,15 @@ body{
         justify-content: center;
         flex-wrap: wrap;
         margin: 0;
-        padding: 0
+        padding: 0;
+        min-width: 200px;
  }
 
 .flex-container{
         background: rgb(241, 241, 241);
-       
         display: flex;
-        flex-flow: column nowrap;  
+        flex-flow: column nowrap;
+        min-width: 300px;  
         width: 95%; 
         
         
@@ -35,14 +36,13 @@ body{
         
 }
 
-
-
 .flex-container__label{
 
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        
 }
 
 output{
@@ -50,23 +50,84 @@ output{
 
 }
 
+
+/*Resultado en numero*/
 .precio_final{
 
            font-size: 2.5em;
            
 }
 
-img{
+/*Resultado en texto*/
+.precioFinal{
+        color: rgb(48, 161, 38);
+        text-align: center;
+        font-size: 2em;
+        font-family: 'PT Sans Narrow', sans-serif;
+        padding: 0px;
+        margin: 0px;
+
+}
+
+
+.estilos_logo{
         opacity: 0.8;
 }
-img:hover{
+.estilos_logo:hover{
          
         opacity: 1;
 }
 
+/*--Seccion de estilos del logo de interrogacion rojo-------------------*/
+.logoinfo{
+        display: flex;
+        align-items: center;
+        flex-flow: column wrap;
+        margin: 0;
+        padding: 0;
+        position: relative;
+       
+        
+}
+
+.logo_ayuda{
+        margin:-29px;
+        color: red;
+        font-size: 30px;
+        opacity: 0.2;
+        position: absolute;
+        
+        transition: 0.2s;
+}
+
+
+.logo_ayuda::before{
+        content: "?";
+}
+.logo_ayuda:active{
+        color: rgb(86, 226, 73);
+        opacity: 1;
+        font-size: 32px;
+        transition: 0.2s;
+}
+/*---------------------------------Final -----------------------------------*/
+
 @media (max-width: 600px){
         .flex-item__titulo-principal{
                 flex-flow: column wrap;
+        
         }
+        .logo_ayuda{
+                font-size: 25px;
+                margin:-25px;
+        }
+        .logo_ayuda:active{
+                color: green;
+        }
+        .logo_ayuda::before:active{
+                content: "asdasdasdads";
+        }
+        
+
 }
         

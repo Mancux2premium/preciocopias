@@ -9,8 +9,8 @@ function calc() {
    var correcionPrecionporHojaImparApaisado =4;
    var maximascopiasPermitidasaimprimir = 9000;
    var precioAnillado = 150;
-    
 
+      
 
    var select = document.getElementById("select");
     var option = select.options[select.selectedIndex].text;
@@ -23,9 +23,10 @@ function calc() {
       
       //Al ser copias simples, no es necesario descontar nada, solo se le agrega un +1 por el valor de la primera impresion.
      if (option == "Simples") {
-      
+    
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
-        activarAnillado()
+        activarAnillado();
+      
         if(activaranillado){
 
           result.value = "$" + (parseInt(a) * precioCopiasSimples * cantidadDecompias +1 + precioAnillado * cantidadDecompias)
@@ -39,7 +40,7 @@ function calc() {
       
       //El numero ingresado es par, no es necesario descontar nada.
       if (option == "Doble Faz") {
-         
+  
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
           activarAnillado()
           if(activaranillado){
@@ -173,3 +174,11 @@ function calc() {
   }
   /************************************************************************************************************************************** */
 
+//muestra una alerta si la ayuda fue consultada
+function boton_ayuda(){
+
+      alert("Numero de veces que desea imprimir el mismo documento");       
+ 
+  }
+
+     
