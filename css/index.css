@@ -5,6 +5,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/*--Estilos del body --*/
 body{
         display: flex;
         background: rgba(0,0, 0, 0.1);
@@ -14,17 +15,19 @@ body{
         padding: 0;
         min-width: 200px;
  }
+/*---------------------------------Final -----------------------------------*/
 
+/*--Estilos del contenedor principal--*/
 .flex-container{
         background: rgb(241, 241, 241);
         display: flex;
         flex-flow: column nowrap;
         min-width: 300px;  
-        width: 95%; 
-        
-        
+        width: 95%;        
 }
-/* HEADER*/
+/*---------------------------------Final -----------------------------------*/
+
+/* Estilos del header y  titulo Precio Fotocopias */
 .flex-item__titulo-principal{
         background: rgb(255, 253, 253);
         text-align: center;
@@ -32,10 +35,11 @@ body{
         color: black;
         display:flex;
         justify-content:space-between;
-        align-items: center;
-        
+        align-items: center;       
 }
+/*---------------------------------Final -----------------------------------*/
 
+/*--Estilos del contenedor principal Label que contiene todo los datos--*/
 .flex-container__label{
 
         display: flex;
@@ -44,21 +48,25 @@ body{
         flex-wrap: wrap;
         
 }
+/*---------------------------------Final -----------------------------------*/
 
+/*--Estilos del output que muestra el precio final --*/
 output{
         text-align: center;
 
 }
-
+/*---------------------------------Final -----------------------------------*/
 
 /*Resultado en numero*/
+
+/*--Tamaño de fuente que tiene el numero que aparece en pantalla--*/
 .precio_final{
 
-           font-size: 2.5em;
-           
+           font-size: 2.5em;          
 }
+/*---------------------------------Final -----------------------------------*/
 
-/*Resultado en texto*/
+/*Estilos que tiene el texto precio final que aparece en pantalla*/
 .precioFinal{
         color: rgb(48, 161, 38);
         text-align: center;
@@ -66,10 +74,10 @@ output{
         font-family: 'PT Sans Narrow', sans-serif;
         padding: 0px;
         margin: 0px;
-
 }
+/*---------------------------------Final -----------------------------------*/
 
-
+/*--Estilos del logo mancux2--*/
 .estilos_logo{
         opacity: 0.8;
 }
@@ -77,8 +85,12 @@ output{
          
         opacity: 1;
 }
+/*---------------------------------Final -----------------------------------*/
 
-/*--Seccion de estilos del logo de interrogacion rojo-------------------*/
+/*--Seccion de estilos del logo de asterisco rojo-------------------*/
+
+
+/*--Estilos del contenedor principal de logo asterisco--*/
 .logoinfo{
         display: flex;
         align-items: center;
@@ -86,26 +98,25 @@ output{
         margin: 0;
         padding: 0;
         position: relative;
-       
-        
 }
+/*---------------------------------Final -----------------------------------*/
 
+/*--Estilos y colores del logo asterisco --*/
 .logo_ayuda{
-        margin:-29px;
+        margin-top:-22px;
+        margin-left: 90%;
         color: red;
         font-size: 30px;
-        opacity: 0.2;
+        opacity: 0.5;
         position: absolute;
-        
         transition: 0.2s;
 }
 
-
 .logo_ayuda::before{
-        content: "?";
+        content: "*";
 }
-.logo_ayuda:active{
-        color: rgb(86, 226, 73);
+.logo_ayuda:hover{
+        color: rgb(240, 0, 0);
         opacity: 1;
         font-size: 32px;
         transition: 0.2s;
@@ -113,21 +124,35 @@ output{
 /*---------------------------------Final -----------------------------------*/
 
 @media (max-width: 600px){
+
+        /* Estilos del header y  titulo Precio Fotocopias */
         .flex-item__titulo-principal{
                 flex-flow: column wrap;
         
         }
+        /*---------------------------------Final -----------------------------------*/
+
+        /*--Estilos y colores del logo asterisco --*/
         .logo_ayuda{
                 font-size: 25px;
-                margin:-25px;
+                margin:-19px;
+                margin-left: 75%;
+                color:rgb(255, 0, 0);
+                opacity: 1;
         }
-        .logo_ayuda:active{
-                color: green;
-        }
-        .logo_ayuda::before:active{
-                content: "asdasdasdads";
-        }
-        
+        /*---------------------------------Final -----------------------------------*/
 
 }
-        
+      
+@media (max-width: 390px){
+
+        /*--Estilos y colores del logo asterisco --*/
+        .logo_ayuda{
+                font-size: 25px;
+                margin:-19px;
+                margin-left: 75%;
+                color:rgb(255, 0, 0);
+                opacity: 1;
+        }
+        /*---------------------------------Final -----------------------------------*/        
+}
