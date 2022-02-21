@@ -1,5 +1,5 @@
 
-function calc() {
+function calcular_precio_fotocopias() {
    var a = document.getElementById("a").value;
    var cantidadDecompias = document.getElementById("numerodejuegos").value;
    var precioCopiasSimples = 4;
@@ -9,26 +9,23 @@ function calc() {
    var correcionPrecionporHojaImparApaisado =4;
    var maximascopiasPermitidasaimprimir = 9000;
    var precioAnillado = 150;
-
-      
-
    var select = document.getElementById("select");
-    var option = select.options[select.selectedIndex].text;
+   var option = select.options[select.selectedIndex].text;
+   var result = document.getElementById("result");
     
-    var result = document.getElementById("result");
-    
-     
-      
+      activarAnillado();
+
      /************************************************************************************************************************************** */
       
       //Al ser copias simples, no es necesario descontar nada, solo se le agrega un +1 por el valor de la primera impresion.
      if (option == "Simples") {
     
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
-        activarAnillado();
+        
+       
       
         if(activaranillado){
-
+        
           result.value = "$" + (parseInt(a) * precioCopiasSimples * cantidadDecompias +1 + precioAnillado * cantidadDecompias)
 
         }else{
@@ -42,7 +39,7 @@ function calc() {
       if (option == "Doble Faz") {
   
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
-          activarAnillado()
+         
           if(activaranillado){
 
             result.value = "$" + (parseInt(a) /2  *  precioCompiasDobleFaz * cantidadDecompias + precioAnillado * cantidadDecompias)
@@ -63,7 +60,7 @@ function calc() {
          
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
         
-        activarAnillado()
+        
 
         if(activaranillado){
 
@@ -80,7 +77,7 @@ function calc() {
       if (option == "Apaisado" && a %4  == 0  ) {
 
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
-          activarAnillado()
+         
           if(activaranillado){
 
             result.value = "$" + (parseInt(a) /4  * precioCompiasApaisado  * cantidadDecompias + precioAnillado * cantidadDecompias);
@@ -101,7 +98,7 @@ function calc() {
           if( option =="Apaisado" && a/4 == i){
             
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
-            activarAnillado()
+          
             if(activaranillado){
 
                  result.value = "$" + (parseInt(a /4 -0.25)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
@@ -124,7 +121,7 @@ function calc() {
           if( option =="Apaisado" && a/4 == i){
             
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
-             activarAnillado()
+            
              if(activaranillado){
 
               result.value = "$" + (parseInt(a /4 -0.50)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
@@ -147,7 +144,7 @@ function calc() {
           if( option =="Apaisado" && a/4 == i){
             
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
-            activarAnillado()
+            
             if(activaranillado){
 
               result.value = "$" + (parseInt(a /4 -0.75)   * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
@@ -163,22 +160,8 @@ function calc() {
     
   }
 
-  //Verifica si la opcion anillado fue tildada 
-  function activarAnillado (){
-     if(document.getElementById("activarAnillado").checked){
-       activaranillado= true;
-     }
-     else {
-       activaranillado = false;
-     }
-  }
-  /************************************************************************************************************************************** */
-
-//muestra una alerta si la ayuda fue consultada
-function boton_ayuda(){
-
-      alert("Numero de veces que desea imprimir el mismo documento");       
  
-  }
+
+
 
      
