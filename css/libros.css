@@ -14,6 +14,9 @@ body{
         margin: 0;
         padding: 0;
         min-width: 200px;
+        height: 100vh;
+        overflow: hidden;
+     
  }
 /*---------------------------------Final -----------------------------------*/
 
@@ -21,10 +24,9 @@ body{
 .flex-container{
         background: rgb(241, 241, 241);
         display: flex;
-        flex-flow: column nowrap;
+       flex-flow: column nowrap;
         min-width: 300px;  
-        width: 95%; 
-        
+        width: 95%;         
         
 }
 /*---------------------------------Final -----------------------------------*/
@@ -34,10 +36,12 @@ body{
         background: rgb(255, 253, 253);
         text-align: center;
         font-family: 'PT Sans Narrow', sans-serif;
+        /*font-size: 1.5em;*/
         color: black;
         display:flex;
         justify-content:space-between;
-        align-items: center;       
+        align-items: center;      
+         
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -51,6 +55,53 @@ body{
         opacity: 1;
 }
 /*---------------------------------Final -----------------------------------*/
+
+
+/*--SECCION ESTILOS DE LA GALERIA--*/
+
+/*--Contenedor principal que contiene el conjunto de imagenes --*/
+.flex-container-galeria{
+        background-color:red;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 100vh;
+        overflow: auto;
+    
+      
+}       
+
+/*--Contenedor que contiene las imagenes por separado--*/
+.flex-galeria-img{
+        margin: 5px auto;
+        padding: 0;
+        background-color: aqua;
+        width: 300px;
+        height: 450px;
+       
+
+}
+/*---------------------------------Final -----------------------------------*/
+
+/*--Estilos que recaen directamente en las imagenes de los libros--*/
+.flex-galeria-estilos-img{
+       
+        width: 100%;
+        height: 100%;
+        margin: 5px auto;
+        object-fit: cover;
+
+}
+/*---------------------------------Final -----------------------------------*/     
+
+
+
+
+
+
+
+
 
 
 
