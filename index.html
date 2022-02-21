@@ -8,14 +8,18 @@
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/main.js"></script>
+       <script src="js/botos_ayuda_asterisco_rojo.js"></script>
+       <script src="js/activar_desactivar_anillado.js"></script>
+       <script src="js/funcion_simplefaz.js"></script>
+        <script src="js/copias_simples_doblefaz_apaisado.js"></script>
+       
         <title>Precio Fotocopias</title>
     </head>
     <body >
         <div class="flex-container">
             <header class="flex-item__titulo-principal">
                 
-               <a href="libros.html"><img class="estilos_logo" src="img/logo.ico" alt=""></a>
+               <a class="estilos_logo" href="libros.html"><img class="estilos_logo" src="img/logo.ico" alt=""></a>
                         
                         <h1 >PRECIO FOTOCOPIAS</h1>
               
@@ -23,7 +27,7 @@
               
             </header>
 
-                <label class="flex-container__label" oninput="calc()">
+                <label class="flex-container__label" oninput="calcular_precio_fotocopias()">
                     <input id="a" type="number" placeholder="Cantidad de Hojas" value="" >
                         <select id="select">
                              <option>Simples</option>s
@@ -43,7 +47,7 @@
                     </div> 
                     <!----------------------------------------Final--------------------------------------------------------------------->     
                     <label for="" id="precioPorHoja"  type="text" value="">Precio por hoja $4  </label> 
-                    <label for="activarAnillado" ><input type="checkbox" id="activarAnillado" >Anillado</label></label>
+                    <label for="activarAnillado" ><input type="checkbox" id="activarAnillados" >Anillado</label></label>
                                                        
 
                        <p class="precioFinal">Precio Final</p>

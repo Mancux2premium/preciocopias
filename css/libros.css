@@ -45,7 +45,7 @@ body{
 }
 /*---------------------------------Final -----------------------------------*/
 
-/*--Estilos del logo mancux2--*/
+/*--Estilos del logo mancux2 y los link A--*/
 .estilos_logo{
 
         opacity: 0.8;
@@ -55,6 +55,7 @@ body{
         opacity: 1;
 }
 /*---------------------------------Final -----------------------------------*/
+
 
 
 /*--SECCION ESTILOS DE LA GALERIA--*/
@@ -124,7 +125,7 @@ body{
         }
         /*---------------------------------Final -----------------------------------*/
        
-        /*--Estilos del logo mancux2--*/
+        /*--Estilos del logo mancux2 y  los link A --*/
         .estilos_logo{
                 width: 20%;
                 height: 30px;
@@ -132,6 +133,7 @@ body{
                 
         }
          /*---------------------------------Final -----------------------------------*/
+
 
          /*--Estilos del titulo Libros--*/
          h1{
