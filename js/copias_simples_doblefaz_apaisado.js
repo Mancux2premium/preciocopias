@@ -5,6 +5,7 @@ function calcular_precio_fotocopias() {
    var precioCopiasSimples = 4;
    var precioCompiasDobleFaz = 5;
    var precioCompiasApaisado = 5; 
+   var cantidad_copias_default =1;
    var correcionPrecioPorHojaImparDoblefaz= 4;
    var correcionPrecionporHojaImparApaisado =4;
    var maximascopiasPermitidasaimprimir = 9000;
@@ -15,6 +16,12 @@ function calcular_precio_fotocopias() {
     
       activarAnillado();
 
+      /*--Comprueba si la cantida de copias a realizar es menor que 1, de ser asi le asigna un valor por defecto--*/
+        if(cantidadDecompias<1){
+          cantidadDecompias = cantidad_copias_default;
+        }
+        /*--Final--*/
+        
      /************************************************************************************************************************************** */
       
       //Al ser copias simples, no es necesario descontar nada, solo se le agrega un +1 por el valor de la primera impresion.
@@ -22,8 +29,6 @@ function calcular_precio_fotocopias() {
     
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
         
-       
-      
         if(activaranillado){
         
           result.value = "$" + (parseInt(a) * precioCopiasSimples * cantidadDecompias +1 + precioAnillado * cantidadDecompias)

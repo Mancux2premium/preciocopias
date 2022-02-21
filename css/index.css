@@ -121,7 +121,7 @@ output{
 .logo_ayuda:hover{
         color: rgb(240, 0, 0);
         opacity: 1;
-        font-size: 32px;
+        transform: scale(1.5);
         transition: 0.2s;
 }
 /*---------------------------------Final -----------------------------------*/
@@ -157,8 +157,12 @@ output{
                 margin:-19px;
                 margin-left: 75%;
                 color:rgb(255, 0, 0);
+                opacity: 0.5;
+                
+        }
+        .logo_ayuda:hover{
+                transform: scale(1); 
                 opacity: 1;
-
         }
         /*---------------------------------Final -----------------------------------*/
 
