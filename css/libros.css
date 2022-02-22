@@ -25,7 +25,7 @@ body{
         background: rgb(241, 241, 241);
         display: flex;
         flex-flow: column nowrap;
-        min-width: 300px;  
+        min-width: 200px;  
         width: 95%;         
         
 }
@@ -96,10 +96,13 @@ body{
 }
 /*---------------------------------Final -----------------------------------*/     
 
-
-
-
-
+/*--Estilos del input buscador--*/
+.buscador-estilo{
+        display: flex;
+        justify-content: center;
+        color: red;        
+}
+/*--Final--*/
 
 
 
@@ -168,5 +171,14 @@ body{
                 height: 100%;
                 object-fit:scale-down;
         }
+        /*--Estilos del input buscador--*/
+        .buscador-estilo{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        color: red;        
+        }       
+        /*--Final--*/
+        
 }
         
