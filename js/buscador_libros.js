@@ -1,7 +1,6 @@
 const buscador_libros = document.querySelector('#buscador_libros');
 const resultado_libro = document.querySelector('#resultado_libro');
 
-
 /*--Lista de los libros--*/
 const lista_de_libros = [
 
@@ -34,6 +33,7 @@ const filtrar_libros = ()=>{
                 if(nombres.indexOf(libro_escrito) !== -1){
                         resultado_libro.innerHTML += `
                         <li> ${libros.nombre} - valor: ${libros.valor} </li>`
+                        ocultarlibros();
             }
             /*--Final--*/
         }
@@ -58,3 +58,16 @@ buscador_libros.addEventListener('keyup',filtrar_libros);
 /*--Ejecuta la funcio por primera ves para que apareca todo el catalogo--*/
 filtrar_libros();
 /*--Final--**/
+
+
+function ocultarlibros(){
+   
+    var africano = document.getElementById("africano");
+
+    if(buscador_libros.value=="el espejo africano" || buscador_libros.value=="africano" ){
+        africano.style.display="block";
+    }else{
+        africano.style.display="none";
+    }
+     
+}

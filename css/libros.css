@@ -11,12 +11,11 @@ body{
         background: rgba(0,0, 0, 0.1);
         justify-content: center;
         flex-wrap: wrap;
-        margin: 0;
         padding: 0;
         min-width: 200px;
         height: 100vh;
-        overflow: hidden;
-     
+       /* overflow: hidden;*/
+
  }
 /*---------------------------------Final -----------------------------------*/
 
@@ -26,8 +25,9 @@ body{
         display: flex;
         flex-flow: column nowrap;
         min-width: 200px;  
-        width: 95%;         
-        
+        width: 95%;
+
+           
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -40,8 +40,7 @@ body{
         color: black;
         display:flex;
         justify-content:space-between;
-        align-items: center;      
-         
+        align-items: center;          
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -56,45 +55,24 @@ body{
 }
 /*---------------------------------Final -----------------------------------*/
 
+/*--Estilos de li y ul donde aparecenra los nombres de los libros--*/
+li{
+        color: rgb(2, 2, 2);
+        font-size: 1.3rem;
+        margin-top: 10px ;
+        margin-bottom: 10px;
+        padding: 1rem;
+        list-style: none;
+}
 
-
-/*--SECCION ESTILOS DE LA GALERIA--*/
-
-/*--Contenedor principal que contiene el conjunto de imagenes --*/
-.flex-container-galeria{
-        background: rgb(241, 241, 241);
-        width: 100%;
-        height: 100%;
+ul{
+        background: rgb(241, 241, 255);
         display: flex;
-        flex-wrap: wrap;
-        max-height: 100vh;
-        overflow: auto;
-    
-      
-}       
-
-/*--Contenedor que contiene las imagenes por separado--*/
-.flex-galeria-img{
-        margin: 5px auto;
-        padding: 0;
-        background-color: aqua;
-        width: 200px;
-        height: 350px;
-
+        justify-content:flex-start;
+        flex-direction: column;
+        border: 2px solid rgb(20, 20, 26);
 }
-/*---------------------------------Final -----------------------------------*/
-
-
-/*--Estilos que recaen directamente en las imagenes de los libros--*/
-.flex-galeria-estilos-img{
-       
-        width: 100%;
-        height: 100%;
-        margin: 5px auto;
-        object-fit: cover;
-
-}
-/*---------------------------------Final -----------------------------------*/     
+/*--Final--*/
 
 /*--Estilos del input buscador--*/
 .buscador-estilo{
@@ -103,8 +81,6 @@ body{
         color: red;        
 }
 /*--Final--*/
-
-
 
 
 
@@ -120,11 +96,14 @@ body{
 
         /* Estilos del header y  titulo Libros */
         .flex-item__titulo-principal{
+                position: fixed;
                 margin: 0;
+                width: 95%;
                 /*background:blue;*/
                 height: 40px;
                 flex-flow: column wrap;
                 justify-content:space-around;
+                
         }
         /*---------------------------------Final -----------------------------------*/
        
@@ -145,32 +124,7 @@ body{
          }
          /*---------------------------------Final -----------------------------------*/
 
-        /*--Contenedor que contiene las imagenes por separado--*/
-        .flex-galeria-img{
-                /*background-color:yellow;*/
-                margin: 10px;
-                padding: 0;
-                width: 100px;
-                height: 150px;
-        }
-        /*---------------------------------Final -----------------------------------*/
-
-        /*--Contenedor principal que contiene el conjunto de imagenes --*/
-        .flex-container-galeria{
-                /*background-color:green;*/
-                justify-content: space-around;
-                overflow: auto;
-        }
-         /*---------------------------------Final -----------------------------------*/
-
-         /*--Estilos que recaen directamente en las imagenes de los libros--*/
-        .flex-galeria-estilos-img{
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                height: 100%;
-                object-fit:scale-down;
-        }
+        
         /*--Estilos del input buscador--*/
         .buscador-estilo{
         display: flex;
@@ -178,7 +132,30 @@ body{
         margin: 10px;
         color: red;        
         }       
-        /*--Final--*/
+         /*---------------------------------Final -----------------------------------*/
+
+        /*--Estilos de li y ul donde aparecenra los nombres de los libros--*/
+        li{
+        color: rgb(2, 2, 2);
+        font-size: 1.3rem;
+        margin-top: 10px ;
+        margin-bottom: 10px;
+        padding: 1rem;
+        list-style: none;
+        }
+
+        ul{
+        background: rgb(241, 241, 255);
+        width: 95%;
+        border: 2px solid rgb(20, 20, 26);
+        display: flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 10px auto;
+        overflow: scroll;
+        }
+         /*---------------------------------Final -----------------------------------*/
         
 }
         
