@@ -96,7 +96,7 @@ ul{
 
         /* Estilos del header y  titulo Libros */
         .flex-item__titulo-principal{
-                position: fixed;
+               
                 margin: 0;
                 width: 95%;
                 /*background:blue;*/
@@ -130,6 +130,7 @@ ul{
         display: flex;
         justify-content: center;
         margin: 10px;
+        height: 2rem;
         color: red;        
         }       
          /*---------------------------------Final -----------------------------------*/
