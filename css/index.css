@@ -132,10 +132,15 @@ output{
                
                 box-sizing: border-box;
         }
+        body{
+                margin: -2rem;
+                padding: 0;
+        }
         /* Estilos del header y  titulo Precio Fotocopias */
         .flex-item__titulo-principal{
                 flex-flow:  nowrap;
                 height: 40px;
+                margin: 0;
              
         }
         /*---------------------------------Final -----------------------------------*/
@@ -178,5 +183,6 @@ output{
                 color:rgb(255, 0, 0);
                 opacity: 1;
         }
-        /*---------------------------------Final -----------------------------------*/        
+        /*---------------------------------Final -----------------------------------*/   
+       
 }
