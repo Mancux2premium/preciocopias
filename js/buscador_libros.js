@@ -3,6 +3,7 @@ function filtrar_libros() {
 
     const buscador_libros = document.getElementById('buscador_libros');
     const resultado_libro = document.getElementById('resultado_libro');
+
     /*--Muestra los resultado de los libros encontrados--*/
     resultado_libro.innerHTML = ' ';
     /*--Final--*/
@@ -17,10 +18,13 @@ function filtrar_libros() {
         /*--Final--*/
         /*--Compara si el nombre de la lista de libros defaul es igual a el nombre del libro ingresado por el usuario  --*/
         if (nombres.indexOf(libro_escrito) !== -1) {
+            
             resultado_libro.innerHTML += `
                         <li> ${libros.nombre} - Páginas:${libros.paginas} </li>`;
-
-
+                       
+                       /*  resultado_libro.appendChild(aladino_img); */
+                     
+                
         }
         /*--Final if--*/
     }
@@ -32,6 +36,10 @@ function filtrar_libros() {
             
                 <li> Libro no encontrado... </li> 
             `;
+
+            
+            
+            
     }
     /*--Final--*/
 }   
@@ -43,7 +51,7 @@ buscador_libros.addEventListener('keyup',filtrar_libros);
 /*--Final--*/
  
 /*--Ejecuta la funcio por primera ves para que apareca todo el catalogo--*/
-filtrar_libros();
+//filtrar_libros();
 /*--Final--**/
 
 

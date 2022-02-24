@@ -161,3 +161,5 @@ const lista_de_libros = [
         {nombre:'', paginas:0}, 
         {nombre:'', paginas:0},                        
         /*--Final Z--*/]
+
+      
