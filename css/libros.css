@@ -1,6 +1,6 @@
 *{
-    margin: 10px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -13,9 +13,7 @@ body{
         flex-wrap: wrap;
         padding: 0;
         min-width: 200px;
-        height: 100vh;
-       /* overflow: hidden;*/
-
+        height: 20rem;
  }
 /*---------------------------------Final -----------------------------------*/
 
@@ -25,9 +23,11 @@ body{
         display: flex;
         flex-flow: column nowrap;
         min-width: 200px;  
-        width: 95%;
-
-           
+        width: 98%;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
+        margin-top: 0.2rem;
+     
+          
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -41,12 +41,13 @@ body{
         display:flex;
         justify-content:space-between;
         align-items: center;          
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
 }
 /*---------------------------------Final -----------------------------------*/
 
-/*--Estilos del logo mancux2 y los link A--*/
+/*--Estilos del logo MANCUX2 y los link A--*/
 .estilos_logo{
-
+        margin: 0 1rem;
         opacity: 0.8;
 }
 .estilos_logo:hover{
@@ -70,7 +71,9 @@ ul{
         display: flex;
         justify-content:flex-start;
         flex-direction: column;
-        border: 2px solid rgb(20, 20, 26);
+        margin-top: 0.5rem;
+       border: 2px solid rgb(20, 20, 26); 
+        
 }
 /*--Final--*/
 
@@ -78,7 +81,11 @@ ul{
 .buscador-estilo{
         display: flex;
         justify-content: center;
-        color: red;        
+        color: red;
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
 }
 /*--Final--*/
 
@@ -94,9 +101,8 @@ ul{
 
         /* Estilos del header y  titulo Libros */
         .flex-item__titulo-principal{
-               
                 margin: 0;
-                width: 95%;
+                width: 100%;
                 /*background:blue;*/
                 height: 40px;
                 flex-flow: column wrap;

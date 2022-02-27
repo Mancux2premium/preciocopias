@@ -9,6 +9,7 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta charset="UTF-8"/>
+     
        <script src="js/botos_ayuda_asterisco_rojo.js"></script>
        <script src="js/activar_desactivar_anillado.js"></script>
         <script src="js/copias_simples_doblefaz_apaisado.js"></script>
@@ -19,22 +20,25 @@
         <div class="flex-container">
             <header class="flex-item__titulo-principal">
                 
-               <a class="estilos_logo" href="libros.html"><img class="estilos_logo" src="img/logo.ico" alt=""></a>
+               <a class="estilos_logo estilos_equiqueta_a" href="libros.html"><img class="estilos_logo" src="img/logo.ico" alt=""></a>
                         
-                        <h1 >PRECIO FOTOCOPIAS</h1>
+                        <h1 >COPIAS</h1>
               
                 <img class="estilos_logo" src="img/logo.ico" alt="">
               
             </header>
 
                 <label class="flex-container__label" oninput="calcular_precio_fotocopias()">
-                    <input id="a" type="number" placeholder="Cantidad de Hojas" value="" >
-                        <select id="select">
+
+                   
+
+                    <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" >
+                        <select class="estilo-de-contenido-imput-option-label" id="select">
                              <option>Simples</option>s
                              <option>Doble Faz</option>
                              <option>Apaisado</option>
                         </select>
-                        <select>
+                        <select class="estilo-de-contenido-imput-option-label">
                             <option>Hoja A4</option>
                             <option>Hoja OFICIO</option>
                        </select>
@@ -43,22 +47,37 @@
                      <div class="logoinfo ">
                          
                         <i class="logo_ayuda" id="boton_ayuda" onclick="boton_ayuda()" title="Click"></i>
-                         <input id="numerodejuegos" type="number" placeholder="Cantidad de copias" value="" class="aa">
+                         <input class="estilo-de-contenido-imput-option-label" id="numerodejuegos" type="number" placeholder="Cantidad de copias" value="" >
                     </div> 
                     <!----------------------------------------Final--------------------------------------------------------------------->     
-                    <label for="" id="precioPorHoja"  type="text" value="">Precio por hoja $4  </label> 
-                    <label for="activarAnillado" ><input type="checkbox" id="activarAnillados" >Anillado</label></label>
+                    <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja" for="" id="precioPorHoja"  value="">Precio por hoja $4  </label> 
+                    <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" ><input type="checkbox" class="activar-anillado-margen" id="activarAnillados" >Anillado</label></label>
                                                        
 
                        <p class="precioFinal">Precio Final</p>
             <output class="precio_final "id="result">$0</output>    
-                  
-  
+
+
         </div>
-    
-      
-      
         
+        <button id="boton_guardar_copia_en_carrito_de_compras" onclick="agregar_al_carrito()" class="boton_carrito_compras">agregar al carrrito</button>
+
+        <div class="contenedor-principal-tabla-copias" >
+
+            <table id="lista_de_copias" >
+                <td>Hojas</td>
+            </table>
+
+            <table id="lista_de_cantidad" >
+                <td>Cantidad</td>
+            </table>
+
+            <table id="lista_de_precio" >
+                <td>Precio</td>
+            </table>
+        </div>
+      
+        <script src="js/agregar_al_carrito.js"></script>
     </body>
     <footer></footer>
 </html>
