@@ -41,7 +41,7 @@ function calcular_precio_fotocopias() {
      /************************************************************************************************************************************** */
       
       //El numero ingresado es par, no es necesario descontar nada.
-      if (option == "Doble Faz") {
+      if (option == "Doble faz") {
   
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
          
@@ -61,7 +61,7 @@ function calcular_precio_fotocopias() {
        /************************************************************************************************************************************** */
       
       //le descuenta -1  al numero Impar ingresado para hacerlo par 
-      if (option == "Doble Faz" && a %2 ==1) {
+      if (option == "Doble faz" && a %2 ==1) {
          
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
         

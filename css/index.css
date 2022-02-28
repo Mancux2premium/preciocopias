@@ -177,40 +177,49 @@ output{
         text-align: center;
         position: relative;
         color:#fff;
-        background-color: #47a4f7;
+        font-weight:bold;
+        background-color: #000000;
         border: none;
         border-radius: 1em;
         box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
         cursor:pointer;
+
 }
 .boton_carrito_compras:hover{
         background-color: #4494da;
 }
 /*---------------------------------Final -----------------------------------*/
 
-/*--Estilos del contenedor principal que contiene las tablas de el historial de copias--*/
+/*--Estilos del contenedor principal del carrito de compras--*/
 .contenedor-principal-tabla-copias{
 
         display: flex;
-        flex-wrap: wrap;
-        flex-basis: 5;
-        background-color: red;
+        background-color: rgb(241, 241, 241);
+      /*   box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 15%); */
         width: 98%;
-        color: yellow;
+        justify-content: center;  
+}
+/*---------------------------------Final -----------------------------------*/
+
+/*--Estilos del contenedor que contiene la tabla del carrito de compras--*/
+.estilos-tabla{
+        background-color: rgb(241, 241, 241);
+        width: 98%;
+}
+/*---------------------------------Final -----------------------------------*/
+
+/*--Estilos de las letras del carrito de compras--*/
+tr{     
+        color: black;
+        display: flex;
+        width: 100%;
+        border-bottom:1px solid #cacaca;
+        padding: 1rem 1rem;
         justify-content: space-between;
-   
+        margin-top: 0.3rem;
 }
 /*---------------------------------Final -----------------------------------*/
 
-
-/*--Estilos de la lista que va a parerciendo cuando se hace click en agregar al carrito--*/
-td{
-        display: inline-block;
-        color: #47a4f7;
-        background-color: yellowgreen;
-        
-}
-/*---------------------------------Final -----------------------------------*/
 @media (max-width: 600px){
 
         *{

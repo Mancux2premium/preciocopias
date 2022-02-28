@@ -13,6 +13,7 @@
        <script src="js/botos_ayuda_asterisco_rojo.js"></script>
        <script src="js/activar_desactivar_anillado.js"></script>
         <script src="js/copias_simples_doblefaz_apaisado.js"></script>
+        <script src="js/agregar_al_carrito.js"></script>
        
         <title>Precio Fotocopias</title>
     </head>
@@ -35,7 +36,7 @@
                     <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" >
                         <select class="estilo-de-contenido-imput-option-label" id="select">
                              <option>Simples</option>s
-                             <option>Doble Faz</option>
+                             <option>Doble faz</option>
                              <option>Apaisado</option>
                         </select>
                         <select class="estilo-de-contenido-imput-option-label">
@@ -64,20 +65,24 @@
 
         <div class="contenedor-principal-tabla-copias" >
 
-            <table id="lista_de_copias" >
-                <td>Hojas</td>
+            <table id="lista_de_copias" class="estilos-tabla" >
+                
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Item</th>
+                      <th scope="col">Cantidad</th>
+                      <th scope="col">Acción</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+               
             </table>
 
-            <table id="lista_de_cantidad" >
-                <td>Cantidad</td>
-            </table>
-
-            <table id="lista_de_precio" >
-                <td>Precio</td>
-            </table>
+            
         </div>
       
-        <script src="js/agregar_al_carrito.js"></script>
+
     </body>
     <footer></footer>
 </html>
