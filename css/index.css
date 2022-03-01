@@ -142,8 +142,9 @@ output{
 }
 /*---------------------------------Final -----------------------------------*/
 
+
 /*--Estilos y colores del logo asterisco --*/
-.logo_ayuda{
+/*.logo_ayuda{
         margin-top: -1.2rem;
         margin-left: 99%;
         color: red;
@@ -163,7 +164,7 @@ output{
         opacity: 1;
         transform: scale(1.5);
         transition: 0.2s;
-}
+}*/
 /*---------------------------------Final -----------------------------------*/
 
 /*--Estilos del boton carrito de compras--*/
@@ -220,82 +221,54 @@ tr{
 }
 /*---------------------------------Final -----------------------------------*/
 
-@media (max-width: 600px){
-
-        *{
-                box-sizing: border-box;
+@media (max-width: 500px){
+        
+        .flex-container{
+               /*  background-color: #4494da; */
+                display: flex;
+                flex-direction:column;
+                min-width: 333px;       
         }
-        body{
-                margin: 0;
-                padding: 0;
-        }
-        /* Estilos del header y  titulo Precio Fotocopias */
-        .flex-item__titulo-principal{
-                flex-flow:  nowrap;
-                height: 40px;
-                margin: 0;
-             
-        }
-        /*---------------------------------Final -----------------------------------*/
-
-        /*--Estilos de los dos logos MANCUX2--*/
-        .estilos_logo{
-                margin-left: 0.2rem;
-                margin-right: 0.2rem;
-                padding: 0;
-                width: 20px;
-                height: 40px;
-                object-fit:scale-down;
-               
-        }
-        /*---------------------------------Final -----------------------------------*/
-
-        /*--Estilos de la estiquera A que se encuentra en el logo MANCUX2-*/
-        .estilos_equiqueta_a{
-                margin-left: 0.2rem;
-        }
-        /*---------------------------------Final -----------------------------------*/
-
-        /*--Estilos del titulo princial que dice COPIAS--*/
-        h1{
-                font-size: 15px;
-        }
-        /*---------------------------------Final -----------------------------------*/
-
-        /*--Estilos y colores del logo asterisco --*/
-        .logo_ayuda{
-                font-size: 25px;
-                margin:-19px;
-                margin-left: 75%;
-                color:rgb(255, 0, 0);
-                opacity: 0.5;
-                
-        }
-        .logo_ayuda:hover{
-                transform: scale(1); 
-                opacity: 1;
-        }
-        /*---------------------------------Final -----------------------------------*/
-        /*--Estilos del contenedor principal Label que contiene todo los datos--*/
-
-        /*--Estilos del contenedor principal de los label que contienes carrito-copias-simples-anillado-ect--*/
+        /*--Estilos del contenedor  de los label--*/
         .flex-container__label{
-                background-color: red;
+                display: flex;
+                flex-direction: column;
+              /*   background-color:green; */
+                align-content:center;
+                margin-top: 0.5em;
+                width: 100%;
+                margin-left: 0;
         }
-         /*---------------------------------Final -----------------------------------*/
+/*---------------------------------Final -----------------------------------*/
 
-}
-      
-@media (max-width: 390px){
-
-        /*--Estilos y colores del logo asterisco --*/
-        .logo_ayuda{
-                font-size: 25px;
-                margin:-19px;
-                margin-left: 75%;
-                color:rgb(255, 0, 0);
-                opacity: 1;
+        /*--Estilos de contenedor de hoja A4 y Modo de impresion --*/
+        .estilo-de-contenido-imput-option-label{
+                margin-top: 0.5em;
+                margin-bottom: 1em;
+                height: 4rem;
+                border-radius: 2em;
+                color:#000000;
+                width: 80%;
+                font-weight: bold;
+                text-align: center;
         }
-        /*---------------------------------Final -----------------------------------*/   
-       
+/*---------------------------------Final -----------------------------------*/
+
+        /*--Estilos de el contenedor de precio or hoja y Anillado--*/
+        .estilos-pecio-por-hoja{
+                display: flex;
+                color: #000000;
+                font-weight: bold;
+                background-color: #4494da;
+                justify-content: center;
+                margin: 0.5em auto;
+        }
+/*---------------------------------Final -----------------------------------*/
+        /*--Estilos de la palabra Precio final--*/
+        .precioFinal{
+                color:#fff;
+                font-weight: bold;
+                background-color:#1a1a1a;
+        }
+/*---------------------------------Final -----------------------------------*/
 }

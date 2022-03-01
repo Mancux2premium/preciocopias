@@ -20,47 +20,36 @@
     <body >
         <div class="flex-container">
             <header class="flex-item__titulo-principal">
-                
                <a class="estilos_logo estilos_equiqueta_a" href="libros.html"><img class="estilos_logo" src="img/logo.ico" alt=""></a>
-                        
                         <h1 >COPIAS</h1>
-              
-                <img class="estilos_logo" src="img/logo.ico" alt="">
-              
+                    <img class="estilos_logo" src="img/logo.ico" alt="">
             </header>
-
-                <label class="flex-container__label" oninput="calcular_precio_fotocopias()">
-
-                   
-
-                    <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" >
-                        <select class="estilo-de-contenido-imput-option-label" id="select">
-                             <option>Simples</option>s
-                             <option>Doble faz</option>
-                             <option>Apaisado</option>
-                        </select>
-                        <select class="estilo-de-contenido-imput-option-label">
-                            <option>Hoja A4</option>
-                            <option>Hoja OFICIO</option>
-                       </select>
-                      
+            <label class="flex-container__label" oninput="calcular_precio_fotocopias()">
+                <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" >
+                    <select class="estilo-de-contenido-imput-option-label" id="select">
+                        <option>Simples</option>
+                        <option>Doble faz</option>
+                        <option>Apaisado</option>
+                    </select>
+                    <select class="estilo-de-contenido-imput-option-label">
+                        <option>Hoja A4</option>
+                    </select>
+                    
                     <!--Seccion del logo de interrogacion------------------------------------------------------------------------------->
-                     <div class="logoinfo ">
-                         
-                        <i class="logo_ayuda" id="boton_ayuda" onclick="boton_ayuda()" title="Click"></i>
-                         <input class="estilo-de-contenido-imput-option-label" id="numerodejuegos" type="number" placeholder="Cantidad de copias" value="" >
-                    </div> 
+                <!-- <div class="logoinfo ">    -->
+                    <i class="logo_ayuda" id="boton_ayuda" onclick="boton_ayuda()" title="Click"></i>
+                         <input  class="estilo-de-contenido-imput-option-label" id="numerodejuegos" type="number" placeholder="Cantidad de copias" value="" >
+              <!--   </div>  -->
                     <!----------------------------------------Final--------------------------------------------------------------------->     
-                    <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja" for="" id="precioPorHoja"  value="">Precio por hoja $4  </label> 
-                    <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" ><input type="checkbox" class="activar-anillado-margen" id="activarAnillados" >Anillado</label></label>
-                                                       
-
-                       <p class="precioFinal">Precio Final</p>
-            <output class="precio_final "id="result">$0</output>    
+                <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja" for="" id="precioPorHoja"  value="">Precio por hoja $4  </label> 
+                <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" ><input type="checkbox" class="activar-anillado-margen" id="activarAnillados" >Anillado</label>
+            </label>
+                                        
+                <p class="precioFinal">Precio Final</p>
+                <output class="precio_final "id="result">$0</output>    
 
 
         </div>
-        
         <button id="boton_guardar_copia_en_carrito_de_compras" onclick="agregar_al_carrito()" class="boton_carrito_compras">agregar al carrrito</button>
 
         <div class="contenedor-principal-tabla-copias" >
