@@ -6,7 +6,6 @@
 }
 
 /*--Estilos del body --*/
-
 body{
        /* display: flex;*/
         background: rgba(0,0, 0, 0.1);
@@ -16,7 +15,6 @@ body{
         justify-content: center;
         flex-wrap: wrap;
         padding: 0;
-        min-width: 200px;
         height: 20rem;
  }
 /*---------------------------------Final -----------------------------------*/
@@ -42,27 +40,27 @@ body{
         justify-content:space-between;
         align-items: center;  
         box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
-
-        
+      
 }
 /*---------------------------------Final -----------------------------------*/
 
 /*--Estilos del contenedor principal Label que contiene todo los datos--*/
 .flex-container__label{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         justify-items: center;
         flex-wrap: wrap;
-        margin: 0.5rem 1rem;
         align-content: center;
-        margin-top: 1rem;  
+        margin-top: 1rem;
+      /*   background-color: red; */
+        padding: 2em 0;
 }
 /*---------------------------------Final -----------------------------------*/
 
 /*--Estilos de las principales opciones de la pagina como cantidad de hojas,numero de juegos,anillado,hoja a4 oficio--*/
 .estilo-de-contenido-imput-option-label{
-        height: 2rem;
+        height: 3em;
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -77,9 +75,12 @@ output{
 .estilos-pecio-por-hoja{
         display: flex;
         align-items: center; 
-        color: red;
+        color:#000000;
+        font-size: 1.2em;
+        font-weight: bold;
         text-align: center;
         margin-right: 1rem;
+        padding: 0 1em;
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -100,12 +101,15 @@ output{
 
 /*Estilos que tiene el texto precio final que aparece en pantalla*/
 .precioFinal{
-        color: rgb(48, 161, 38);
+        color: rgb(245, 239, 239);
+        background-color: #000000;
         text-align: center;
         font-size: 2em;
+        font-weight: bold;
         font-family: 'PT Sans Narrow', sans-serif;
         padding: 0px;
         margin: 0px;
+        margin-bottom: 0.1em;
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -132,14 +136,14 @@ output{
 
 
 /*--Estilos del contenedor principal de logo asterisco--*/
-.logoinfo{
+/*.logoinfo{
         display: flex;
         align-items: center;
         flex-flow: column wrap;
         margin: 0;
         padding: 0;
         position: relative;
-}
+}*/
 /*---------------------------------Final -----------------------------------*/
 
 
@@ -271,4 +275,61 @@ tr{
                 background-color:#1a1a1a;
         }
 /*---------------------------------Final -----------------------------------*/
+}
+
+@media (min-width: 500px) and (max-width: 870px)  {
+        
+        body{
+                background-color: #000000;
+        }
+
+        .flex-container{
+                /*  background-color: #4494da; */
+                 display: flex;
+                 flex-direction:column;
+                 min-width: 333px;       
+         }
+         /*--Estilos del contenedor  de los label--*/
+         .flex-container__label{
+                 display: flex;
+                 flex-direction: column;
+               /*   background-color:green; */
+                 align-content:center;
+                 margin-top: 0.5em;
+                 width: 100%;
+                 margin-left: 0;
+         }
+ /*---------------------------------Final -----------------------------------*/
+ 
+         /*--Estilos de contenedor de hoja A4 y Modo de impresion --*/
+         .estilo-de-contenido-imput-option-label{
+                 margin-top: 0.5em;
+                 margin-bottom: 1em;
+                 height: 4rem;
+                 border-radius: 2em;
+                 color:#000000;
+                 width: 80%;
+                 font-weight: bold;
+                 text-align: center;
+         }
+ /*---------------------------------Final -----------------------------------*/
+ 
+         /*--Estilos de el contenedor de precio por hoja y Anillado--*/
+         .estilos-pecio-por-hoja{
+                 display: flex;
+                 color: #000000;
+                 font-weight: bold;
+                 background-color: #4494da;
+                 justify-content: center;
+                 margin: 0.5em auto;
+         }
+ /*---------------------------------Final -----------------------------------*/
+         /*--Estilos de la palabra Precio final--*/
+         .precioFinal{
+                 color:#fff;
+                 font-weight: bold;
+                 background-color:#1a1a1a;
+         }
+ /*---------------------------------Final -----------------------------------*/
+        
 }
