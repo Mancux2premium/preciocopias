@@ -9,11 +9,9 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta charset="UTF-8"/>
-     
-       <script src="js/botos_ayuda_asterisco_rojo.js"></script>
        <script src="js/activar_desactivar_anillado.js"></script>
         <script src="js/copias_simples_doblefaz_apaisado.js"></script>
-        <script src="js/agregar_al_carrito.js"></script>
+  
        
         <title>Precio Fotocopias</title>
     </head>
@@ -43,39 +41,35 @@
               <!--   </div>  -->
                     <!----------------------------------------Final--------------------------------------------------------------------->     
                 <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja" for="" id="precioPorHoja"  value="">Precio por hoja $4  </label> 
-            
-                <label for="activarAnillados"class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" ><input type="checkbox" class="activar-anillado-margen" id="activarAnillados" >  <label for="activarAnillados" id="anillado__togle"></label>Anillado</label>
-               
-       
+                <label for="activarAnillados"class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" ><input type="checkbox" class="activar-anillado-margen" id="activarAnillados" ><label for="activarAnillados" id="anillado__togle" class="anillado-pointer"></label>Anillado</label>
+                
             </label>
                                         
-                <p class="precioFinal">Precio Final</p>
-                <output class="precio_final "id="result">$0</output>    
-
+                <p class="precioFinal" >Precio Final</p>
+         
+                    <output class="precio_final " id="result" >$0</output>    
+        
 
         </div>
-        <button id="boton_guardar_copia_en_carrito_de_compras" onclick="agregar_al_carrito()" class="boton_carrito_compras">agregar al carrrito</button>
+        <button id="add__carrito" class="boton_carrito_compras">agregar al carrrito</button>
 
         <div class="contenedor-principal-tabla-copias" >
 
-            <table id="lista_de_copias" class="estilos-tabla" >
-                
-                <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Item</th>
-                      <th scope="col">Cantidad</th>
-                      <th scope="col">Acción</th>
-                      <th scope="col">Total</th>
-                    </tr>
-                  </thead>
-               
-            </table>
-
+                <table id="carrito_copias" class="estilos-tabla" >
+                    <thead>
+                        <tr>
+                         <th scope="col" >Nombre</th>
+                          <th scope="col" >Hojas</th>
+                          <th scope="col">Juegos</th>
+                          <th scope="col">Anillado</th>
+                          <th scope="col" >Total:</th>
+                        </tr>
+                      </thead>
+                </table>
             
         </div>
       
-
+        <script src="js/carrito_de_compras.js"></script>
     </body>
     <footer></footer>
 </html>

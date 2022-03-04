@@ -2,8 +2,8 @@
 function calcular_precio_fotocopias() {
    var a = document.getElementById("a").value;
    var cantidadDecompias = document.getElementById("numerodejuegos").value;
-   var precioCopiasSimples = 4;
-   var precioCompiasDobleFaz = 5;
+   let precioCopiasSimples = 4;
+   let precioCompiasDobleFaz = 5;
    var precioCompiasApaisado = 5; 
    var cantidad_copias_default =1;
    var correcionPrecioPorHojaImparDoblefaz= 4;
