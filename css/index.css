@@ -211,12 +211,12 @@ output{
 /*--Estilos del contenedor principal del carrito de compras--*/
 .contenedor-principal-tabla-copias{
 
-        display: flex;
+        display: block;
         background-color: rgb(241, 241, 241); 
-     
-   box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 15%); 
+
+        box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 15%); 
         width: 98%;
-        justify-content: center; 
+       
         height: 40vh;
         overflow: auto;
 
@@ -226,8 +226,11 @@ output{
 
 /*--Estilos del contenedor que contiene la tabla del carrito de compras--*/
 .estilos-tabla{
+        display: flex;
+        flex-direction: column;
         background-color: rgb(241, 241, 241);
-        width: 98%;
+        width: 100%;
+      /*   border: 2px solid red; */
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -235,11 +238,24 @@ output{
 tr{     
         color: black;
         display: flex;
-        width: 100%;
         border-bottom:1px solid #cacaca;
-        padding: 1rem 1rem;
-        justify-content: space-between;
+        padding: 1rem 0;
+        justify-content: space-evenly;
         margin-top: 0.3rem;
+/*          border: 2px solid violet; */ 
+        text-align: center;
+        justify-items: center;
+
+}
+th{
+        
+         align-items: center;
+         align-content: center; 
+        /*  border: 2px solid blue;  */
+         width: 10rem;
+         justify-content: space-between;
+
+
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -295,8 +311,17 @@ tr{
                 background-color:#1a1a1a;
         }
 /*---------------------------------Final -----------------------------------*/
-}
 
+/*--Estilos de los th que contienen el titulo de las lista--*/
+th{
+                display: flex;
+                align-items: center;
+                align-content: center; 
+       /*        border: 2px solid blue;  */
+                 width: 10rem; 
+        }
+}
+/*---------------------------------Final -----------------------------------*/
 @media (min-width: 500px) and (max-width: 870px)  {
         
         body{

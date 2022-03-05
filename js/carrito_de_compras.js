@@ -1,8 +1,9 @@
 const carrito_copias = document.querySelector("#carrito_copias");
 const boton_carrito = document.querySelector("#add__carrito");
 let nombre;
-let anillado;
-
+let anillado="no";
+let clienteName;
+/* activarAnillado (); */
 
 boton_carrito.addEventListener("click", () =>{
 
@@ -11,6 +12,7 @@ boton_carrito.addEventListener("click", () =>{
       comprobacionHojas(a,numerodejuegos);
       carrito_copias.innerHTML += `
       <tr>
+      <th scope="col" >${clienteName}</th>
       <th scope="col" >${nombre}</th>
       <th scope="col" >${a.value}</th>
       <th scope="col">${numerodejuegos.value}</th>
@@ -38,6 +40,8 @@ const comprobacionHojas = (hojas, cantidad) =>{
 const nombre_del_documento = ()=>{
 
          nombre=prompt("Nombre del documento");
+         clienteName=prompt("Nombre del cliente")
+         
 
 }
 /*--Final--*/
