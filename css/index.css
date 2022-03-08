@@ -186,40 +186,39 @@ output{
 
 /*--Estilos del boton carrito de compras--*/
 .boton_carrito_compras{
-        margin: 0;
-        padding: 0 1em;
-        left: 0.4rem;
+        margin: 0 1rem;
         top: 0.2rem;
         width: 10rem;
         height: 2rem;
         text-align: center;
-        position: relative;
         color:#fff;
         font-weight:bold;
         background-color: #000000;
         border: none;
-        border-radius: 1em;
+/*         border-radius: 1em; */
         box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
         cursor:pointer;
 
 }
 .boton_carrito_compras:hover{
-        background-color: #4494da;
+        background-color: #0707F8;
 }
 /*---------------------------------Final -----------------------------------*/
+
+.borrar_carrito:hover{
+        background-color: #FF0000;
+}
 
 /*--Estilos del contenedor principal del carrito de compras--*/
 .contenedor-principal-tabla-copias{
 
         display: block;
         background-color: rgb(241, 241, 241); 
-
         box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 15%); 
         width: 98%;
-       
+        border: 2px solid rgb(0, 0, 0);
         height: 40vh;
         overflow: auto;
-
 }
 
 /*---------------------------------Final -----------------------------------*/
@@ -231,6 +230,17 @@ output{
         background-color: rgb(241, 241, 241);
         width: 100%;
       /*   border: 2px solid red; */
+}
+/*---------------------------------Final -----------------------------------*/
+
+/*--Estilos del contenedor de las botoneras carrito y eliminar carrito--*/
+.contenedor_principal_botones_carritos_de_compra{
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+/*         background-color: red; */
+        padding-top: 1rem;
+        padding-bottom: 0.8rem;
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -251,13 +261,12 @@ th{
         
          align-items: center;
          align-content: center; 
-        /*  border: 2px solid blue;  */
+         /* border-right: 2px solid blue;  */
          width: 10rem;
          justify-content: space-between;
-
-
 }
 /*---------------------------------Final -----------------------------------*/
+
 
 @media (max-width: 500px){
         body{
@@ -322,6 +331,7 @@ th{
         }
 }
 /*---------------------------------Final -----------------------------------*/
+
 @media (min-width: 500px) and (max-width: 870px)  {
         
         body{

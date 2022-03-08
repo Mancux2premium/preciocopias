@@ -41,8 +41,8 @@
               <!--   </div>  -->
                     <!----------------------------------------Final--------------------------------------------------------------------->     
                 <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja" for="" id="precioPorHoja"  value="">Precio por hoja $4  </label> 
-                <label for="activarAnillados"class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" ><input type="checkbox" class="activar-anillado-margen" id="activarAnillados" ><label for="activarAnillados" id="anillado__togle" class="anillado-pointer"></label>Anillado</label>
-                
+                <label for="activarAnillados"class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" >
+                <input type="checkbox" class="activar-anillado-margen" id="activarAnillados" ><label for="activarAnillados" id="anillado__togle" class="anillado-pointer"></label>Anillado</label>
             </label>
                                         
                 <p class="precioFinal" >Precio Final</p>
@@ -51,8 +51,10 @@
         
 
         </div>
-        <button id="add__carrito" class="boton_carrito_compras">agregar al carrrito</button>
-
+        <div class="contenedor_principal_botones_carritos_de_compra">       
+            <button id="add__carrito" class="boton_carrito_compras">Agregar al carrrito</button>
+            <button id ="borrar_carrito"class="boton_carrito_compras borrar_carrito">Borrar carrito</button>
+        </div>
         <div class="contenedor-principal-tabla-copias" >
 
                 <table id="carrito_copias" class="estilos-tabla" >
@@ -61,13 +63,17 @@
                          <th scope="col" >Cliente</th>
                          <th scope="col" >Documento/Libro</th>
                           <th scope="col" >Hojas</th>
-                          <th scope="col">juegos</th>
-                          <th scope="col">impresion</th>
+                          <th scope="col">Juegos</th>
+                          <th scope="col">Impresion</th>
                           <th scope="col">Anillado</th>
                           <th scope="col" >Total</th>
                         </tr>
-                      </thead>
-                      
+                        <tbody id=""></tbody>
+                        <tfoot id="msj_carrito_vacio">
+                          <tr id="footer" class="footer">
+                            <th scope="row"  class="carritovacio">¡Carrito vacío!</th>
+                          </tr>
+                        </tfoot>
                 </table>
             
         </div>
