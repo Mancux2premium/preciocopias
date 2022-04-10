@@ -1,9 +1,7 @@
 //funcion para filtrar los libros
 function filtrar_libros() {
-
     const buscador_libros = document.getElementById('buscador_libros');
     const resultado_libro = document.getElementById('resultado_libro');
-
     /*--Muestra los resultado de los libros encontrados--*/
     resultado_libro.innerHTML = ' ';
     /*--Final--*/
@@ -20,7 +18,8 @@ function filtrar_libros() {
         if (nombres.indexOf(libro_escrito) !== -1) {
             
             resultado_libro.innerHTML += `
-                        <li> ${libros.nombre} - Páginas:${libros.paginas} </li>`;
+                        <li> ${libros.nombre} - Editorial:${libros.editorial} - Páginas:${libros.paginas}  - Precio:${libros.precio} - Anillado:${libros.anillado} 
+                            - Impresion:${libros.impresion} </li> `;
                        
                        /*  resultado_libro.appendChild(aladino_img); */
                      
@@ -31,28 +30,29 @@ function filtrar_libros() {
     /*--Final for--*/
     /*--En caso que el usuario ingrese un nombre de libro que no este en la lista aparece el mensaje Producto no encontrado--*/
     if (resultado_libro.innerHTML === ' ') {
-
         resultado_libro.innerHTML += `
             
                 <li> Libro no encontrado... </li> 
             `;
-
             
-            
-            
+          
     }
     /*--Final--*/
-}   
+      /*--En caso que el usuario no borre lo escrito elimina la listaa--*/
+        if( buscador_libros.value ==""){
+            resultado_libro.innerHTML = 
+            
+                     ` <li></li>  `;
+        }
+       /*--Final--*/
+    } 
+    
 /*--Final filtrar libros--*/
 
 /*--Pone a la escucha el input buscador de libros cada ves que se precione una tecla--*/
-buscador_libros.addEventListener('keyup',filtrar_libros);
-
-/*--Final--*/
+buscador_libros.addEventListener('keyup',filtrar_libros );
  
-/*--Ejecuta la funcio por primera ves para que apareca todo el catalogo--*/
-//filtrar_libros();
-/*--Final--**/
+
 
 
 
