@@ -6,10 +6,20 @@ const aladino_y_la_lampara_maravillosa_paginas=27;
 /*--Final A--*/
 
 /*--Comienzan con Letra B--*/
+const biologia2_santillana_paginas=176;
+const biologia3_Santillana_paginas=158;
 /*--Final B--*/
 
 /*--Comienzan con Letra C--*/
 const caro_dice_paginas=242;
+const casa_de_muñecas_paginas=132;
+const cereminia_secreta_paginas=69;
+const ciudadania1_santillana_paginas=128;
+const ciudadania1_estrada_paginas=144;
+const ciudadania2_santillana_paginas=145;
+const ciudadania3_sanitalla_paginas=146;
+const ciudadania3_estrada_paginas=152;
+
 /*--Final C--*/
 
 /*--Comienzan con Letra D--*/
@@ -21,12 +31,21 @@ const el_espejo_africano_paginas=81;
 /*--Final E--*/
 
 /*--Comienzan con Letra F--*/
+const fisica_quimica2_proyecto_nodos_paginas=198;
+const fisica_quimica2_serie_conectar_paginas=176;
+const fisica_quimica3_proyecto_nodos_paginas=200;
 /*--Final F--*/
 
 /*--Comienzan con Letra G--*/
+const geografia2_santillana_paginas=210;
+const geografia3_estrada_paginas=239;
 /*--Final G--*/
 
 /*--Comienzan con Letra H--*/
+const historia1_mandioca_paginas=162;
+const historia2_mandioca_paginas=240;
+const historia2_santillana_paginas=203;
+const historia3_santillana_paginas=233;
 /*--Final H--*/
 
 /*--Comienzan con Letra I--*/
@@ -42,10 +61,15 @@ const el_espejo_africano_paginas=81;
 /*--Final L--*/
 
 /*--Comienzan con Letra M--*/
+const mafalda_paginas=128;
+const matematica4_porfesores_paginas=43;
 const mi_planta_de_naranja_lima_paginas=150;
+const mitos_clasificados1_paginas=90;
+const mitos_clasificados2_paginas=94;
 /*--Final M--*/
 
 /*--Comienzan con Letra N--*/
+const Nuevas_Tegnologias_de_la_informacion_y_la_conectividad_NTICx=274;
 /*--Final N--*/
 
 /*--Comienzan con Letra Ñ--*/
@@ -61,6 +85,7 @@ const mi_planta_de_naranja_lima_paginas=150;
 /*--Final Q--*/
 
 /*--Comienzan con Letra R--*/
+const rebelion_en_la_granja_pagina=110;
 /*--Final R--*/
 
 /*--Comienzan con Letra S--*/

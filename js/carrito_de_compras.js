@@ -1,11 +1,11 @@
 const carrito_copias = document.querySelector("#carrito_copias");
 const boton_carrito = document.querySelector("#add__carrito");
 const eliminar_carrito = document.querySelector("#borrar_carrito");
-const msj_carrito_vacio = document.querySelector("#msj_carrito_vacio").textContent;
 let nombre;
 let anillado="no";
 let clienteName;
 let contador =0;
+var precio_unitario = 1 ;
 
 boton_carrito.addEventListener("click", () =>{
       activarAnillado ();
@@ -59,22 +59,18 @@ const borrar_carrito = ()=>{
    carrito_copias.innerHTML =`
    <thead>
    <tr>
-    <th scope="col" >Cliente</th>
-    <th scope="col" >Documento/Libro</th>
-     <th scope="col" >Hojas</th>
-     <th scope="col">Juegos</th>
-     <th scope="col">Impresion</th>
-     <th scope="col">Anillado</th>
-     <th scope="col" >Total:</th>
+   <th scope="col" >#</th>
+   <th scope="col" >DETALLE</th>
+   <th scope="col" >HOJAS</th>
+   <th scope="col">JUEGOS</th>
+   <th scope="col">P.UNIT</th>
+   <th scope="col">IMPRESION</th>
+   <th scope="col">ANILLADO</th>
+   <th scope="col" >IMPORTE:</th>
+  </tr>
    </tr>
  </thead>
- <tfoot>
-      <tr>
-          <th scope="row">${msj_carrito_vacio.textContent="¡Carrito vacio!"}</th>
-      </tr>
- </tfoot>
 
- 
  `
 }
 
@@ -87,6 +83,7 @@ eliminar_carrito.addEventListener("click",()=>{
 /*--Final--*/
 /*--Funcion que agrega los productos al carrito--*/
 const add_carrito =()=>{
+
    contador++
    carrito_copias.innerHTML += `
    <tr>
@@ -94,6 +91,7 @@ const add_carrito =()=>{
    <th scope="col" >${nombre}</th>
    <th scope="col" >${a.value}</th>
    <th scope="col">${numerodejuegos.value}</th>
+   <th scope="col"> $${precio_unitario}</th>
    <th scope="col">${select.options[select.selectedIndex].text}</th>
    <th scope="col">${anillado}</th>
    <th scope="col" >${totalcarrito = result.value}</th>

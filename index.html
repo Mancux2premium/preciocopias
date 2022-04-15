@@ -23,8 +23,8 @@
                     <img class="estilos_logo" src="img/logo.ico" alt="">
             </header>
             <label class="flex-container__label" oninput="calcular_precio_fotocopias()">
-                <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" >
-                <input  class="estilo-de-contenido-imput-option-label" id="numerodejuegos" type="number" placeholder="Numero de juegos" value="" >
+                <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" min="1" >
+                <input  class="estilo-de-contenido-imput-option-label" id="numerodejuegos" type="number" placeholder="Numero de juegos" value="" min="1" >
                     <select class="estilo-de-contenido-imput-option-label" id="select">
                         <option>Simples</option>
                         <option>Doble faz</option>
@@ -53,28 +53,23 @@
         </div>
         <div class="contenedor_principal_botones_carritos_de_compra">       
             <button id="add__carrito" class="boton_carrito_compras">Agregar al carrrito</button>
-            <button id ="borrar_carrito"class="boton_carrito_compras borrar_carrito">Borrar carrito</button>
+            <button id ="borrar_carrito"class="boton_carrito_compras borrar_carrito">Vaciar carrito</button>
         </div>
         <div class="contenedor-principal-tabla-copias" >
 
                 <table id="carrito_copias" class="estilos-tabla" >
                     <thead>
                         <tr>
-                         <th scope="col" >#ID</th>
-                         <th scope="col" >Cliente</th>
-                         <th scope="col" >Documento/Libro</th>
-                          <th scope="col" >Hojas</th>
-                          <th scope="col">Juegos</th>
-                          <th scope="col">Impresion</th>
-                          <th scope="col">Anillado</th>
-                          <th scope="col" >Total:<span></span></th>
+                         <th scope="col" >#</th>
+                         <th scope="col" >DETALLE</th>
+                          <th scope="col" >HOJAS</th>
+                          <th scope="col">JUEGOS</th>
+                          <th scope="col">P.UNIT</th>
+                          <th scope="col">IMPRESION</th>
+                          <th scope="col">ANILLADO</th>
+                          <th scope="col" >IMPORTE:</th>
                         </tr>
                         <tbody id=""></tbody>
-                        <tfoot id="msj_carrito_vacio">
-                          <tr id="footer" class="footer">
-                            <th scope="row"  class="carritovacio">¡Carrito vacío!</th>
-                          </tr>
-                        </tfoot>
                 </table>
             
         </div>

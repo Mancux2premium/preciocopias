@@ -17,13 +17,12 @@ function filtrar_libros() {
         /*--Compara si el nombre de la lista de libros defaul es igual a el nombre del libro ingresado por el usuario  --*/
         if (nombres.indexOf(libro_escrito) !== -1) {
             
+           
             resultado_libro.innerHTML += `
-                        <li> ${libros.nombre} - Editorial:${libros.editorial} - Páginas:${libros.paginas}  - Precio:${libros.precio} - Anillado:${libros.anillado} 
-                            - Impresion:${libros.impresion} </li> `;
+                        <li>-${libros.nombre} <br> -Editorial:${libros.editorial} <br> -Páginas:${libros.paginas} <br>-Precio:$${libros.precio}<br>-Impresion:${libros.impresion} </li> `;
                        
                        /*  resultado_libro.appendChild(aladino_img); */
-                     
-                
+             
         }
         /*--Final if--*/
     }
