@@ -28,6 +28,7 @@ const de_como_romeo_se_tranzo_a_julieta_paginas=127;
 
 /*--Comienzan con Letra E--*/
 const el_espejo_africano_paginas=81;
+const el_principito_paginas=71;
 /*--Final E--*/
 
 /*--Comienzan con Letra F--*/

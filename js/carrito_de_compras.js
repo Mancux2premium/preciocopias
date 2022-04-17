@@ -5,7 +5,7 @@ let nombre;
 let anillado="no";
 let clienteName;
 let contador =0;
-var precio_unitario = 1 ;
+
 
 boton_carrito.addEventListener("click", () =>{
       activarAnillado ();
@@ -23,7 +23,7 @@ boton_carrito.addEventListener("click", () =>{
 const comprobacionHojas = (hojas, cantidad) =>{
            
             if(hojas.value<=0){
-               hojas.value=0;
+               hojas.value=1;
             }
 
             if(cantidad.value<=0 ){
@@ -76,14 +76,14 @@ const borrar_carrito = ()=>{
 
 /*--Esta a la escucha del click para llamar a la funcion Borrar_carrito--*/
 eliminar_carrito.addEventListener("click",()=>{
-
+      contador=0;
       borrar_carrito();
   
 })
 /*--Final--*/
 /*--Funcion que agrega los productos al carrito--*/
 const add_carrito =()=>{
-
+  
    contador++
    carrito_copias.innerHTML += `
    <tr>
@@ -91,11 +91,31 @@ const add_carrito =()=>{
    <th scope="col" >${nombre}</th>
    <th scope="col" >${a.value}</th>
    <th scope="col">${numerodejuegos.value}</th>
-   <th scope="col"> $${precio_unitario}</th>
+   <th scope="col">$${precio_initario(result.value,numerodejuegos.value)}</th>
    <th scope="col">${select.options[select.selectedIndex].text}</th>
    <th scope="col">${anillado}</th>
-   <th scope="col" >${totalcarrito = result.value}</th>
+   <th scope="col">$${importe(result.value)}</th>
    </tr>
     `; 
 }
 /*--Final--*/
+
+const precio_initario=(precio,numero_juegos)=>{
+     
+      if(a.value<=1 && numerodejuegos.value<=1 ){
+         precio=5;
+         numero_juegos=1;
+         return parseInt(precio/numero_juegos);
+      }
+
+      return parseInt(precio/numero_juegos);
+}
+
+const importe=(importe)=>{
+
+      if(importe<=0){
+         importe=5;
+         return importe;
+      } 
+   return importe;
+}

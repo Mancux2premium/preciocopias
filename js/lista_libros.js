@@ -121,7 +121,28 @@ const lista_de_libros = [
         paginas:el_espejo_africano_paginas,
         precio:parseInt((el_espejo_africano_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
         impresion:'apaisado'
-        },        
+        },
+
+        {nombre:'El principito',
+         editorial:'Epublibre',
+         paginas:el_principito_paginas,
+         precio:parseInt((el_principito_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+         impresion:'doble faz'
+        }, 
+
+        {nombre:'El principito',
+        editorial:'Epublibre',
+        paginas:el_principito_paginas,
+        precio:parseInt((el_principito_paginas/impresion_apaisado))*precioCompiasDobleFaz+redondeo+abrochado,
+        impresion:'apaisado'
+       }, 
+
+        {nombre:'El principito',
+        editorial:'Epublibre',
+        paginas:el_principito_paginas,
+        precio:parseInt((el_principito_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+        impresion:'apaisado'
+       },         
         /*--Final E--*/
 
          /*--Comienzan con Letra F--*/

@@ -70,6 +70,9 @@ output{
         text-align: center;
 
 }
+output::before{
+        content: "$";
+}
 /*---------------------------------Final -----------------------------------*/
 
 /*--Estilos a las letras que dicen precio por hoja y al anillado--*/

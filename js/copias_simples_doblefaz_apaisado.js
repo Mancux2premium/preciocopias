@@ -13,9 +13,10 @@ function calcular_precio_fotocopias() {
    var select = document.getElementById("select");
    var option = select.options[select.selectedIndex].text;
    var result = document.getElementById("result");
-    
-      activarAnillado();
+    activarAnillado();
+     
 
+  
       /*--Comprueba si la cantida de copias a realizar es menor que 1, de ser asi le asigna un valor por defecto--*/
         if(cantidadDecompias<1){
           cantidadDecompias = cantidad_copias_default;
@@ -31,12 +32,12 @@ function calcular_precio_fotocopias() {
         
         if(activaranillado){
         
-          result.value = "$" + (parseInt(a) * precioCopiasSimples * cantidadDecompias +1 + precioAnillado * cantidadDecompias)
+          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias +1 + precioAnillado * cantidadDecompias)
 
         }else{
 
-          result.value = "$" + (parseInt(a) * precioCopiasSimples * cantidadDecompias +1);}
-        
+          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias +1);}
+
     } 
      /************************************************************************************************************************************** */
       
@@ -47,11 +48,11 @@ function calcular_precio_fotocopias() {
          
           if(activaranillado){
 
-            result.value = "$" + (parseInt(a) /2  *  precioCompiasDobleFaz * cantidadDecompias + precioAnillado * cantidadDecompias)
+            result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * cantidadDecompias + precioAnillado * cantidadDecompias)
 
           }else{
 
-         result.value = "$" + (parseInt(a) /2  *  precioCompiasDobleFaz * cantidadDecompias)
+         result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * cantidadDecompias)
 
             }  ;
         
@@ -69,11 +70,11 @@ function calcular_precio_fotocopias() {
 
         if(activaranillado){
 
-          result.value = "$" + (parseInt(a -1  ) /2  *  precioCompiasDobleFaz * cantidadDecompias + correcionPrecioPorHojaImparDoblefaz  * cantidadDecompias + precioAnillado * cantidadDecompias );
+          result.value =  (parseInt(a -1  ) /2  *  precioCompiasDobleFaz * cantidadDecompias + correcionPrecioPorHojaImparDoblefaz  * cantidadDecompias + precioAnillado * cantidadDecompias );
 
         }else{
 
-       result.value = "$" + (parseInt(a -1) /2  *  precioCompiasDobleFaz * cantidadDecompias + correcionPrecioPorHojaImparDoblefaz  * cantidadDecompias);
+       result.value =  (parseInt(a -1) /2  *  precioCompiasDobleFaz * cantidadDecompias + correcionPrecioPorHojaImparDoblefaz  * cantidadDecompias);
       }
        
       
@@ -85,10 +86,10 @@ function calcular_precio_fotocopias() {
          
           if(activaranillado){
 
-            result.value = "$" + (parseInt(a) /4  * precioCompiasApaisado  * cantidadDecompias + precioAnillado * cantidadDecompias);
+            result.value =  (parseInt(a) /4  * precioCompiasApaisado  * cantidadDecompias + precioAnillado * cantidadDecompias);
           }else{
 
-            result.value = "$" + (parseInt(a) /4  * precioCompiasApaisado  * cantidadDecompias);
+            result.value =  (parseInt(a) /4  * precioCompiasApaisado  * cantidadDecompias);
           }
        
       } 
@@ -106,10 +107,10 @@ function calcular_precio_fotocopias() {
           
             if(activaranillado){
 
-                 result.value = "$" + (parseInt(a /4 -0.25)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
+                 result.value =  (parseInt(a /4 -0.25)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
             }else{  
 
-              result.value = "$" + (parseInt(a /4 -0.25)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
+              result.value = (parseInt(a /4 -0.25)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
 
             }
          
@@ -129,11 +130,11 @@ function calcular_precio_fotocopias() {
             
              if(activaranillado){
 
-              result.value = "$" + (parseInt(a /4 -0.50)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
+              result.value = (parseInt(a /4 -0.50)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
 
              }else{
 
-              result.value = "$" + (parseInt(a /4 -0.50)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
+              result.value =  (parseInt(a /4 -0.50)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
              }
             
           
@@ -152,20 +153,20 @@ function calcular_precio_fotocopias() {
             
             if(activaranillado){
 
-              result.value = "$" + (parseInt(a /4 -0.75)   * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
+              result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
 
             }else{
 
-              result.value = "$" + (parseInt(a /4 -0.75)   * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
+              result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
             }
           
           }
         }
     } 
-    
   }
 
- 
+
+
 
 
 
