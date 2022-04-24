@@ -8,6 +8,7 @@ const aladino_y_la_lampara_maravillosa_paginas=27;
 /*--Comienzan con Letra B--*/
 const biologia2_santillana_paginas=176;
 const biologia3_Santillana_paginas=158;
+const biologia3_Sm_nodos_paginas=218;
 /*--Final B--*/
 
 /*--Comienzan con Letra C--*/
@@ -47,6 +48,7 @@ const historia1_mandioca_paginas=162;
 const historia2_mandioca_paginas=240;
 const historia2_santillana_paginas=203;
 const historia3_santillana_paginas=233;
+const historia3_estrada_paginas=242;
 /*--Final H--*/
 
 /*--Comienzan con Letra I--*/

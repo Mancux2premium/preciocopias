@@ -25,7 +25,14 @@ const lista_de_libros = [
           editorial:'Santillana ',
           paginas:biologia3_Santillana_paginas,
           precio:(biologia3_Santillana_paginas/impresion_doble_faz)*precioCompiasDobleFaz+precio_anillado+anillado ,
-          impresion:'doble faz'},    
+          impresion:'doble faz'},
+          
+        {nombre:'Biologia 3°',
+         editorial:'Sm Nodos',
+         paginas:biologia3_Sm_nodos_paginas,
+         precio:(biologia3_Sm_nodos_paginas/impresion_doble_faz)*precioCompiasDobleFaz+precio_anillado+anillado,
+         impresion:'doble faz',
+       }, 
          /*--Final B--*/
 
         /*--Comienzan con Letra C--*/
@@ -211,7 +218,14 @@ const lista_de_libros = [
          paginas:historia3_santillana_paginas,
          precio:parseInt((historia3_santillana_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
          impresion:'doble faz',
-        },                     
+        },
+
+        {nombre:'Historia 3°',
+         editorial:'Estrada',
+         paginas:historia3_estrada_paginas,
+         precio:parseInt((historia3_estrada_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+anillado,
+         impresion:'doble faz',
+        },                       
         /*--Final H--*/
 
         /*--Comienzan con Letra I--*/               
