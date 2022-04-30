@@ -1,6 +1,7 @@
 const carrito_copias = document.querySelector("#carrito_copias");
 const boton_carrito = document.querySelector("#add__carrito");
 const eliminar_carrito = document.querySelector("#borrar_carrito");
+const color_tabla_carrito_de_compra = document.querySelector("#color_tabla_carrito_de_compra");
 let nombre;
 let anillado="no";
 let clienteName;
@@ -9,9 +10,9 @@ let contador =0;
 
 boton_carrito.addEventListener("click", () =>{
       activarAnillado ();
-      if(activaranillado){
+     /*  if(activaranillado){
          nombre_del_documento();
-      }
+      } */
       anilladoSianilladoNO();
       comprobacionHojas(a,numerodejuegos);
       add_carrito();
@@ -83,8 +84,9 @@ eliminar_carrito.addEventListener("click",()=>{
 /*--Final--*/
 /*--Funcion que agrega los productos al carrito--*/
 const add_carrito =()=>{
-  
-   contador++
+   
+ 
+   contador++;
    carrito_copias.innerHTML += `
    <tr>
    <th scope="col" >${clienteName,contador}</th>
@@ -97,6 +99,7 @@ const add_carrito =()=>{
    <th scope="col">$${importe(result.value)}</th>
    </tr>
     `; 
+  
 }
 /*--Final--*/
 
@@ -119,3 +122,4 @@ const importe=(importe)=>{
       } 
    return importe;
 }
+

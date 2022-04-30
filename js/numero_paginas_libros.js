@@ -15,6 +15,9 @@ const biologia3_Sm_nodos_paginas=218;
 const caro_dice_paginas=242;
 const casa_de_muñecas_paginas=132;
 const cereminia_secreta_paginas=69;
+const ciencias_naturales1_santillana_paginas=215;
+const ciencias_sociales1_santillana_paginas=248;
+const ciudadania1_sm_paginas=159;
 const ciudadania1_santillana_paginas=128;
 const ciudadania1_estrada_paginas=144;
 const ciudadania2_santillana_paginas=145;
@@ -41,6 +44,7 @@ const fisica_quimica3_proyecto_nodos_paginas=200;
 /*--Comienzan con Letra G--*/
 const geografia2_santillana_paginas=210;
 const geografia3_estrada_paginas=239;
+const geografia4_estrada_paginas =225;
 /*--Final G--*/
 
 /*--Comienzan con Letra H--*/
@@ -95,6 +99,7 @@ const rebelion_en_la_granja_pagina=110;
 /*--Final S--*/
 
 /*--Comienzan con Letra T--*/
+const trabajo_y_ciudadania_maipue_paginas =142; 
 /*--Final T--*/
 
 /*--Comienzan con Letra W--*/

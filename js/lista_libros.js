@@ -42,6 +42,31 @@ const lista_de_libros = [
           precio: parseInt((caro_dice_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado +redondeo+anillado,
           impresion:'apaisado',
         },
+
+        {nombre:'Ciencias Naturales 1°',
+         editorial:'Santillana',
+         paginas:ciencias_naturales1_santillana_paginas,
+         precio:parseInt((ciencias_naturales1_santillana_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+         impresion:'doble faz'},
+
+        {nombre:'Ciencias Sociales 1°',
+         editorial:'Santillana',
+         paginas:ciencias_sociales1_santillana_paginas,
+         precio:(ciencias_sociales1_santillana_paginas/impresion_doble_faz)*precioCompiasDobleFaz+precio_anillado+anillado,
+         impresion:'doble faz'},
+
+         {nombre:'Ciudadania 1°',
+          editorial:'Sm',
+          paginas: ciudadania1_sm_paginas,
+          precio:parseInt(( ciudadania1_sm_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+          impresion:'doble faz'},
+
+          {nombre:'Ciudadania 1°',
+          editorial:'Sm',
+          paginas: ciudadania1_sm_paginas,
+          precio:parseInt(( ciudadania1_sm_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+          impresion:'apaisado'},
+
          {nombre:'Ciudadania 1°',
           editorial:'Santillana',
           paginas:ciudadania1_santillana_paginas,
@@ -138,17 +163,17 @@ const lista_de_libros = [
         }, 
 
         {nombre:'El principito',
-        editorial:'Epublibre',
-        paginas:el_principito_paginas,
-        precio:parseInt((el_principito_paginas/impresion_apaisado))*precioCompiasDobleFaz+redondeo+abrochado,
-        impresion:'apaisado'
+         editorial:'Epublibre',
+         paginas:el_principito_paginas,
+         precio:parseInt((el_principito_paginas/impresion_apaisado))*precioCompiasDobleFaz+redondeo+abrochado,
+         impresion:'apaisado'
        }, 
 
         {nombre:'El principito',
-        editorial:'Epublibre',
-        paginas:el_principito_paginas,
-        precio:parseInt((el_principito_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
-        impresion:'apaisado'
+         editorial:'Epublibre',
+         paginas:el_principito_paginas,
+         precio:parseInt((el_principito_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+         impresion:'apaisado'
        },         
         /*--Final E--*/
 
@@ -188,7 +213,21 @@ const lista_de_libros = [
          paginas:geografia3_estrada_paginas,
          precio:parseInt((geografia3_estrada_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
          impresion:'doble faz',
-         },         
+         },
+         
+         {nombre:'Geografia 4 ',
+          editorial:'Estrada ',
+          paginas:geografia4_estrada_paginas,
+          precio:parseInt((geografia4_estrada_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+          impresion:'doble faz',
+         },  
+
+         {nombre:'Geografia 4 ',
+          editorial:'Estrada ',
+          paginas:geografia4_estrada_paginas,
+          precio:parseInt((geografia4_estrada_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+          impresion:'apaisado',
+         },  
         /*--Final G--*/
 
         /*--Comienzan con Letra H--*/
@@ -225,7 +264,13 @@ const lista_de_libros = [
          paginas:historia3_estrada_paginas,
          precio:parseInt((historia3_estrada_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+anillado,
          impresion:'doble faz',
-        },                       
+        },
+        {nombre:'Hola buen día, te quería avisar que ya esta el cuadernillo, avísame cuando pasas 👌',
+         editorial:'Hola buen día, te quería avisar que ya estan los cuadernillos, avísame cuando pasas 👌',
+         paginas:'no aplica',
+         precio:'no aplica',
+         impresion:'no aplica',
+       },                        
         /*--Final H--*/
 
         /*--Comienzan con Letra I--*/               
@@ -338,7 +383,19 @@ const lista_de_libros = [
         /*--Comienzan con Letra S--*/                    
         /*--Final S--*/
 
-        /*--Comienzan con Letra T--*/                      
+        /*--Comienzan con Letra T--*/   
+        {nombre:'Trabajo y Ciudadania',
+         editorial:'Maipue',
+         paginas:trabajo_y_ciudadania_maipue_paginas,
+         precio:(trabajo_y_ciudadania_maipue_paginas/impresion_doble_faz)*precioCompiasDobleFaz+precio_anillado+anillado,
+         impresion:'doble faz',
+       },
+       {nombre:'Trabajo y Ciudadania',
+        editorial:'Maipue',
+        paginas:trabajo_y_ciudadania_maipue_paginas,
+        precio:parseInt((trabajo_y_ciudadania_maipue_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+1+anillado,
+        impresion:'apaisado',
+      },                   
         /*--Final T--*/
 
         /*--Comienzan con Letra U--*/                   
