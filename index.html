@@ -1,80 +1,18 @@
-<!DOCTYPE html  >
-<html lang="es">
-    <head>
-       <link   rel="shortcut icon" href="img/logo.ico">
-       <link rel="stylesheet" href="css/index.css">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta charset="UTF-8"/>
-       <script src="js/activar_desactivar_anillado.js"></script>
-        <script src="js/copias_simples_doblefaz_apaisado.js"></script>
-  
-       
-        <title>Precio Fotocopias</title>
-    </head>
-    <body >
-        <div class="flex-container">
-            <header class="flex-item__titulo-principal">
-               <a class="estilos_logo estilos_equiqueta_a" href="libros.html"><img class="estilos_logo" src="img/logo.ico" alt=""></a>
-                        <h1 >COPIAS</h1>
-                    <img class="estilos_logo" src="img/logo.ico" alt="">
-            </header>
-            <label class="flex-container__label" oninput="calcular_precio_fotocopias()">
-                <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" min="1" >
-                <input  class="estilo-de-contenido-imput-option-label" id="numerodejuegos" type="number" placeholder="Numero de juegos" value="" min="1" >
-                    <select class="estilo-de-contenido-imput-option-label" id="select">
-                        <option>Simples</option>
-                        <option>Doble faz</option>
-                        <option>Apaisado</option>
-                    </select>
-                    <select class="estilo-de-contenido-imput-option-label">
-                        <option>Hoja A4</option>
-                    </select>
-                    
-                    <!--Seccion del logo de interrogacion------------------------------------------------------------------------------->
-                <!-- <div class="logoinfo ">    -->
-                    <!-- <i class="logo_ayuda" id="boton_ayuda" onclick="boton_ayuda()" title="Click"></i> -->
-                       
-              <!--   </div>  -->
-                    <!----------------------------------------Final--------------------------------------------------------------------->     
-                <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja" for="" id="precioPorHoja"  value="">Precio por hoja $4  </label> 
-                <label for="activarAnillados"class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" >
-                <input type="checkbox" class="activar-anillado-margen" id="activarAnillados" ><label for="activarAnillados" id="anillado__togle" class="anillado-pointer"></label>Anillado</label>
-            </label>
-                                        
-                <p class="precioFinal" >Precio Final</p>
-         
-                <output class="precio_final " id="result" >0</output>    
-        
-
-        </div>
-        <div class="contenedor_principal_botones_carritos_de_compra">       
-            <button id="add__carrito" class="boton_carrito_compras">Agregar al carrrito</button>
-            <button id ="borrar_carrito"class="boton_carrito_compras borrar_carrito">Vaciar carrito</button>
-        </div>
-        <div class="contenedor-principal-tabla-copias" >
-
-                <table id="carrito_copias" class="estilos-tabla" >
-                    <thead>
-                        <tr>
-                         <th scope="col" >#</th>
-                         <th scope="col" >DETALLE</th>
-                          <th scope="col" >HOJAS</th>
-                          <th scope="col">JUEGOS</th>
-                          <th scope="col">P.UNIT</th>
-                          <th scope="col">IMPRESION</th>
-                          <th scope="col">ANILLADO</th>
-                          <th scope="col" >IMPORTE:</th>
-                        </tr>
-                        <tbody id=""></tbody>
-                </table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link   rel="shortcut icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/inicio.css">
+    <title>Mancux2</title>
+</head>
+<body>
+        <div class="contenedor_principal_opciones"> 
+        <div class="conetenedor_opciones"><a href="copias.html">COPIAS</a></div>
+        <div class="conetenedor_opciones"><a href="libros.html">LIBROS</a></div>
             
         </div>
-      
-        <script src="js/carrito_de_compras.js"></script>
-    </body>
-    <footer></footer>
+</body>
 </html>

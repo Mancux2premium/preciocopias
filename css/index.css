@@ -331,11 +331,13 @@ th{
                 align-items: center;
                 align-content: center; 
        /*        border: 2px solid blue;  */
-                 width: 10rem; 
+                 width: 6rem;
+                 font-size: 12px; 
         }
         .estilos-tabla{
                min-width: fit-content;
-        }       
+        }   
+
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -394,5 +396,17 @@ th{
                  background-color:#1a1a1a;
          }
  /*---------------------------------Final -----------------------------------*/
+ th{
+        display: flex;
+        align-items: center;
+        align-content: center; 
+/*        border: 2px solid blue;  */
+         width: 6rem;
+         font-size: 12px; 
+}
+.estilos-tabla{
+       min-width: fit-content;
+}   
+
      
 }
