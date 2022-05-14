@@ -45,6 +45,8 @@ const fisica_quimica3_proyecto_nodos_paginas=200;
 const geografia2_santillana_paginas=210;
 const geografia3_estrada_paginas=239;
 const geografia4_estrada_paginas =225;
+const geografia5_estrada_paginas =240;
+const geografia6_ceraldi_paginas =109;
 /*--Final G--*/
 
 /*--Comienzan con Letra H--*/

@@ -227,7 +227,21 @@ const lista_de_libros = [
           paginas:geografia4_estrada_paginas,
           precio:parseInt((geografia4_estrada_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
           impresion:'apaisado',
-         },  
+         },
+
+         {nombre:'Geografia 5 ',
+         editorial:'Estrada ',
+         paginas:geografia5_estrada_paginas,
+         precio:(geografia5_estrada_paginas/impresion_doble_faz)*precioCompiasDobleFaz+precio_anillado+anillado,
+         impresion:'Doble faz',
+        },
+
+         {nombre:'Geografia 6 ',
+          editorial:'Ceraldi',
+          paginas:geografia6_ceraldi_paginas,
+          precio:parseInt((geografia6_ceraldi_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+          impresion:'Doble faz',
+        },  
         /*--Final G--*/
 
         /*--Comienzan con Letra H--*/
