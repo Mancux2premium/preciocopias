@@ -32,6 +32,7 @@ const de_como_romeo_se_tranzo_a_julieta_paginas=127;
 
 /*--Comienzan con Letra E--*/
 const el_espejo_africano_paginas=81;
+const el_diablo_en_la_botella_paginas=24;
 const el_principito_paginas=71;
 /*--Final E--*/
 
@@ -53,8 +54,10 @@ const geografia6_ceraldi_paginas =109;
 const historia1_mandioca_paginas=162;
 const historia2_mandioca_paginas=240;
 const historia2_santillana_paginas=203;
+const historia3_mandioca_paginas=240;
 const historia3_santillana_paginas=233;
 const historia3_estrada_paginas=242;
+const historia4_santillana_paginas=252;
 /*--Final H--*/
 
 /*--Comienzan con Letra I--*/

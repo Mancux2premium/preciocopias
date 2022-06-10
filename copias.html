@@ -3,6 +3,7 @@
     <head>
        <link   rel="shortcut icon" href="img/logo.ico">
        <link rel="stylesheet" href="css/copias.css">
+       <link rel="stylesheet" href="css/modos-de-impresion.css">
        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
@@ -11,12 +12,13 @@
        <meta charset="UTF-8"/>
        <script src="js/activar_desactivar_anillado.js"></script>
         <script src="js/copias_simples_doblefaz_apaisado.js"></script>
+        <script src="js/modo_impresion_msj.js"></script>
   
        
         <title>Precio Fotocopias</title>
     </head>
-    <body >
-        <div class="flex-container">
+    <body id="body">
+        <div class="flex-container" id="contenedor-principal-degradado">
             <header class="flex-item__titulo-principal">
                <a class="estilos_logo estilos_equiqueta_a" href="libros.html"><img class="estilos_logo" src="img/logo.ico" alt=""></a>
                         <h1 >COPIAS</h1>
@@ -30,6 +32,18 @@
                         <option>Doble faz</option>
                         <option>Apaisado</option>
                     </select>
+                    <p onclick="modo_impresion_msj()">ayuda modos de impresion</p>
+                    <div  onclick="modo_impresion_msj()" id="ayuda_opciones_de_impresion" class="modos-de-impresion">
+                        <div class="contenedor-formato-impresiones">
+                            
+                            <img class="estilos-imagenes-formato-de-impresion simple"src="img/formato-simple-faz.PNG" alt="">
+                           
+                            <img class="estilos-imagenes-formato-de-impresion doble-faz"src="img/formato- doble-faz.PNG" alt="">
+                          
+                            <img class="estilos-imagenes-formato-de-impresion apaisado"src="img/formato- apaisado.PNG" alt="">
+                        </div>
+
+                    </div>
                     <select class="estilo-de-contenido-imput-option-label">
                         <option>Hoja A4</option>
                     </select>
@@ -42,7 +56,7 @@
                     <!----------------------------------------Final--------------------------------------------------------------------->     
                 <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja" for="" id="precioPorHoja"  value="">Precio por hoja $4  </label> 
                 <label for="activarAnillados"class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" >
-                <input type="checkbox" class="activar-anillado-margen" id="activarAnillados" ><label for="activarAnillados" id="anillado__togle" class="anillado-pointer"></label>Anillado</label>
+                <input type="checkbox" class="activar-anillado-margen" id="activarAnillados" ><label for="activarAnillados" id="anillado__togle" class="anillado-pointer"></label>Anillado $150</label>
             </label>
                                         
                 <p class="precioFinal" >Precio Final</p>

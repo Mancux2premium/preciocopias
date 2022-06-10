@@ -32,11 +32,11 @@ function calcular_precio_fotocopias() {
         
         if(activaranillado){
         
-          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias +1 + precioAnillado * cantidadDecompias)
+          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias + precioAnillado * cantidadDecompias)
 
         }else{
 
-          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias +1);}
+          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias );}
 
     } 
      /************************************************************************************************************************************** */

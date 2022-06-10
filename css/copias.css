@@ -201,6 +201,7 @@ output::before{
 /*         border-radius: 1em; */
         box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
         cursor:pointer;
+        display: none;
 
 }
 .boton_carrito_compras:hover{
@@ -215,7 +216,7 @@ output::before{
 /*--Estilos del contenedor principal del carrito de compras--*/
 .contenedor-principal-tabla-copias{
 
-        display: block;
+        display: none;
         background-color: rgb(241, 241, 241); 
         box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 15%); 
         width: 98%;
