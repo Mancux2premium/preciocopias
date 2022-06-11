@@ -1,0 +1,50 @@
+.modos-de-impresion{
+    position: absolute;
+    top: 100px;
+    left: auto;
+    width: 40vh;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 3px 13px 1px rgb(0, 0, 0 / 9%);
+    display: none;
+    z-index: 1;
+  }
+
+  .contenedor-formato-impresiones{
+    display: flex;
+    flex-direction:column;
+    height: auto;
+    width: auto;
+    align-items: center;
+    align-content: center;
+    position: relative;
+  }
+
+.estilos-imagenes-formato-de-impresion{
+      margin-top:20px;
+}
+
+.estilos-imagenes-formato-de-impresion:nth-child(1){
+    width: 33%;
+    height: 13%;
+
+}
+.estilos-imagenes-formato-de-impresion:nth-child(2){
+  width: 33%;
+  height: 13%;
+
+}
+.estilos-imagenes-formato-de-impresion:nth-child(3){
+  width: 33%;
+  height: 13%;
+
+}
+.estilo-ayuda-modos-de-impresion{
+  color:rgb(252, 0, 0);
+  font-weight: bold;
+
+}
+

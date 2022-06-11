@@ -154,6 +154,27 @@ const lista_de_libros = [
         precio:parseInt((el_espejo_africano_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
         impresion:'apaisado'
         },
+        /*--Comienzan con Letra E--*/
+        {nombre:'El diablo en la botella',
+         editorial:'Clasicos',
+         paginas:el_diablo_en_la_botella_paginas,
+         precio:(el_diablo_en_la_botella_paginas/impresion_doble_faz)*precioCompiasDobleFaz+precio_anillado+anillado,
+         impresion:'doble faz'
+        },  
+        /*--Comienzan con Letra E--*/
+        {nombre:'El diablo en la botella',
+         editorial:'Clasicos',
+         paginas:el_diablo_en_la_botella_paginas,
+         precio:(el_diablo_en_la_botella_paginas/impresion_doble_faz)*precioCompiasDobleFaz+abrochado,
+         impresion:'doble faz'
+        },  
+                /*--Comienzan con Letra E--*/
+        {nombre:'El espejo Africano',
+         editorial:'Sm',
+         paginas:el_espejo_africano_paginas,
+         precio:parseInt((el_espejo_africano_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+         impresion:'doble faz'
+        },  
 
         {nombre:'El principito',
          editorial:'Epublibre',
@@ -227,7 +248,21 @@ const lista_de_libros = [
           paginas:geografia4_estrada_paginas,
           precio:parseInt((geografia4_estrada_paginas/impresion_apaisado))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
           impresion:'apaisado',
-         },  
+         },
+
+         {nombre:'Geografia 5 ',
+         editorial:'Estrada ',
+         paginas:geografia5_estrada_paginas,
+         precio:(geografia5_estrada_paginas/impresion_doble_faz)*precioCompiasDobleFaz+precio_anillado+anillado,
+         impresion:'Doble faz',
+        },
+
+         {nombre:'Geografia 6 ',
+          editorial:'Ceraldi',
+          paginas:geografia6_ceraldi_paginas,
+          precio:parseInt((geografia6_ceraldi_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
+          impresion:'Doble faz',
+        },  
         /*--Final G--*/
 
         /*--Comienzan con Letra H--*/
@@ -253,6 +288,13 @@ const lista_de_libros = [
         },
 
         {nombre:'Historia 3°',
+        editorial:'Mandioca',
+        paginas:historia3_mandioca_paginas,
+        precio:(historia3_mandioca_paginas/impresion_doble_faz)*precioCompiasDobleFaz+precio_anillado+anillado,
+        impresion:'doble faz',
+       },
+
+        {nombre:'Historia 3°',
          editorial:'Santillana',
          paginas:historia3_santillana_paginas,
          precio:parseInt((historia3_santillana_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+redondeo+anillado,
@@ -265,7 +307,22 @@ const lista_de_libros = [
          precio:parseInt((historia3_estrada_paginas/impresion_doble_faz))*precioCompiasDobleFaz+precio_anillado+anillado,
          impresion:'doble faz',
         },
-        {nombre:'Hola buen día, te quería avisar que ya esta el cuadernillo, avísame cuando pasas 👌',
+
+        {nombre:'Historia 4°',
+        editorial:'Santillana',
+        paginas:historia4_santillana_paginas,
+        precio:(historia4_santillana_paginas/impresion_doble_faz)*precioCompiasDobleFaz+precio_anillado+anillado,
+        impresion:'doble faz',
+       },
+
+       {nombre:'Historia 4°',
+       editorial:'Santillana',
+       paginas:historia4_santillana_paginas,
+       precio:(historia4_santillana_paginas/impresion_apaisado)*precioCompiasDobleFaz+precio_anillado+anillado,
+       impresion:'apaisado',
+      },
+
+       {nombre:'Hola buen día, te quería avisar que ya esta el cuadernillo, avísame cuando pasas 👌',
          editorial:'Hola buen día, te quería avisar que ya estan los cuadernillos, avísame cuando pasas 👌',
          paginas:'no aplica',
          precio:'no aplica',

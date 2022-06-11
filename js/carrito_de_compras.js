@@ -2,7 +2,7 @@ const carrito_copias = document.querySelector("#carrito_copias");
 const boton_carrito = document.querySelector("#add__carrito");
 const eliminar_carrito = document.querySelector("#borrar_carrito");
 const color_tabla_carrito_de_compra = document.querySelector("#color_tabla_carrito_de_compra");
-let nombre;
+let nombre="copias";
 let anillado="no";
 let clienteName;
 let contador =0;
