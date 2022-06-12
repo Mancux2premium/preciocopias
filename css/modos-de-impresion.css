@@ -42,4 +42,13 @@
   height: 13%;
 
 }
+.estilo-ayuda-modos-de-impresion{
+  color:rgb(252, 0, 0);
+  font-weight: bold;
+
+}
+
+.contador-visitas{
+  display:none;
+}
 
