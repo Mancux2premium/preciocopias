@@ -48,6 +48,10 @@
 
 }
 
+.estilo-ayuda-modos-de-impresion:hover{
+  cursor: pointer;
+}
+
 .contador-visitas{
   display:none;
 }
