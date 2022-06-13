@@ -1,4 +1,5 @@
 
+
 function calcular_precio_fotocopias() {
    var a = document.getElementById("a").value;
    var cantidadDecompias = document.getElementById("numerodejuegos").value;

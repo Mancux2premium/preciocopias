@@ -10,11 +10,12 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta charset="UTF-8"/>
+   
        <script src="js/activar_desactivar_anillado.js"></script>
         <script src="js/copias_simples_doblefaz_apaisado.js"></script>
         <script src="js/modo_impresion_msj.js"></script>
-  
        
+
         <title>Precio Fotocopias</title>
     </head>
     <body id="body">
@@ -29,6 +30,17 @@
             </header>
             <label class="flex-container__label" oninput="calcular_precio_fotocopias()">
                 <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" min="1" >
+                                   
+                <input type="file" id="file">
+                
+                                <!--CODIGO DE PUERBAAAAAAA
+                                    
+                <input id="pdf" type="file" name="pdffile" required >
+                <embed id="vistaPrevia" type="application/pdf" width="400" height="400">
+                    <input type="file">
+<button id="myBtn">Try it</button>
+<pre id="file"></pre>
+-->
                 <input  class="estilo-de-contenido-imput-option-label" id="numerodejuegos" type="number" placeholder="Numero de juegos" value="" min="1" >
                     <select class="estilo-de-contenido-imput-option-label" id="select">
                         <option>Simples</option>
@@ -88,9 +100,10 @@
                         </tr>
                         <tbody id=""></tbody>
                 </table>
-            
+               
         </div>
-      
+   
+        <script src="js/lector_hojas_pdf.js"></script>
         <script src="js/carrito_de_compras.js"></script>
     </body>
     <footer></footer>
