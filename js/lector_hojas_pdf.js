@@ -40,6 +40,7 @@ fileReader.addEventListener('load', (e) =>{
 
 
     console.log(result.value=(parseInt(a) * precioCopiasSimples));
+    console.log(file.name + " Pagina: " + result.value);
   
 })
 })
