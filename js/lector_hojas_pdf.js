@@ -21,6 +21,8 @@ document.getElementById("myBtn").addEventListener("click", function() {
   });
 */
 
+function pdfSimpleFaz(){
+
 const fileInput = document.getElementById('file')
 let SubirPDF = document.getElementById('subirPDF')
 const text = document.getElementById('text')
@@ -42,7 +44,7 @@ fileReader.addEventListener('load', (e) =>{
    result.value=(parseInt(a) * precioCopiasSimples)
 
     //console.log(result.value=(parseInt(a) * precioCopiasSimples));
-    console.log(file.name + " Pagina: " + result.value);
+   // console.log(file.name + " Pagina: " + result.value);
     SubirPDF.innerHTML =' ';
     for(i=0;i<20;i++){
       
@@ -51,5 +53,42 @@ fileReader.addEventListener('load', (e) =>{
   
 })
 })
+}
+
+function pdfDobleFaz(){
+
+  const fileInput = document.getElementById('file')
+  let SubirPDF = document.getElementById('subirPDF')
+  const text = document.getElementById('text')
+  var precioCompiasDobleFaz = 5;
+  
+  fileInput.addEventListener('change',(e) =>{
+  
+  const file = e.target.files[0];
+  const fileReader = new FileReader();
+  fileReader.readAsBinaryString(file);
+  fileReader.addEventListener('load', (e) =>{
+  
+    var cantidad_hojas_del_pdf_subido_por_el_usuario =  fileReader.result.match(/\/Type[\s*]*\/Page[^s]/g); 
+    //console.log('Number of Pages:',cantidad_hojas_del_pdf_subido_por_el_usuario);
+    
+      a = document.getElementById("a").value= parseInt(cantidad_hojas_del_pdf_subido_por_el_usuario.length);
+      
+     result.value=(parseInt(a/2) * precioCompiasDobleFaz)
+  
+      //console.log(result.value=(parseInt(a) * precioCopiasSimples));
+     // console.log(file.name + " Pagina: " + result.value);
+      SubirPDF.innerHTML =' ';
+      for(i=0;i<20;i++){
+        
+        SubirPDF.innerHTML +=file.name[i];
+      }
+    
+  })
+  })
+  }
+
+
+  
 
      
