@@ -22,6 +22,7 @@ document.getElementById("myBtn").addEventListener("click", function() {
 */
 
 const fileInput = document.getElementById('file')
+let SubirPDF = document.getElementById('subirPDF')
 const text = document.getElementById('text')
 var precioCopiasSimples=4;
 var precioCompiasDobleFaz = 5;
@@ -36,12 +37,19 @@ fileReader.addEventListener('load', (e) =>{
   var cantidad_hojas_del_pdf_subido_por_el_usuario =  fileReader.result.match(/\/Type[\s*]*\/Page[^s]/g); 
   console.log('Number of Pages:',cantidad_hojas_del_pdf_subido_por_el_usuario);
   
-  var a = document.getElementById("a").value= parseInt(cantidad_hojas_del_pdf_subido_por_el_usuario.length);
+    a = document.getElementById("a").value= parseInt(cantidad_hojas_del_pdf_subido_por_el_usuario.length);
 
+   result.value=(parseInt(a) * precioCopiasSimples)
 
-    console.log(result.value=(parseInt(a) * precioCopiasSimples));
+    //console.log(result.value=(parseInt(a) * precioCopiasSimples));
     console.log(file.name + " Pagina: " + result.value);
+    SubirPDF.innerHTML =' ';
+    for(i=0;i<20;i++){
+      
+      SubirPDF.innerHTML +=file.name[i];
+    }
   
 })
 })
+
      
