@@ -1,0 +1,31 @@
+.botonSumarRestarJuegos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color:#19191a;
+    cursor: pointer;
+    color: aliceblue;
+    margin: 0 12px;
+    
+}
+.contenedorBotoneraSumarRestarJuegos{
+
+    display: flex;
+    text-align: center;
+    color:rgb(27, 28, 29);
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5em;
+  
+}
+
+.sumarJuego:hover{
+    background-color: #41AD40;
+}
+
+.RestarJuego:hover{
+    background-color: brown;
+}
