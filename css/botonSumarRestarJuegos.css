@@ -8,7 +8,7 @@
     cursor: pointer;
     color: aliceblue;
     margin: 0 12px;
-    
+
 }
 .contenedorBotoneraSumarRestarJuegos{
 
@@ -19,7 +19,7 @@
     justify-content: center;
     font-weight: bold;
     font-size: 1.5em;
-  
+    position: relative;
 }
 
 .sumarJuego:hover{
@@ -27,5 +27,18 @@
 }
 
 .RestarJuego:hover{
-    background-color: brown;
+    background-color: rgb(202, 21, 21);
+}
+
+.textoCantidadJuegos{
+    position: absolute;
+    top: -1.7rem;
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px){
+    .contenedorBotoneraSumarRestarJuegos{
+        margin-top: 16px;
+    }
 }
