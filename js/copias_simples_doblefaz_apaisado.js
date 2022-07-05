@@ -1,12 +1,12 @@
 
 
 function calcular_precio_fotocopias() {
-   var a = document.getElementById("a").value;
-   var cantidadDecompias = document.getElementById("numerodejuegos").value;
+  const a = document.getElementById("a").value;
+   //var cantidadDecompias = document.getElementById("numerodejuegos").value;
    let precioCopiasSimples = 4;
    let precioCompiasDobleFaz = 5;
    var precioCompiasApaisado = 5; 
-   var cantidad_copias_default =1;
+   //var cantidad_copias_default =1;
    var correcionPrecioPorHojaImparDoblefaz= 4;
    var correcionPrecionporHojaImparApaisado =4;
    var maximascopiasPermitidasaimprimir = 9000;
@@ -19,25 +19,26 @@ function calcular_precio_fotocopias() {
 
   
       /*--Comprueba si la cantida de copias a realizar es menor que 1, de ser asi le asigna un valor por defecto--*/
-        if(cantidadDecompias<1){
-          cantidadDecompias = cantidad_copias_default;
+        if(spanCantidadJuegos.value <1){
+            spanCantidadJuegos.value=1;
         }
         /*--Final--*/
+
         
      /************************************************************************************************************************************** */
       
       //Al ser copias simples, no es necesario descontar nada, solo se le agrega un +1 por el valor de la primera impresion.
      if (option == "Simples") {
-      pdfSimpleFaz();
+        pdfSimpleFaz();
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
         
         if(activaranillado){
         
-          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias + precioAnillado * cantidadDecompias)
+          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias + precioAnillado * spanCantidadJuegos.values)
 
         }else{
 
-          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias );}
+          result.value =  (parseInt(a) * precioCopiasSimples * spanCantidadJuegos.value );}
 
     } 
      /************************************************************************************************************************************** */
@@ -49,11 +50,11 @@ function calcular_precio_fotocopias() {
          
           if(activaranillado){
 
-            result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * cantidadDecompias + precioAnillado * cantidadDecompias)
+            result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value)
 
           }else{
 
-         result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * cantidadDecompias)
+         result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value)
 
             }  ;
         
@@ -71,11 +72,11 @@ function calcular_precio_fotocopias() {
 
         if(activaranillado){
 
-          result.value =  (parseInt(a -1  ) /2  *  precioCompiasDobleFaz * cantidadDecompias + correcionPrecioPorHojaImparDoblefaz  * cantidadDecompias + precioAnillado * cantidadDecompias );
+          result.value =  (parseInt(a -1  ) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.values + correcionPrecioPorHojaImparDoblefaz  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value );
 
         }else{
 
-       result.value =  (parseInt(a -1) /2  *  precioCompiasDobleFaz * cantidadDecompias + correcionPrecioPorHojaImparDoblefaz  * cantidadDecompias);
+       result.value =  (parseInt(a -1) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + correcionPrecioPorHojaImparDoblefaz  * spanCantidadJuegos.value);
       }
        
       
@@ -87,10 +88,10 @@ function calcular_precio_fotocopias() {
          
           if(activaranillado){
 
-            result.value =  (parseInt(a) /4  * precioCompiasApaisado  * cantidadDecompias + precioAnillado * cantidadDecompias);
+            result.value =  (parseInt(a) /4  * precioCompiasApaisado  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
           }else{
 
-            result.value =  (parseInt(a) /4  * precioCompiasApaisado  * cantidadDecompias);
+            result.value =  (parseInt(a) /4  * precioCompiasApaisado  * spanCantidadJuegos.value);
           }
        
       } 
@@ -108,10 +109,10 @@ function calcular_precio_fotocopias() {
           
             if(activaranillado){
 
-                 result.value =  (parseInt(a /4 -0.25)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
+                 result.value =  (parseInt(a /4 -0.25)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
             }else{  
 
-              result.value = (parseInt(a /4 -0.25)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
+              result.value = (parseInt(a /4 -0.25)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value);
 
             }
          
@@ -131,11 +132,11 @@ function calcular_precio_fotocopias() {
             
              if(activaranillado){
 
-              result.value = (parseInt(a /4 -0.50)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
+              result.value = (parseInt(a /4 -0.50)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado *spanCantidadJuegos.value);
 
              }else{
 
-              result.value =  (parseInt(a /4 -0.50)  * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
+              result.value =  (parseInt(a /4 -0.50)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value);
              }
             
           
@@ -154,11 +155,11 @@ function calcular_precio_fotocopias() {
             
             if(activaranillado){
 
-              result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias + precioAnillado * cantidadDecompias);
+              result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
 
             }else{
 
-              result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * cantidadDecompias  + correcionPrecionporHojaImparApaisado * cantidadDecompias);
+              result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value);
             }
           
           }

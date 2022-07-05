@@ -7,11 +7,13 @@ spanCantidadJuegos.value = parseInt(1);
 function SumarcantidadJuegos (){
 
    spanCantidadJuegos.value ++;
+   calcular_precio_fotocopias();
 }
 
 function RestarcantidadJuegos (){
 
   spanCantidadJuegos.value --;
+  calcular_precio_fotocopias();
 }
 
 botonSumarJuego.addEventListener("click", SumarcantidadJuegos);
