@@ -30,7 +30,7 @@ function calcular_precio_fotocopias() {
       
       //Al ser copias simples, no es necesario descontar nada, solo se le agrega un +1 por el valor de la primera impresion.
      if (option == "Simples") {
-        pdfSimpleFaz();
+       
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
         
         if(activaranillado){
@@ -47,7 +47,7 @@ function calcular_precio_fotocopias() {
       
       //El numero ingresado es par, no es necesario descontar nada.
       if (option == "Doble faz") {
-        pdfDobleFaz();
+       
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
          
           if(activaranillado){
