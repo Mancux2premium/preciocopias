@@ -45,9 +45,9 @@
                 
                 <div class="contenedorBotoneraSumarRestarJuegos">
                     <span class="textoCantidadJuegos">Cantidad</span>
-                    <div class="botonSumarRestarJuegos RestarJuego">-</div>
-                    <span>1</span>
-                    <div class="botonSumarRestarJuegos sumarJuego">+</div>
+                    <div class="botonSumarRestarJuegos RestarJuego" id="botonRestarJuego">-</div>
+                    <output id="spanCantidadJuegos"></output>
+                    <div class="botonSumarRestarJuegos sumarJuego" id="botonSumarJuego">+</div>
                 </div>
 
                     <select class="estilo-de-contenido-imput-option-label" id="select">
@@ -84,7 +84,7 @@
                                         
                 <p class="precioFinal" >Precio Final</p>
          
-                <output class="precio_final " id="result" >0</output>    
+                <output class="precio_final" id="result" >0</output>    
         
 
         </div>
@@ -113,6 +113,7 @@
    
         <script src="js/lector_hojas_pdf.js"></script>
         <script src="js/carrito_de_compras.js"></script>
+        <script src="js/botonSumarRestarJuegos.js"></script>
     </body>
     <footer></footer>
 </html>

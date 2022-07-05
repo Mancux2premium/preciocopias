@@ -4,7 +4,6 @@
 
 
         activaranillado= true;
-      
 
     }
     else {

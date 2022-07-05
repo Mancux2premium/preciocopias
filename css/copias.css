@@ -70,7 +70,7 @@ output{
         text-align: center;
 
 }
-output::before{
+.precio_final::before{
         content: "$";
 }
 /*---------------------------------Final -----------------------------------*/
