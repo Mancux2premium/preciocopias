@@ -34,7 +34,7 @@ function calcular_precio_fotocopias() {
         
         if(activaranillado){
         
-          result.value =  (parseInt(a) * precioCopiasSimples * cantidadDecompias + precioAnillado * spanCantidadJuegos.values)
+          result.value =  (parseInt(a) * precioCopiasSimples * spanCantidadJuegos.value  + precioAnillado * spanCantidadJuegos.values)
 
         }else{
 
@@ -48,12 +48,13 @@ function calcular_precio_fotocopias() {
         pdfDobleFaz();
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
          
-          if(activaranillado){
+          if(activaranillado && a.value >=1){
 
             result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value)
 
           }else{
-
+           
+          
          result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value)
 
             }  ;
