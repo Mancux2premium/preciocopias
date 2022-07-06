@@ -1,20 +1,27 @@
 
-const botonSumarJuego = document.querySelector("#botonSumarJuego");
-const botonRestarJuego = document.querySelector("#botonRestarJuego")
+const contenedorBotones =document.querySelector("#contenedorBotones");
 const spanCantidadJuegos = document.getElementById("spanCantidadJuegos");
+
 spanCantidadJuegos.value = parseInt(1);
 
-function SumarcantidadJuegos (){
+function SumarRestarJuegos (e){
+  e.preventDefault();
 
-   spanCantidadJuegos.value ++;
-   calcular_precio_fotocopias();
+  const botonSumarRestar =e.target.classList[1];
+
+  switch(botonSumarRestar){
+
+    case 'sumarJuego':
+      spanCantidadJuegos.value++;
+      calcular_precio_fotocopias();
+    break;
+    case 'RestarJuego':
+      spanCantidadJuegos.value--;
+      calcular_precio_fotocopias();
+      break;
+    
+  }
+
 }
+contenedorBotones.addEventListener("click", SumarRestarJuegos);
 
-function RestarcantidadJuegos (){
-
-  spanCantidadJuegos.value --;
-  calcular_precio_fotocopias();
-}
-
-botonSumarJuego.addEventListener("click", SumarcantidadJuegos);
-botonRestarJuego.addEventListener("click", RestarcantidadJuegos);
