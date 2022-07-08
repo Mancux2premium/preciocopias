@@ -25,6 +25,7 @@ document.getElementById("myBtn").addEventListener("click", function() {
 
 const fileInput = document.getElementById('file')
 let SubirPDF = document.getElementById('subirPDF')
+const nombreDocumento = document.getElementById('nombre')
 const text = document.getElementById('text')
 
 
@@ -41,16 +42,48 @@ fileReader.addEventListener('load', (e) =>{
   
     a = document.getElementById("a").value=parseInt(cantidad_hojas_del_pdf_subido_por_el_usuario.length);
     calcular_precio_fotocopias();
-   //result.value=(parseInt(a) * precioCopiasSimples)
 
-    //console.log(result.value=(parseInt(a) * precioCopiasSimples));
     console.log(file.name + " Pagina: " );
-    SubirPDF.innerHTML =' ';
+    //SubirPDF.innerHTML =' ';
+
     
-    SubirPDF.innerHTML +=file.name;
+   // SubirPDF.innerHTML +=file.name;
+    nombreDocumento.textContent=file.name;
     
 })
 })
+
+function prueba(){
+  const fileInput = document.getElementById('file')
+let SubirPDF = document.getElementById('subirPDF')
+const nombreDocumento = document.getElementById('nombre')
+const text = document.getElementById('text')
+
+
+fileInput.addEventListener('change',(e) =>{
+
+const file  = e.target.files[0];
+const fileReader = new FileReader();
+fileReader.readAsBinaryString(file);
+fileReader.addEventListener('load', (e) =>{
+
+  const cantidad_hojas_del_pdf_subido_por_el_usuario =  fileReader.result.match(/\/Type[\s*]*\/Page[^s]/g); 
+
+  console.log('Number of Pages:',cantidad_hojas_del_pdf_subido_por_el_usuario);
+  
+    a = document.getElementById("a").value=parseInt(cantidad_hojas_del_pdf_subido_por_el_usuario.length);
+    calcular_precio_fotocopias();
+
+    console.log(file.name + " Pagina: " );
+    //SubirPDF.innerHTML =' ';
+
+    
+   // SubirPDF.innerHTML +=file.name;
+    nombreDocumento.textContent=file.name;
+    
+})
+})
+}
 
 /*
 function pdfDobleFaz(){

@@ -1,0 +1,33 @@
+:root{
+    --azul:#0707F8;
+    --rojo: #FF0000;
+    --blanco:#fff;
+    --negro:rgb(39, 38, 38);
+}
+.templateBotonesCarritoContenedor{
+    display: grid;
+    grid-template-columns:  8fr 1fr;
+    width: 98%;
+}
+
+.botonAgregarQuitar{
+    margin: 10px;
+    top: 0.2rem;
+    width: 10rem;
+    height: 2rem;
+    text-align: center;
+    color:var(--blanco);
+    font-weight:bold;
+    background-color: var(--negro);
+    border: none;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
+    cursor:pointer;
+  
+}
+.agregarProducto:hover{
+    background-color: var(--azul);
+}
+
+.eliminarProducto:hover{
+    background-color: var(--rojo);
+}

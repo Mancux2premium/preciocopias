@@ -9,15 +9,12 @@
        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/botonesAgregarVaciarCarrrito.css">
+        <link rel="stylesheet" href="css/CarritoDeCompras.css">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta charset="UTF-8"/>
    
-       <script src="js/activar_desactivar_anillado.js"></script>
-        <script src="js/copias_simples_doblefaz_apaisado.js"></script>
-        <script src="js/modo_impresion_msj.js"></script>
-       
-
         <title>Precio Fotocopias</title>
     </head>
     <body id="body">
@@ -43,14 +40,14 @@
 
                <!--  <input  class="estilo-de-contenido-imput-option-label" id="numerodejuegos" type="number" placeholder="Numero de juegos" value="" min="1" > -->
                 
-                <!--Botones   -->
+                <!--Botones sumar restar juegos   -->
                 <div class="contenedorBotoneraSumarRestarJuegos" id="contenedorBotones">
                     <span class="textoCantidadJuegos">Cantidad</span>
                     <div class="botonSumarRestarJuegos RestarJuego" id="botonRestarJuego">-</div>
                     <output id="spanCantidadJuegos"></output>
                     <div class="botonSumarRestarJuegos sumarJuego" id="botonSumarJuego" >+</div>
                 </div>
-                 <!-- Fin Botones   -->
+                 <!-- Fin Botones sumar restar juegos  -->
                     <select class="estilo-de-contenido-imput-option-label" id="select">
                         <option>Simples</option>
                         <option>Doble faz</option>
@@ -88,30 +85,49 @@
                 <output class="precio_final" id="result" >0</output>    
         
 
-        </div>
-        <div class="contenedor_principal_botones_carritos_de_compra">       
-            <button id="add__carrito" class="boton_carrito_compras">Agregar al carrrito</button>
-            <button id ="borrar_carrito"class="boton_carrito_compras borrar_carrito">Vaciar carrito</button>
-        </div>
-        <div class="contenedor-principal-tabla-copias" >
 
-                <table id="carrito_copias" class="estilos-tabla" >
-                    <thead>
-                        <tr>
-                         <th scope="col" >#</th>
-                         <th scope="col" >DETALLE</th>
-                          <th scope="col" >HOJAS</th>
-                          <th scope="col">JUEGOS</th>
-                          <th scope="col">P.UNIT</th>
-                          <th scope="col">IMPRESION</th>
-                          <th scope="col">ANILLADO</th>
-                          <th scope="col" >IMPORTE:</th>
-                        </tr>
-                        <tbody id=""></tbody>
-                </table>
-               
         </div>
-   
+        
+        <!-- Botones agregar y vaciar carrito -->
+        <div class="templateBotonesCarritoContenedor" >       
+            <button 
+                id="agregarAlCarrito" 
+                class="botonAgregarQuitar agregarProducto">
+                Agregar al carrrito
+              </button>
+            <button 
+            id ="borrar_carrito"
+            class=" vaciarCarrito botonAgregarQuitar ">
+            Vaciar carrito
+          </button>
+
+        </div>
+      
+        </div>
+         <!-- Fin Botones agregar y vaciar carrito  -->
+
+         <!-- Carrito de compras -->
+          <div class="templateCarrito" id="template-Carrito">
+            <div class="tituloDelProducto">
+                <p>Nombre:<span id="nombre" ></span></p>
+            </div>
+            <div class="contenedorBotonesAgregarQuitar">
+                <p class="precio">Precio<span>$1520252</span></p>
+                
+                <button  id="add__carrito"  class="botonAgregarQuitar agregarProducto " > Agregar </button>
+                <button id ="borrar_carrito"class="botonAgregarQuitar eliminarProducto"> quitar</button>
+            </div>    
+                
+          </div>
+          
+        
+          <!-- Fin Carrtito de compras -->
+         
+
+
+        <script src="js/activar_desactivar_anillado.js"></script>
+        <script src="js/copias_simples_doblefaz_apaisado.js"></script>
+        <script src="js/modo_impresion_msj.js"></script>
         <script src="js/lector_hojas_pdf.js"></script>
         <script src="js/carrito_de_compras.js"></script>
         <script src="js/botonSumarRestarJuegos.js"></script>
