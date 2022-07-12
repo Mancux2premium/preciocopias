@@ -28,7 +28,9 @@
             <div class="flex-container__label" oninput="calcular_precio_fotocopias()">
                 
                     <label for="file" class="estilos-label-subir-PDF" id="subirPDF">Subir PDF</label>
-                    <input  type="file" multiple id="file" class="input-cargar-archivos" accept=".pdf">
+                    <input  type="file" multiple id="file" class="input-cargar-archivos" >
+                    <p id="text"></p>
+                    <div id="images"></div>
                 
           
                 <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" min="1" >
@@ -77,11 +79,12 @@
                 <label for="activarAnillados"class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" >
                 <input type="checkbox" class="activar-anillado-margen" id="activarAnillados" ><label for="activarAnillados" id="anillado__togle" class="anillado-pointer"></label>Anillado $150</label>
             </div>
-                                        
+                
+                <!-- Precio Final -->
                 <p class="precioFinal" >Precio Final</p>
          
                 <output class="precio_final" id="result" >0</output>    
-        
+             <!-- Precio Final end-->
 
 
         </div>
@@ -110,7 +113,7 @@
                 <p id="nombrePdfCopiado" onclick="copiarTexto()"><span id="nombre" ></span></p>
             </div>
             <div class="contenedorBotonesAgregarQuitar">
-                <p class="precio" id="precioPdf">Precio<span></span></p>
+                <p class="precio" id="precioPdf" >Precio<span></span></p>
                 
                 <button  id="add__carrito"  class="botonAgregarQuitar agregarProducto " > Agregar </button>
                 <button id ="borrar_carrito"class="botonAgregarQuitar eliminarProducto"> quitar</button>
