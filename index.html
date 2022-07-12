@@ -18,9 +18,7 @@
         <title>Precio Fotocopias</title>
     </head>
     <body id="body">
-        <div class="contador-visitas" id="sfclgfa9g5yqg968758recbyg2pcpwtq4sf"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=lgfa9g5yqg968758recbyg2pcpwtq4sf&down=async" async></script>
-        <noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas para web"><img src="https://counter9.stat.ovh/private/contadorvisitasgratis.php?c=lgfa9g5yqg968758recbyg2pcpwtq4sf",border="0" title="contador de visitas para web" alt="contador de visitas para web"></a></noscript>
-        <a class="contador-visitas" href="https://www.contadorvisitasgratis.com" title="contador de visitas para web"><img src="https://counter9.stat.ovh/private/contadorvisitasgratis.php?c=lgfa9g5yqg968758recbyg2pcpwtq4sf",border="0" title="contador de visitas para web" alt="contador de visitas para web"></a>
+       
         <div class="flex-container" id="contenedor-principal-degradado">
             <header class="flex-item__titulo-principal">
                <a class="estilos_logo estilos_equiqueta_a" href="#"><img class="estilos_logo" src="img/logo.ico" alt=""></a>
@@ -45,11 +43,11 @@
                     <span class="textoCantidadJuegos">Cantidad</span>
                     <div class="botonSumarRestarJuegos RestarJuego" id="botonRestarJuego">-</div>
                     <output id="spanCantidadJuegos"></output>
-                    <div class="botonSumarRestarJuegos sumarJuego" id="botonSumarJuego" >+</div>
+                    <div class="botonSumarRestarJuegos sumarJuego" id="botonSumarJuego" onclick=" copiarTexto();" >+</div>
                 </div>
                  <!-- Fin Botones sumar restar juegos  -->
                     <select class="estilo-de-contenido-imput-option-label" id="select">
-                        <option>Simples</option>
+                        <option >Simples</option>
                         <option>Doble faz</option>
                         <option>Apaisado</option>
                     </select>
@@ -109,10 +107,10 @@
          <!-- Carrito de compras -->
           <div class="templateCarrito" id="template-Carrito">
             <div class="tituloDelProducto">
-                <p>Nombre:<span id="nombre" ></span></p>
+                <p id="nombrePdfCopiado" onclick="copiarTexto()"><span id="nombre" ></span></p>
             </div>
             <div class="contenedorBotonesAgregarQuitar">
-                <p class="precio">Precio<span>$1520252</span></p>
+                <p class="precio" id="precioPdf">Precio<span></span></p>
                 
                 <button  id="add__carrito"  class="botonAgregarQuitar agregarProducto " > Agregar </button>
                 <button id ="borrar_carrito"class="botonAgregarQuitar eliminarProducto"> quitar</button>
@@ -131,6 +129,7 @@
         <script src="js/lector_hojas_pdf.js"></script>
         <script src="js/carrito_de_compras.js"></script>
         <script src="js/botonSumarRestarJuegos.js"></script>
+        <script src="js/copiarTexto.js"></script>
     </body>
     <footer></footer>
 </html>

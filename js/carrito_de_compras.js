@@ -1,6 +1,6 @@
 const agregarAlCarrito = document.getElementById('agregarAlCarrito')
 const templateCarrito = document.getElementById('template-Carrito');
-let precio = [];
+
 document.addEventListener('click', (e)=>{
      
    // e.preventDefault();
@@ -9,15 +9,13 @@ document.addEventListener('click', (e)=>{
      switch( AgregarAlCarrito){
 
         case 'botonAgregarQuitar':
-          spanCantidadJuegos.value++;
+
           calcular_precio_fotocopias();
           
           pintarCarrito();
-          prueba();
         break;
         case 'vaciarCarrito':
-          spanCantidadJuegos.value--;
-          borrarCarrito()
+          borrarCarrito();
           break;
         
       }
@@ -26,9 +24,9 @@ document.addEventListener('click', (e)=>{
 
 function pintarCarrito(){
 
-  templateCarrito.innerHTML +=` <div class="templateCarrito">
+  /*templateCarrito.innerHTML +=` <div class="templateCarrito">
   <div class="tituloDelProducto">
-      <p>Nombre:<span id="nombre"></span></p>
+      <p>Nombre:<span id="nombre">${nombreDocumento}</span></p>
   </div>
   <div class="contenedorBotonesAgregarQuitar">
       <p class="precio">Precio<span>${result.value}</span></p>
@@ -39,12 +37,11 @@ function pintarCarrito(){
       
 </div>
         `
-   
+   */
 }
 
 function borrarCarrito(){
 
-   precio.pop();
    templateCarrito.innerHTML =' '
    
 }
