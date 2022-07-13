@@ -68,13 +68,12 @@ const precioPdf = document.getElementById('precioPdf')
 const text = document.getElementById('text')
 const ListaPdfCargados = document.getElementById('ListaPdfCargados')
 
-
-
 fileInput.addEventListener('change',(e) =>{
 
 const files  = e.target.files;
 
-
+let select = document.getElementById("select");
+let option = select.options[select.selectedIndex].text;
 for(const file of files){
   const fragment = document.createDocumentFragment()
   const fileReader = new FileReader();
@@ -85,19 +84,26 @@ for(const file of files){
 fileReader.addEventListener('load', (e) =>{
   
   let cantidad_hojas_del_pdf_subido_por_el_usuario = fileReader.result.match(/\/Type[\s*]*\/Page[^s]/g); 
-
-  console.log('Number of Pages:',cantidad_hojas_del_pdf_subido_por_el_usuario);
+  
+ /*  console.log('Number of Pages:',cantidad_hojas_del_pdf_subido_por_el_usuario); */
   
     a = document.getElementById("a").value=parseInt(cantidad_hojas_del_pdf_subido_por_el_usuario.length);
     calcular_precio_fotocopias();
-
   /*   console.log(file.name + " Pagina: " );
     nombreDocumento.innerText +=`-${file.name} te sale: $${result.value} doble faz  son:${cantidad_hojas_del_pdf_subido_por_el_usuario.length} Hojas\n`
- */
-    listaPdfCargados.textContent += `-${file.name} te sale: $${result.value} son:${cantidad_hojas_del_pdf_subido_por_el_usuario.length} hojas `;
-  
+ */  
+    listaPdfCargados.textContent += `-${file.name} te sale $${result.value} ${option} son:${cantidad_hojas_del_pdf_subido_por_el_usuario.length} hojas`;
+
+   
+ 
 })
+
+
   fragment.appendChild(listaPdfCargados)
   ListaPdfCargados.appendChild(fragment)
 }
 });
+
+
+
+
