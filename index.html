@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/botonesAgregarVaciarCarrrito.css">
+        <link rel="stylesheet" href="css/estilosListaPdfCargados.css">
         <link rel="stylesheet" href="css/CarritoDeCompras.css">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +31,8 @@
                     <label for="file" class="estilos-label-subir-PDF" id="subirPDF">Subir PDF</label>
                     <input  type="file" multiple id="file" class="input-cargar-archivos" >
                     <p id="text"></p>
-                    <div id="images"></div>
+                    
+                    <div  ></div>
                 
           
                 <input class="estilo-de-contenido-imput-option-label" id="a" type="number" placeholder="Cantidad de Hojas" value="" min="1" >
@@ -110,9 +112,9 @@
          <!-- Carrito de compras -->
           <div class="templateCarrito" id="template-Carrito">
             <div class="tituloDelProducto">
-                <p id="nombrePdfCopiado" onclick="copiarTexto()"><span id="nombre" ></span></p>
+                <div id="ListaPdfCargados"></div>
             </div>
-            <div class="contenedorBotonesAgregarQuitar">
+            <div class="contenedorBotonesAgregarQuitar" >
                 <p class="precio" id="precioPdf" >Precio<span></span></p>
                 
                 <button  id="add__carrito"  class="botonAgregarQuitar agregarProducto " > Agregar </button>
@@ -121,7 +123,7 @@
                 
           </div>
           
-        
+         
           <!-- Fin Carrtito de compras -->
          
 

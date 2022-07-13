@@ -1,0 +1,11 @@
+:root{
+    --azul:#0707F8;
+    --rojo: #FF0000;
+    --blanco:#fff;
+    --negro:rgb(39, 38, 38);
+  }
+.estilosListaPdfCargados{
+
+    background-color: #0707F8;
+    margin-top: 20px;
+}
