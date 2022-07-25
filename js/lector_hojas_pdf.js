@@ -82,11 +82,7 @@ fileReader.addEventListener('load', (e) =>{
   let hojasPdf = fileReader.result.match(/\/Type[\s*]*\/Page[^s]/g).length; 
 /*crear un array para poder almacenar los precios de cada pdf y luego sumarlos*/
  
-  let precio=0;
-      precio = hojasPdf *4;
-      let precioFinal=0;
-      precioFinal+= precio + parseInt(result.value);
-
+    /*saca mal el precio en doble faz porque esta dividiendo las hojas del pdf en 2 */
     a = document.getElementById("a").value=hojasPdf;
     calcular_precio_fotocopias(); 
   
@@ -95,9 +91,9 @@ fileReader.addEventListener('load', (e) =>{
     nombreDocumento.innerText +=`-${file.name} te sale: $${result.value} doble faz  son:${hojasPdf} Hojas\n` 
 
   */
-    listaPdfCargados.textContent += `-${file.name} te sale $${precio} ${option} son:${hojasPdf} `;
+    listaPdfCargados.textContent += `-${file.name} te sale $${result.value} ${option} son:${hojasPdf} `;
 
-      result.innerHTML = contador;
+      result.innerHTML = sumaTotalDelosPdf;
  
 })
   fragment.appendChild(listaPdfCargados)
