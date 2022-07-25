@@ -25,6 +25,7 @@ function calcular_precio_fotocopias() {
       result.value =0;
       sumaTotalDelosPdf =0;
     }
+      /*Si se cumple la condicion entra al programa*/
         if(a !==""){
 
            /*--Comprueba si la cantida de copias a realizar es menor que 1, de ser asi le asigna un valor por defecto--*/
@@ -53,13 +54,13 @@ function calcular_precio_fotocopias() {
    /************************************************************************************************************************************** */
     
     //El numero ingresado es par, no es necesario descontar nada.
-    if (option == "Doble faz") {
+    if (option == "Doble faz" && a%2 ==0 ) {
      
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
        
         if(activaranillado){
 
-          result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+          result.value =  (parseInt(a ) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
           
         }else{
          
@@ -68,30 +69,72 @@ function calcular_precio_fotocopias() {
        
        }
       
-     
     }
 
      /************************************************************************************************************************************** */
-    
-    //le descuenta -1  al numero Impar ingresado para hacerlo par 
-    if (option == "Doble faz" && a %2 ==1) {
-    
-      document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
+       //le descuenta 0.25 al cociente de la divicion de los Impares 
+       if (option == "Doble faz" ) {
       
+        for(i=0.25; i<maximascopiasPermitidasaimprimir;i++){
+            
+          if( option =="Doble faz" && a/2 == i){
+            
+            document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
+          
+            if(activaranillado){
+  
+                 result.value =  (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+            }else{  
+              sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
+  
+            }
+         
+          }
+        }
+    } 
+       //le descuenta 0.50 al cociente de la divicion de los Impares 
+     if (option == "Doble faz" ) {
       
+      for(i=0.5; i<maximascopiasPermitidasaimprimir;i++){
+          
+        if( option =="Doble faz" && a/2 == i){
+          
+          document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
+        
+          if(activaranillado){
 
-      if(activaranillado){
+               result.value =  (parseInt(a /2 -0.5)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+          }else{  
+            sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.5)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
 
-        result.value =  (parseInt(a -1  ) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + correcionPrecioPorHojaImparDoblefaz  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value );
+          }
+       
+        }
+      }
+  } 
+       //le descuenta 0.75 al cociente de la divicion de los Impares 
+     if (option == "Doble faz" ) {
+      
+        for(i=0.75; i<maximascopiasPermitidasaimprimir;i++){
+            
+          if( option =="Doble faz" && a/2 == i){
+            
+            document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
+          
+            if(activaranillado){
+  
+                 result.value =  (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+            }else{  
+              sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
+  
+            }
+         
+          }
+        }
+    } 
 
-      }else{
+     /************************************************************************************************************************************** */
 
-         result.value =  (parseInt(a -1) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + correcionPrecioPorHojaImparDoblefaz  * spanCantidadJuegos.value);
-
-    }
-     
-    
-  }
     /*se divide un numero par, no es necesario descontar el cociente*/ 
     if (option == "Apaisado" && a %4  == 0  ) {
 
@@ -122,7 +165,6 @@ function calcular_precio_fotocopias() {
 
                result.value =  (parseInt(a /4 -0.25)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
           }else{  
-
             sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /4 -0.25)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
 
           }
@@ -147,7 +189,7 @@ function calcular_precio_fotocopias() {
 
            }else{
 
-            result.value =  (parseInt(a /4 -0.50)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value);
+            sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a /4 -0.50)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
            }
           
         
@@ -170,7 +212,7 @@ function calcular_precio_fotocopias() {
 
           }else{
 
-            result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value);
+            sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
           }
         
         }
