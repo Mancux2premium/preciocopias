@@ -1,5 +1,5 @@
-
-
+var contador =0;
+console.log(contador)
 function calcular_precio_fotocopias() {
   let a = document.getElementById("a").value;
    //var cantidadDecompias = document.getElementById("numerodejuegos").value;
@@ -14,13 +14,16 @@ function calcular_precio_fotocopias() {
    let select = document.getElementById("select");
    let option = select.options[select.selectedIndex].text;
    var result = document.getElementById("result");
-
+ 
+  
+  console.log(contador)
    activarAnillado();
    if(spanCantidadJuegos.value <1){
     spanCantidadJuegos.value=1;
 }
     if(a ===""){
       result.value =0;
+      contador =0;
     }
         if(a !==""){
 
@@ -42,7 +45,8 @@ function calcular_precio_fotocopias() {
       }else{
 
         result.value =  (parseInt(a) * precioCopiasSimples * spanCantidadJuegos.value );}
-
+        contador += parseInt(result.value);
+        //result.value = contador;
   } 
    /************************************************************************************************************************************** */
     
