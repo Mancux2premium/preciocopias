@@ -62,6 +62,7 @@ let option = select.options[select.selectedIndex].text;
 
 preciosArray =[];
 let random =0;
+let numero =0;
 /*Ver si ´puedo agregar el precio finalaun array y mandarlo abajo dende esta la funcion de load*/
 console.log(files.length)
   while(random < files.length){
@@ -78,7 +79,7 @@ for(let file of files){
   fileReader.readAsBinaryString(file);
 
 fileReader.addEventListener('load', (e) =>{
-  
+  const carritoPdf = document.getElementById('CarritoPdf')
   let hojasPdf = fileReader.result.match(/\/Type[\s*]*\/Page[^s]/g).length; 
 /*crear un array para poder almacenar los precios de cada pdf y luego sumarlos*/
  
@@ -91,8 +92,33 @@ fileReader.addEventListener('load', (e) =>{
     nombreDocumento.innerText +=`-${file.name} te sale: $${result.value} doble faz  son:${hojasPdf} Hojas\n` 
 
   */
-    listaPdfCargados.textContent += `-${file.name} te sale $${result.value} ${option} son:${hojasPdf} `;
-
+   /* listaPdfCargados.textContent += `-${file.name} te sale $${result.value} ${option} son:${hojasPdf} `;*/
+  
+    console.log(numero)
+  /*   
+    listaPdfCargados.innerHTML +=` <table class="table table-striped">
+  
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td scope="row">${file.name}</td>
+        <td>te sale $${result.value}</td>
+        <td>${option}</td>
+      </tr>
+    </tbody>
+  </table>
+` */
+carritoPdf.innerHTML +=` <table class="table table-striped">
+<tbody>
+  <tr>
+    <td scope="row">${file.name}</td>
+    <td>te sale $${result.value}</td>
+    <td>${option}</td>
+  </tr>
+</tbody>
+</table>
+`
+    
       result.innerHTML = sumaTotalDelosPdf;
  
 })

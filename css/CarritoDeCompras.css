@@ -1,16 +1,16 @@
-:root{
+/* :root{
   --azul:#0707F8;
   --rojo: #FF0000;
   --blanco:#fff;
   --negro:rgb(39, 38, 38);
 }
 .templateCarrito{
-    background-color: var(--negro);
+    
     width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: var(--blanco);
+   
     margin-top: 10px;
     font-size: 1.5em;
     min-height: 25px;
@@ -28,3 +28,5 @@
 .precio{
   flex: 2;
 }
+
+ */
