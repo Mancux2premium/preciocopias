@@ -1,0 +1,1 @@
+function activarAnillado(){activaranillado=!!document.getElementById("activarAnillados").checked}

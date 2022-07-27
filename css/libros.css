@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*--Estilos del body --*/
+body{
+        display: flex;
+        background: rgba(0,0, 0, 0.1);
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+        min-width: 200px;
+        height: 20rem;
+ }
+/*---------------------------------Final -----------------------------------*/
+
+/*--Estilos del contenedor principal--*/
+.flex-container{
+        background: rgb(241, 241, 241);
+        display: flex;
+        flex-flow: column nowrap;
+        min-width: 200px;  
+        width: 98%;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
+        margin-top: 0.2rem;
+     
+          
+}
+/*---------------------------------Final -----------------------------------*/
+
+/* Estilos del header y  titulo Libros */
+.flex-item__titulo-principal{
+        background: rgb(255, 253, 253);
+        text-align: center;
+        font-family: 'PT Sans Narrow', sans-serif;
+        /*font-size: 1.5em;*/
+        color: black;
+        display:flex;
+        justify-content:space-between;
+        align-items: center;          
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
+}
+/*---------------------------------Final -----------------------------------*/
+
+/*--Estilos del logo MANCUX2 y los link A--*/
+.estilos_logo{
+        margin: 0 1rem;
+        opacity: 0.8;
+}
+.estilos_logo:hover{
+         
+        opacity: 1;
+}
+/*---------------------------------Final -----------------------------------*/
+
+/*--Estilos de li y ul donde aparecenra los nombres de los libros--*/
+li{
+        color: rgb(2, 2, 2);
+        font-size: 1.3rem;
+        margin-top: 10px ;
+        margin-bottom: 10px;
+        padding: 1rem;
+        list-style: none;
+}
+
+ul{
+        background: rgb(241, 241, 255);
+        display: flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        margin-top: 0.5rem;
+       border: 2px solid rgb(20, 20, 26); 
+        
+}
+/*--Final--*/
+
+/*--Estilos del input buscador--*/
+.buscador-estilo{
+        display: flex;
+        justify-content: center;
+        color: red;
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+}
+/*--Final--*/
+
+/*--Seccion de media--*/
+
+@media (max-width: 600px){
+        
+        *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+        }
+
+        /* Estilos del header y  titulo Libros */
+        .flex-item__titulo-principal{
+                margin: 0;
+                width: 100%;
+                /*background:blue;*/
+                height: 40px;
+                flex-flow: column wrap;
+                justify-content:space-around;
+                
+        }
+        /*---------------------------------Final -----------------------------------*/
+       
+        /*--Estilos del logo mancux2 y  los link A --*/
+        .estilos_logo{
+                width: 20%;
+                height: 30px;
+                object-fit:scale-down;
+                
+        }
+         /*---------------------------------Final -----------------------------------*/
+
+
+         /*--Estilos del titulo Libros--*/
+         h1{
+                     font-size: 20px;
+        
+         }
+         /*---------------------------------Final -----------------------------------*/
+
+        
+        /*--Estilos del input buscador--*/
+        .buscador-estilo{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        height: 2rem;
+        color: red;        
+        }       
+         /*---------------------------------Final -----------------------------------*/
+
+        /*--Estilos de li y ul donde aparecenra los nombres de los libros--*/
+        li{
+        color: rgb(2, 2, 2);
+        font-size: 1.3rem;
+        margin-top: 10px ;
+        margin-bottom: 10px;
+        padding: 1rem;
+        list-style: none;
+        }
+
+        ul{
+        background: rgb(241, 241, 255);
+        width: 95%;
+        border: 2px solid rgb(20, 20, 26);
+        display: flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 10px auto;
+        overflow: scroll;
+        }
+         /*---------------------------------Final -----------------------------------*/
+        
+}
+        

@@ -1,0 +1,17 @@
+.input-cargar-archivos{
+
+    display: none;
+}
+
+.estilos-label-subir-PDF{
+   
+    background-color:#000000;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 10px 30px;
+
+}
+
+.estilos-label-subir-PDF:hover{
+    cursor: pointer;
+}

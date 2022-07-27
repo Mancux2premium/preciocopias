@@ -1,0 +1,1 @@
+var caja_activada=!1;function modo_impresion_msj(){(caja_activada=!caja_activada)&&(document.getElementById("ayuda_opciones_de_impresion").style.display="block"),!1==caja_activada&&(document.getElementById("ayuda_opciones_de_impresion").style.display="none"),console.log(caja_activada)}

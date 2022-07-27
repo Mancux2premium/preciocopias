@@ -1,0 +1,32 @@
+/* :root{
+  --azul:#0707F8;
+  --rojo: #FF0000;
+  --blanco:#fff;
+  --negro:rgb(39, 38, 38);
+}
+.templateCarrito{
+    
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    margin-top: 10px;
+    font-size: 1.5em;
+    min-height: 25px;
+}
+
+.contenedorBotonesAgregarQuitar{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    display: none
+
+}
+
+.precio{
+  flex: 2;
+}
+
+ */

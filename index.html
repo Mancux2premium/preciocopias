@@ -1,28 +1,142 @@
-<!DOCTYPE html >
-<html>
+<!DOCTYPE html  >
+<html lang="es">
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
        <link   rel="shortcut icon" href="img/logo.ico">
-        <script src="js/main.js"></script>
+       <link rel="stylesheet" href="css/copias.css">
+       <link rel="stylesheet" href="css/input-cargar-archivos.css">
+       <link rel="stylesheet" href="css/modos-de-impresion.css">
+       <link rel="stylesheet" href="css/botonSumarRestarJuegos.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/botonesAgregarVaciarCarrrito.css">
+        <link rel="stylesheet" href="css/estilosListaPdfCargados.css">
+        <link rel="stylesheet" href="css/CarritoDeCompras.css">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta charset="UTF-8"/>
+   
         <title>Precio Fotocopias</title>
     </head>
-    <body>
-        <h1>Averiguar Precios </h1>
+    <body id="body" onpaste="return false" >
+       
+        <div class="flex-container" id="contenedor-principal-degradado">
+            <header class="flex-item__titulo-principal">
+               <a class="estilos_logo estilos_equiqueta_a" href="#"><img class="estilos_logo" src="img/logo.ico" alt=""></a>
+                        <h1 >COPIAS</h1>
+                    <img class="estilos_logo" src="img/logo.ico" alt="">
+            </header>
+            <div class="flex-container__label" oninput="calcular_precio_fotocopias()">
+                
+                    <label for="file" class="estilos-label-subir-PDF" id="subirPDF">Subir PDF</label>
+                    <input  type="file" multiple id="file" class="input-cargar-archivos" >
+                    <p id="text"></p>
+                    
+                    <div  ></div>
+                
+          
+                <input class="estilo-de-contenido-imput-option-label" id="a" type="number"  placeholder="Cantidad de Hojas" value="" min="1" >
+                                   
+                
+                
 
-        <form oninput="calc()">
-            <label for="">Ingrese la cantidad de hojas que posee el Documento</label>
-            <input id="a" type="number" value="">
-           
-            <select id="select">
-              <option>Simples</option>s
-              <option>Doble Faz</option>
-              <option>Apaisado</option>
-            </select>
-            <label for="">Ingrese la cantidad de veces que desee imprimir el Documento</label>                        <!-- muestra texto de la cantidad de juegos a imprimir--> 
-            <input id="numerodejuegos" type="number" value="1">              <!-- muestra la cantidad de juegos a imprimir--> 
-           
-            <label for="" id="precioPorHoja"  type="text" value="">  </label> <!-- Muestra el precio por hoja--> 
-            <output id="result"></output>                                     <!-- Muestra el precio final de las copias--> 
-          </form>
+               <!--  <input  class="estilo-de-contenido-imput-option-label" id="numerodejuegos" type="number" placeholder="Numero de juegos" value="" min="1" > -->
+                
+                <!--Botones sumar restar juegos   -->
+                <div class="contenedorBotoneraSumarRestarJuegos" id="contenedorBotones">
+                    <span class="textoCantidadJuegos">Cantidad</span>
+                    <div class="botonSumarRestarJuegos RestarJuego" id="botonRestarJuego">-</div>
+                    <output id="spanCantidadJuegos"></output>
+                    <div class="botonSumarRestarJuegos sumarJuego" id="botonSumarJuego" onclick=" copiarTexto();" >+</div>
+                </div>
+                 <!-- Fin Botones sumar restar juegos  -->
+                    <select class="estilo-de-contenido-imput-option-label" id="select">
+                        <option >Simples</option>
+                        <option>Doble faz</option>
+                        <option>Apaisado</option>
+                    </select>
+                    <p class="estilo-ayuda-modos-de-impresion" onclick="modo_impresion_msj()">ayuda modos de impresion</p>
+                    <div  onclick="modo_impresion_msj()" id="ayuda_opciones_de_impresion" class="modos-de-impresion">
+                        <div class="contenedor-formato-impresiones">
+                            
+                            <img class="estilos-imagenes-formato-de-impresion simple"src="img/formato-simple-faz.PNG" alt="">
+                           
+                            <img class="estilos-imagenes-formato-de-impresion doble-faz"src="img/formato- doble-faz.PNG" alt="">
+                          
+                            <img class="estilos-imagenes-formato-de-impresion apaisado"src="img/formato- apaisado.PNG" alt="">
+                        </div>
+
+                    </div>
+                    <select class="estilo-de-contenido-imput-option-label">
+                        <option>Hoja A4</option>
+                    </select>
+                    
+                    <!--Seccion del logo de interrogacion------------------------------------------------------------------------------->
+                <!-- <div class="logoinfo ">    -->
+                    <!-- <i class="logo_ayuda" id="boton_ayuda" onclick="boton_ayuda()" title="Click"></i> -->
+                       
+              <!--   </div>  -->
+                    <!----------------------------------------Final--------------------------------------------------------------------->     
+                <label class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja" for="" id="precioPorHoja"  value="">Precio por hoja $4  </label> 
+                <label for="activarAnillados"class="estilo-de-contenido-imput-option-label estilos-pecio-por-hoja " for="activarAnillado" >
+                <input type="checkbox" class="activar-anillado-margen" id="activarAnillados" ><label for="activarAnillados" id="anillado__togle" class="anillado-pointer"></label>Anillado $150</label>
+            </div>
+                
+                <!-- Precio Final -->
+                <p class="precioFinal" >Precio Final</p>
+         
+                <output class="precio_final" id="result" >0</output>    
+             <!-- Precio Final end-->
+    
+        </div>
+        
+        <!-- Botones agregar y vaciar carrito -->
+        <div class="templateBotonesCarritoContenedor" >       
+            <button 
+                id="agregarAlCarrito" 
+                class="botonAgregarQuitar agregarProducto">
+                Agregar al carrrito
+              </button>
+            <button 
+            id ="borrar_carrito"
+            class=" vaciarCarrito botonAgregarQuitar ">
+            Vaciar carrito
+          </button>
+
+        </div>
+      
+        </div>
+         <!-- Fin Botones agregar y vaciar carrito  -->
+
+         <!-- Carrito de compras -->
+          <div class="templateCarrito" id="template-Carrito">
+            <div class="tituloDelProducto">
+                <div id="ListaPdfCargados"></div>
+            </div>
+            <div class="contenedorBotonesAgregarQuitar" >
+                <p class="precio" id="precioPdf" ><span></span></p>
+                
+                <button  id="add__carrito"  class="botonAgregarQuitar agregarProducto " > Agregar </button>
+                <button id ="borrar_carrito"class="botonAgregarQuitar eliminarProducto"> quitar</button>
+            </div>    
+          </div>
+          
+          <table class="table table-striped" id="CarritoPdf">
+        </table>
+          <!-- Fin Carrtito de compras -->
+
+            <div class="container" id="totalCarrito">
+                
+            </div>
+
+        <script src="js/activar_desactivar_anillado.js"></script>
+        <script src="js/copias_simples_doblefaz_apaisado.js"></script>
+        <script src="js/modo_impresion_msj.js"></script>
+        <script src="js/lector_hojas_pdf.js"></script>
+        <script src="js/carrito_de_compras.js"></script>
+        <script src="js/botonSumarRestarJuegos.js"></script>
+        <script src="js/copiarTexto.js"></script>
     </body>
     <footer></footer>
 </html>
