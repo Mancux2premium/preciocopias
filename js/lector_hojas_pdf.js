@@ -52,6 +52,7 @@ let SubirPDF = document.getElementById('subirPDF')
 const precioPdf = document.getElementById('precioPdf')
 const text = document.getElementById('text')
 const ListaPdfCargados = document.getElementById('ListaPdfCargados')
+const totalCarrito = document.getElementById('totalCarrito')
 //var result = document.getElementById("result");
 
 fileInput.addEventListener('change',(e) =>{
@@ -87,7 +88,6 @@ fileReader.addEventListener('load', (e) =>{
     a = document.getElementById("a").value=hojasPdf;
     calcular_precio_fotocopias(); 
   
-
 /*     console.log(file.name + " Pagina: " );
     nombreDocumento.innerText +=`-${file.name} te sale: $${result.value} doble faz  son:${hojasPdf} Hojas\n` 
 
@@ -119,7 +119,12 @@ carritoPdf.innerHTML +=` <table class="table table-striped">
 </table>
 `
     
-      result.innerHTML = sumaTotalDelosPdf;
+     result.innerHTML = sumaTotalDelosPdf; 
+    totalCarrito.innerHTML = `<ul class="list-group">
+    <li class="list-group-item active fs-2" aria-current="true">Total $${sumaTotalDelosPdf}</li>
+    <li class="list-group-item active .fs-4 text" aria-current="true">PDF CARGADOS: ${files.length}</li>
+  </ul>
+    `
  
 })
   fragment.appendChild(listaPdfCargados)
