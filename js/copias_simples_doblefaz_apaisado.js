@@ -1,5 +1,4 @@
 var sumaTotalDelosPdf =0;
-console.log(sumaTotalDelosPdf)
 function calcular_precio_fotocopias() {
   let a = document.getElementById("a").value;
    //var cantidadDecompias = document.getElementById("numerodejuegos").value;
@@ -16,7 +15,7 @@ function calcular_precio_fotocopias() {
    var result = document.getElementById("result");
  
   
-  console.log(sumaTotalDelosPdf)
+  
    activarAnillado();
    if(spanCantidadJuegos.value <1){
     spanCantidadJuegos.value=1;

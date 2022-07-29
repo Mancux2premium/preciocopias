@@ -61,18 +61,10 @@ const files  = e.target.files;
 let select = document.getElementById("select");
 let option = select.options[select.selectedIndex].text;
 
-preciosArray =[];
-let random =0;
-let numero =0;
+
 /*Ver si ´puedo agregar el precio finalaun array y mandarlo abajo dende esta la funcion de load*/
-console.log(files.length)
-  while(random < files.length){
-    console.log("Hola");
-    preciosArray.push(10)
-    calcular_precio_fotocopias(); 
-    random++;
-  }
-  console.log(preciosArray)
+
+
 for(let file of files){
   const fragment = document.createDocumentFragment()
   const fileReader = new FileReader();
@@ -94,7 +86,7 @@ fileReader.addEventListener('load', (e) =>{
   */
    /* listaPdfCargados.textContent += `-${file.name} te sale $${result.value} ${option} son:${hojasPdf} `;*/
   
-    console.log(numero)
+ 
   /*   
     listaPdfCargados.innerHTML +=` <table class="table table-striped">
   
@@ -108,10 +100,11 @@ fileReader.addEventListener('load', (e) =>{
     </tbody>
   </table>
 ` */
+
 carritoPdf.innerHTML +=` <table class="table table-striped">
 <tbody>
   <tr>
-    <td scope="row">${file.name}</td>
+    <td scope="row">${file.name} #Paginas: (${hojasPdf})</td>
     <td>te sale $${result.value}</td>
     <td>${option}</td>
   </tr>
