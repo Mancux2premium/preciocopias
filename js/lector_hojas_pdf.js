@@ -104,9 +104,9 @@ fileReader.addEventListener('load', (e) =>{
 carritoPdf.innerHTML +=` <table class="table table-striped">
 <tbody>
   <tr>
-    <td scope="row">${file.name} #Paginas: (${hojasPdf})</td>
-    <td>te sale $${result.value}</td>
-    <td>${option}</td>
+    <td scope="row"> #Paginas: (${hojasPdf}) -${file.name.slice(0,-4)} te sale $${result.value} ${option}</td>
+    <td></td>
+    <td></td>
   </tr>
 </tbody>
 </table>
