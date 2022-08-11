@@ -69,7 +69,7 @@ for(let file of files){
   const fragment = document.createDocumentFragment()
   const fileReader = new FileReader();
   const listaPdfCargados = document.createElement('div')
-  fileReader.readAsBinaryString(file);
+ fileReader.readAsBinaryString(file);
 
 fileReader.addEventListener('load', (e) =>{
   const carritoPdf = document.getElementById('CarritoPdf')

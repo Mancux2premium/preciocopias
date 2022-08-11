@@ -14,3 +14,15 @@ function modo_impresion_msj(){
         }
      console.log(caja_activada);
 }
+
+let modosDeimpresion = document.querySelectorAll('.contenedor__imagenes');
+
+    modosDeimpresion.forEach(elemento =>{
+        elemento.addEventListener('click',()=>{
+
+            modosDeimpresion.forEach(element =>{
+                element.classList.remove('--active');
+            })
+        elemento.classList.add('--active');
+        })
+    })
