@@ -61,6 +61,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
+    margin-bottom: 30px;
 }
 
 .contenedor__imagenes{
@@ -69,7 +70,7 @@
 }
 
  .contenedor__imagenes:hover{
-   border-top:1px solid red ; 
+  border-top: 2px solid #41AD40;
    height: 105px;
    width: 105px;
 } 
@@ -80,7 +81,7 @@
 }
 
 .--active{
-    border-top: 1px solid red;
+    border-top: 2px solid #41AD40;
 }
 
 .dobleFazAfter{
@@ -96,4 +97,10 @@
 .TextobottomMododeImpresion{
   margin-left: .6rem;
   
+}
+
+@media (max-width:855px){
+  .contenedorImagenesModosDeImpresion{
+    margin-top: 30px;
+}
 }

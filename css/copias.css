@@ -64,6 +64,9 @@ body{
 .estilo-de-contenido-imput-option-label{
         height: 3em;
 }
+.opcionesModosDeImpresionOcultado{
+        display: none;
+}
 /*---------------------------------Final -----------------------------------*/
 
 /*--Estilos del output que muestra el precio final --*/

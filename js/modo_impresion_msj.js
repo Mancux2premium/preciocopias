@@ -24,5 +24,9 @@ let modosDeimpresion = document.querySelectorAll('.contenedor__imagenes');
                 element.classList.remove('--active');
             })
         elemento.classList.add('--active');
+        let select = document.getElementById("select");
+        let option = select.options[select.selectedIndex].text =elemento.getAttribute('alt');
+        calcular_precio_fotocopias();
         })
+      
     })
