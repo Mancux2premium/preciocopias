@@ -2,12 +2,12 @@ var sumaTotalDelosPdf =0;
 function calcular_precio_fotocopias() {
   let a = document.getElementById("a").value;
    //var cantidadDecompias = document.getElementById("numerodejuegos").value;
-   let precioCopiasSimples = 4;
-   let precioCompiasDobleFaz = 5;
-   var precioCompiasApaisado = 5; 
+   let precioCopiasSimples = 5;
+   let precioCompiasDobleFaz = 6;
+   var precioCompiasApaisado = 6; 
    var cantidad_copias_default =1;
-   var correcionPrecioPorHojaImparDoblefaz= 4;
-   var correcionPrecionporHojaImparApaisado =4;
+   var correcionPrecioPorHojaImparDoblefaz= 5;
+   var correcionPrecionporHojaImparApaisado =5;
    var maximascopiasPermitidasaimprimir = 9000;
    var precioAnillado = 150;
    let select = document.getElementById("select");
