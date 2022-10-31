@@ -9,7 +9,7 @@ function calcular_precio_fotocopias() {
    var correcionPrecioPorHojaImparDoblefaz= 5;
    var correcionPrecionporHojaImparApaisado =5;
    var maximascopiasPermitidasaimprimir = 9000;
-   var precioAnillado = 150;
+   var precioAnillado = 180;
    let select = document.getElementById("select");
    let option = select.options[select.selectedIndex].text;
    var result = document.getElementById("result");
