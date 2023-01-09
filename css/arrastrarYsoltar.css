@@ -1,0 +1,21 @@
+:root{
+    --azul:#0707F8;
+    --rojo: #FF0000;
+    --blanco:#fff;
+    --negro:rgb(39, 38, 38);
+  }
+.arrastrarYsoltar{
+    width: 350px;
+    height: 100px;
+    border:2px dashed var(--azul) ;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.active{
+  border:2px dashed var(--rojo) ;
+}

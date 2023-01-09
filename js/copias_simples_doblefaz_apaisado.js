@@ -2,12 +2,12 @@ var sumaTotalDelosPdf =0;
 function calcular_precio_fotocopias() {
   let a = document.getElementById("a").value;
    //var cantidadDecompias = document.getElementById("numerodejuegos").value;
-   let precioCopiasSimples = 5;
-   let precioCompiasDobleFaz = 6;
-   var precioCompiasApaisado = 6; 
+   let precioCopiasSimples = 6;
+   let precioCompiasDobleFaz = 7;
+   var precioCompiasApaisado = 7; 
    var cantidad_copias_default =1;
-   var correcionPrecioPorHojaImparDoblefaz= 5;
-   var correcionPrecionporHojaImparApaisado =5;
+   var correcionPrecioPorHojaImparDoblefaz= 6;
+   var correcionPrecionporHojaImparApaisado =6;
    var maximascopiasPermitidasaimprimir = 9000;
    var precioAnillado = 180;
    let select = document.getElementById("select");
@@ -20,6 +20,21 @@ function calcular_precio_fotocopias() {
    if(spanCantidadJuegos.value <1){
     spanCantidadJuegos.value=1;
 }
+switch (option){
+    case "Simples":
+      document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
+    break;
+    case "Doble faz":
+      document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
+    break;
+    case "ApaisadoSimpleFaz":
+      document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
+      break;
+    case "ApaisadoDoblefaz":
+      document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
+    break;
+}  
+
     if(a ===""){
       result.value =0;
       sumaTotalDelosPdf =0;
@@ -200,7 +215,7 @@ function calcular_precio_fotocopias() {
        //El numero ingresado es par, no es necesario descontar nada.
        if (option == "ApaisadoSimpleFaz" && a%2 ==0 ) {
      
-        document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
+        document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
        
         if(activaranillado){
 
