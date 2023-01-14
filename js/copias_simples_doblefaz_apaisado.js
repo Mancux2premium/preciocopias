@@ -99,10 +99,12 @@ switch (option){
           
             if(activarAnillado()){
   
-                 result.value =  (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+                /* result.value =  (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);*/
 
-                 sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value));
-            }else{  
+                 sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value + precioAnillado  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value));
+
+            }
+            else{  
               sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value));
   
             }
@@ -121,7 +123,6 @@ switch (option){
         
           if(activarAnillado()){
 
-               /*result.value =  (parseInt(a /2 -0.5)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);*/
                result.value =  (parseInt(a /2 -0.5)  * precioCompiasDobleFaz  * spanCantidadJuegos.value + correcionPrecionporHojaImparApaisado + precioAnillado * spanCantidadJuegos.value);
                sumaTotalDelosPdf += parseInt(result.value);
           }else{  
@@ -163,6 +164,8 @@ switch (option){
         if(activarAnillado()){
 
           result.value =  (parseInt(a) /4  * precioCompiasApaisado  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+          sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a) /4  * precioCompiasApaisado   + precioAnillado * spanCantidadJuegos.value));
+      
         }else{
 
           sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a) /4  * precioCompiasApaisado  * spanCantidadJuegos.value));
@@ -184,6 +187,7 @@ switch (option){
           if(activarAnillado()){
 
                result.value =  (parseInt(a /4 -0.25)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+               sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a /4 -0.25)  * precioCompiasApaisado  + correcionPrecionporHojaImparApaisado   + precioAnillado * spanCantidadJuegos.value));
           }else{  
             sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /4 -0.25)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
 
@@ -206,6 +210,7 @@ switch (option){
            if(activarAnillado()){
 
             result.value = (parseInt(a /4 -0.50)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado *spanCantidadJuegos.value);
+            sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a /4 -0.50)  * precioCompiasApaisado  + correcionPrecionporHojaImparApaisado  + precioAnillado * spanCantidadJuegos.value));
 
            }else{
 
@@ -226,6 +231,8 @@ switch (option){
         if(activarAnillado()){
 
           result.value =  (parseInt(a ) /2  *  precioCopiasSimples * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+          sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a) /2  *   precioCopiasSimples + precioAnillado * spanCantidadJuegos.value));
+       
           
         }else{
          
@@ -249,6 +256,7 @@ switch (option){
             if(activarAnillado()){
   
                  result.value =  (parseInt(a /2 -0.25)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+                 sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a /2 -0.25)  *   precioCopiasSimples  + correcionPrecioPorHojaImparDoblefaz + precioAnillado * spanCantidadJuegos.value));
             }else{  
               sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value));
   
@@ -269,6 +277,7 @@ switch (option){
           if(activarAnillado()){
 
                result.value =  (parseInt(a /2 -0.5)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+               sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a /2 -0.5)  *   precioCopiasSimples  + correcionPrecioPorHojaImparDoblefaz + precioAnillado * spanCantidadJuegos.value));
           }else{  
             sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.5)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
 
@@ -289,6 +298,7 @@ switch (option){
             if(activarAnillado()){
   
                  result.value =  (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+                 sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a /2 -0.75) *   precioCopiasSimples  + correcionPrecioPorHojaImparDoblefaz + precioAnillado * spanCantidadJuegos.value));
             }else{  
               sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
   
@@ -314,6 +324,7 @@ switch (option){
           if(activarAnillado()){
 
             result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+            sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a) /4  * precioCompiasApaisado  + correcionPrecionporHojaImparApaisado  + precioAnillado * spanCantidadJuegos.value));
 
           }else{
 
