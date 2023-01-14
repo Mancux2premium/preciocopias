@@ -101,23 +101,23 @@ fileReader.addEventListener('load', (e) =>{
   </table>
 ` */
 
-carritoPdf.innerHTML +=` <table class="table table-striped">
-<tbody>
-  <tr>
-    <td scope="row"> #Paginas: (${hojasPdf}) -${file.name.slice(0,-4)} te sale $${result.value} ${option}</td>
-    <td></td>
-    <td></td>
-  </tr>
-</tbody>
-</table>
+  carritoPdf.innerHTML +=` <table class="table table-striped">
+  <tbody>
+    <tr>
+      <td scope="row"> #Paginas: (${hojasPdf}) -${file.name.slice(0,-4)} te sale $${result.value} ${option}</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+  </table>
+  `
+      
+result.innerHTML = sumaTotalDelosPdf; 
+totalCarrito.innerHTML = `<ul class="list-group">
+<li class="list-group-item active fs-2" aria-current="true">Sumando todo el total es $${sumaTotalDelosPdf}</li>
+<li class="list-group-item active .fs-4 text" aria-current="true">PDF CARGADOS: ${files.length}</li>
+</ul>
 `
-    
-     result.innerHTML = sumaTotalDelosPdf; 
-    totalCarrito.innerHTML = `<ul class="list-group">
-    <li class="list-group-item active fs-2" aria-current="true">Total $${sumaTotalDelosPdf}</li>
-    <li class="list-group-item active .fs-4 text" aria-current="true">PDF CARGADOS: ${files.length}</li>
-  </ul>
-    `
  
 })
   fragment.appendChild(listaPdfCargados)
