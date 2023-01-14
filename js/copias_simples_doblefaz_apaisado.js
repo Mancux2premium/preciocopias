@@ -52,7 +52,7 @@ switch (option){
    if (option == "Simples") {
       document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
       
-      if(activaranillado ){ 
+      if(activarAnillado()){ 
        
        // result.value =  (parseInt(a) * precioCopiasSimples * spanCantidadJuegos.value  + precioAnillado * spanCantidadJuegos.values)
         result.value =  (parseInt(a)   * precioCopiasSimples  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
@@ -72,9 +72,11 @@ switch (option){
      
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
        
-        if(activaranillado){
+        if(activarAnillado()){
 
-          result.value =  (parseInt(a ) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+         /* result.value =  (parseInt(a ) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);*/
+         result.value =  (parseInt(a)/2   * precioCompiasDobleFaz  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+         sumaTotalDelosPdf += parseInt(result.value);
           
         }else{
          
@@ -95,9 +97,11 @@ switch (option){
             
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
           
-            if(activaranillado){
+            if(activarAnillado()){
   
                  result.value =  (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+
+                 sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value));
             }else{  
               sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value));
   
@@ -115,9 +119,11 @@ switch (option){
           
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
         
-          if(activaranillado){
+          if(activarAnillado()){
 
-               result.value =  (parseInt(a /2 -0.5)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
+               /*result.value =  (parseInt(a /2 -0.5)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);*/
+               result.value =  (parseInt(a /2 -0.5)  * precioCompiasDobleFaz  * spanCantidadJuegos.value + correcionPrecionporHojaImparApaisado + precioAnillado * spanCantidadJuegos.value);
+               sumaTotalDelosPdf += parseInt(result.value);
           }else{  
             sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.5)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
 
@@ -135,7 +141,7 @@ switch (option){
             
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
           
-            if(activaranillado){
+            if(activarAnillado()){
   
                  result.value =  (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
             }else{  
@@ -154,7 +160,7 @@ switch (option){
 
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
        
-        if(activaranillado){
+        if(activarAnillado()){
 
           result.value =  (parseInt(a) /4  * precioCompiasApaisado  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
         }else{
@@ -175,7 +181,7 @@ switch (option){
           
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
         
-          if(activaranillado){
+          if(activarAnillado()){
 
                result.value =  (parseInt(a /4 -0.25)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
           }else{  
@@ -197,7 +203,7 @@ switch (option){
           
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
           
-           if(activaranillado){
+           if(activarAnillado()){
 
             result.value = (parseInt(a /4 -0.50)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado *spanCantidadJuegos.value);
 
@@ -217,7 +223,7 @@ switch (option){
      
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
        
-        if(activaranillado){
+        if(activarAnillado()){
 
           result.value =  (parseInt(a ) /2  *  precioCopiasSimples * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
           
@@ -240,7 +246,7 @@ switch (option){
             
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
           
-            if(activaranillado){
+            if(activarAnillado()){
   
                  result.value =  (parseInt(a /2 -0.25)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
             }else{  
@@ -260,7 +266,7 @@ switch (option){
           
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
         
-          if(activaranillado){
+          if(activarAnillado()){
 
                result.value =  (parseInt(a /2 -0.5)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
           }else{  
@@ -280,7 +286,7 @@ switch (option){
             
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
           
-            if(activaranillado){
+            if(activarAnillado()){
   
                  result.value =  (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
             }else{  
@@ -305,7 +311,7 @@ switch (option){
           
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
           
-          if(activaranillado){
+          if(activarAnillado()){
 
             result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
 
