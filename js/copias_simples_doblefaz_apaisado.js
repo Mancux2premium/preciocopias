@@ -1,4 +1,4 @@
-var sumaTotalDelosPdf =0;
+let sumaTotalDelosPdf =0;
 function calcular_precio_fotocopias() {
   let a = document.getElementById("a").value;
    //var cantidadDecompias = document.getElementById("numerodejuegos").value;
@@ -324,7 +324,7 @@ switch (option){
           if(activarAnillado()){
 
             result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
-            sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a) /4  * precioCompiasApaisado  + correcionPrecionporHojaImparApaisado  + precioAnillado * spanCantidadJuegos.value));
+            sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a /4 -0.75)  * precioCompiasApaisado  + correcionPrecionporHojaImparApaisado  + precioAnillado * spanCantidadJuegos.value));
 
           }else{
 

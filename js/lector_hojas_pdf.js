@@ -46,6 +46,7 @@ fileReader.addEventListener('load', (e) =>{
 
 /*Codigo original*/
 
+
 const fileInput = document.getElementById('file')
 let SubirPDF = document.getElementById('subirPDF')
 //const nombreDocumento = document.getElementById('nombre')
@@ -123,6 +124,7 @@ totalCarrito.innerHTML = `<ul class="list-group">
   fragment.appendChild(listaPdfCargados)
   ListaPdfCargados.appendChild(fragment)
 }
+
 });
 
 /*Fin original*/
