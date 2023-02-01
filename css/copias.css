@@ -191,6 +191,8 @@ output{
 /*------Final de los Estilos del boton deslizante anillado------*/ 
 
 @media (max-width: 500px){
+       
+
         body{
                 overflow: auto;
         }
@@ -328,3 +330,4 @@ th{
 
      
 }
+
