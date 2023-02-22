@@ -17,7 +17,7 @@ body{
         flex-wrap: wrap;
         padding: 0;
         height: 20rem;
-        overflow: hidden;
+       /* overflow: hidden;*/
  }
 /*---------------------------------Final -----------------------------------*/
 

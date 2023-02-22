@@ -44,7 +44,7 @@ fileReader.addEventListener('load', (e) =>{
   carritoPdf.innerHTML +=` <table class="table table-striped">
   <tbody>
     <tr>
-      <td scope="row"> #Paginas: (${hojasPdf}) -${file.name.slice(0,-4)} te sale $${result.value} ${option}</td><embed src="${pdfFileURL}"type="application/pdf">
+      <td scope="row"> #Paginas: (${hojasPdf}) -${file.name.slice(0,-4)} te sale $${result.value} ${option}</td><embed   src="${pdfFileURL}"type="application/pdf" >
       <td></td>
       <td></td>
     </tr>
