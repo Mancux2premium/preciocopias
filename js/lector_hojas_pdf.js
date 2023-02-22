@@ -1,4 +1,3 @@
-
 const fileInput = document.getElementById('file')
 let SubirPDF = document.getElementById('subirPDF')
 //const nombreDocumento = document.getElementById('nombre')
@@ -15,27 +14,14 @@ let select = document.getElementById("select");
 let option = select.options[select.selectedIndex].text;
 
 
-/*Ver si ´puedo agregar el precio finalaun array y mandarlo abajo dende esta la funcion de load*/
-
-
 for(let file of files){
+  let pdfFileURL = URL.createObjectURL(file)+"#controls";
   const fragment = document.createDocumentFragment()
   const fileReader = new FileReader();
   const listaPdfCargados = document.createElement('div')
- fileReader.readAsBinaryString(file);
+   fileReader.readAsBinaryString(file);
  
- /*Detector de error de carga*/
- if (file) {
 
-  fileReader.addEventListener('error', () => {
-      console.error(`Error occurred reading file: ${file.name}`);
-  })
-  fileReader.addEventListener('load', () => {
-    console.log(`File: ${file.name} read successfully`);
-});
- /*FIN Detector de error de carga*/
- console.log(fileReader)
-}
 fileReader.addEventListener('load', (e) =>{
   let hojasPdf 
   const carritoPdf = document.getElementById('CarritoPdf')
@@ -46,7 +32,7 @@ fileReader.addEventListener('load', (e) =>{
     console.log("El archivo tiene " + numPaginas + " páginas.");
   } catch (error) {
     // Si se produce un error al utilizar la expresión regular, lo mostramos en la consola
-    console.error("No se pudo obtener la cantidad de páginas del archivo: " + error);
+    //console.error("No se pudo obtener la cantidad de páginas del archivo: " + error +`${file.name}`);
   }
 
  
@@ -58,7 +44,7 @@ fileReader.addEventListener('load', (e) =>{
   carritoPdf.innerHTML +=` <table class="table table-striped">
   <tbody>
     <tr>
-      <td scope="row"> #Paginas: (${hojasPdf}) -${file.name.slice(0,-4)} te sale $${result.value} ${option}</td>
+      <td scope="row"> #Paginas: (${hojasPdf}) -${file.name.slice(0,-4)} te sale $${result.value} ${option}</td><embed src="${pdfFileURL}"type="application/pdf">
       <td></td>
       <td></td>
     </tr>
@@ -72,7 +58,7 @@ totalCarrito.innerHTML = `<ul class="list-group">
 <li class="list-group-item active .fs-4 text" aria-current="true">PDF CARGADOS: ${files.length}</li>
 </ul>
 `
- 
+
 })
   fragment.appendChild(listaPdfCargados)
   ListaPdfCargados.appendChild(fragment)
