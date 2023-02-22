@@ -71,7 +71,18 @@ for(let file of files){
   const fileReader = new FileReader();
   const listaPdfCargados = document.createElement('div')
  fileReader.readAsBinaryString(file);
+ 
+ /*Detector de error de carga*/
+ if (file) {
 
+  fileReader.addEventListener('error', () => {
+      console.error(`Error occurred reading file: ${file.name}`);
+  })
+  fileReader.addEventListener('load', () => {
+    console.log(`File: ${file.name} read successfully`);
+});
+ /*FIN Detector de error de carga*/
+}
 fileReader.addEventListener('load', (e) =>{
   const carritoPdf = document.getElementById('CarritoPdf')
   let hojasPdf = fileReader.result.match(/\/Type[\s*]*\/Page[^s]/g).length; 
