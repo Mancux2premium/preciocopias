@@ -35,7 +35,6 @@ fileReader.addEventListener('load', (e) =>{
     //console.error("No se pudo obtener la cantidad de páginas del archivo: " + error +`${file.name}`);
   }
 
- 
     /*saca mal el precio en doble faz porque esta dividiendo las hojas del pdf en 2 */
     a = document.getElementById("a").value=hojasPdf;
     calcular_precio_fotocopias(); 
@@ -44,14 +43,16 @@ fileReader.addEventListener('load', (e) =>{
   carritoPdf.innerHTML +=` <table class="table table-striped">
   <tbody>
     <tr>
-      <td scope="row"> #Paginas: (${hojasPdf}) -${file.name.slice(0,-4)} te sale $${result.value} ${option}</td><embed   src="${pdfFileURL}"type="application/pdf" >
+      <td scope="row"> #Paginas: <strong style="color:red;font-size:2em;">(${hojasPdf})</strong > -${file.name.slice(0,-4)}
+      te sale $ <strong style="color:red;font-size:2em;">${result.value}</strong> ${option}
+      </td><embed  class="vistaPreviaPDF" src="${pdfFileURL}"type="application/pdf" >
       <td></td>
-      <td></td>
+      <td>  </td>
     </tr>
   </tbody>
   </table>
   `
-      
+
 result.innerHTML = sumaTotalDelosPdf; 
 totalCarrito.innerHTML = `<ul class="list-group">
 <li class="list-group-item active fs-2" aria-current="true">Sumando todo el total es $${sumaTotalDelosPdf}</li>

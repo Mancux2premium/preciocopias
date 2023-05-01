@@ -15,7 +15,6 @@ function calcular_precio_fotocopias() {
    var result = document.getElementById("result");
  
   
-  
    activarAnillado();
    if(spanCantidadJuegos.value <1){
     spanCantidadJuegos.value=1;

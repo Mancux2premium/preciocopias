@@ -1,4 +1,4 @@
-const dropArea = document.querySelector(".arrastrarYsoltar")
+/*const dropArea = document.querySelector(".arrastrarYsoltar")
 const button = dropArea.querySelector("button")
 const input = dropArea.querySelector("#ArrastrarFile")
 let files;
@@ -24,4 +24,4 @@ dropArea.addEventListener("dragleave",(e)=>{
 dropArea.addEventListener("drop",(e)=>{
     e.preventDefault();
     dropArea.classList.remove("active")
-})
+})*/

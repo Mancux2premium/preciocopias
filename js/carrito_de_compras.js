@@ -5,7 +5,7 @@ document.addEventListener('click', (e)=>{
      
    // e.preventDefault();
     const AgregarAlCarrito = e.target.classList[0];
-     console.log(AgregarAlCarrito);
+    
      switch( AgregarAlCarrito){
 
         case 'botonAgregarQuitar':
