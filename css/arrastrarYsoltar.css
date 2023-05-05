@@ -19,3 +19,12 @@
 .active{
   border:2px dashed var(--rojo) ;
 }
+
+#miDiv {
+  display: none;
+}
+
+/* Mostrar el div cuando el checkbox está desmarcado */
+#miCheckbox:checked ~ #miDiv {
+  display: block;
+}

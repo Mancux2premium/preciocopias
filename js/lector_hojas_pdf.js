@@ -39,19 +39,19 @@ fileReader.addEventListener('load', (e) =>{
     a = document.getElementById("a").value=hojasPdf;
     calcular_precio_fotocopias(); 
   
-
   carritoPdf.innerHTML +=` <table class="table table-striped">
   <tbody>
     <tr scope="row"> #Paginas: <strong style="color:red;font-size:2em;">(${hojasPdf})</strong >   </tr>
     <tr>
-      <td scope="row"> -${file.name.slice(0,-4)}
-      te sale $ <strong style="color:red;font-size:2em;">${result.value}</strong> ${option}
+      <td scope="row"> ${numeroDeOrdenPDF}) ${file.name.slice(0,-4)}
+      te sale $<strong style="color:red;font-size:2em;">${result.value}</strong> ${option} ${abrochado} ${siAnillado}
       </td><embed  class="vistaPreviaPDF mostrarOcultarsVistaPDF" src="${pdfFileURL}"type="application/pdf" >
       <td></td>
       <td>  </td>
     </tr>
   </tbody>
   </table>
+  
   `
 
 result.innerHTML = sumaTotalDelosPdf; 
