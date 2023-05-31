@@ -44,7 +44,7 @@ fileReader.addEventListener('load', (e) =>{
     <tr scope="row"> #Paginas: <strong style="color:red;font-size:2em;">(${hojasPdf})</strong >   </tr>
     <tr>
       <td scope="row"> ${numeroDeOrdenPDF}) ${file.name.slice(0,-4)}
-      te sale $<strong style="color:red;font-size:2em;">${result.value}</strong> ${option} ${abrochado} ${siAnillado}
+      te sale $<strong style="color:red;font-size:2em;">${result.value}</strong> ${option} ${abrochado}
       </td><embed  class="vistaPreviaPDF mostrarOcultarsVistaPDF" src="${pdfFileURL}"type="application/pdf" >
       <td></td>
       <td>  </td>

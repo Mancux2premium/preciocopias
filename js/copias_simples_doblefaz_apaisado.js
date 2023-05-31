@@ -12,7 +12,7 @@ function calcular_precio_fotocopias() {
    var correcionPrecioPorHojaImparDoblefaz= 8;
    var correcionPrecionporHojaImparApaisado =8;
    var maximascopiasPermitidasaimprimir = 9000;
-   var precioAnillado = 280;
+   var precioAnillado = 300;
    let select = document.getElementById("select");
    let option = select.options[select.selectedIndex].text;
    var result = document.getElementById("result");
@@ -55,13 +55,13 @@ switch (option){
       document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples ;
       
       if(activarAnillado()){ 
-       
+        abrochado="anillado"
        // result.value =  (parseInt(a) * precioCopiasSimples * spanCantidadJuegos.value  + precioAnillado * spanCantidadJuegos.values)
         result.value =  (parseInt(a)   * precioCopiasSimples  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
         sumaTotalDelosPdf += parseInt(result.value);
         numeroDeOrdenPDF++ ;
       }else{
-
+        abrochado="abrochado"
        
         sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a) * precioCopiasSimples * spanCantidadJuegos.value ));
         numeroDeOrdenPDF++ ;
@@ -77,7 +77,7 @@ switch (option){
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
        
         if(activarAnillado()){
-
+          abrochado="anillado"
          /* result.value =  (parseInt(a ) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);*/
          result.value =  (parseInt(a)/2   * precioCompiasDobleFaz  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
          sumaTotalDelosPdf += parseInt(result.value);
@@ -85,7 +85,7 @@ switch (option){
           
         }else{
          
-        
+          abrochado="abrochado"
        sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a) /2  *  precioCompiasDobleFaz * spanCantidadJuegos.value));
        numeroDeOrdenPDF++
        }
@@ -103,13 +103,14 @@ switch (option){
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
           
             if(activarAnillado()){
-  
+              abrochado="anillado"
                 /* result.value =  (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);*/
 
                  sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value + precioAnillado  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value));
                  numeroDeOrdenPDF++
             }
             else{  
+              abrochado="abrochado"
               sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value));
               numeroDeOrdenPDF++
             }
@@ -127,11 +128,12 @@ switch (option){
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
         
           if(activarAnillado()){
-
+            abrochado="anillado"
                result.value =  (parseInt(a /2 -0.5)  * precioCompiasDobleFaz  * spanCantidadJuegos.value + correcionPrecionporHojaImparApaisado + precioAnillado * spanCantidadJuegos.value);
                sumaTotalDelosPdf += parseInt(result.value);
                numeroDeOrdenPDF++
           }else{  
+            abrochado="abrochado"
             sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.5)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
             numeroDeOrdenPDF++
           }
@@ -149,10 +151,11 @@ switch (option){
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasDobleFaz;
           
             if(activarAnillado()){
-  
+              abrochado="anillado"
                  result.value =  (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
                  numeroDeOrdenPDF++
             }else{  
+              abrochado="abrochado"
               sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
               numeroDeOrdenPDF++
             }
@@ -169,12 +172,12 @@ switch (option){
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
        
         if(activarAnillado()){
-
+          abrochado="anillado"
           result.value =  (parseInt(a) /4  * precioCompiasApaisado  * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
           sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a) /4  * precioCompiasApaisado   + precioAnillado * spanCantidadJuegos.value));
           numeroDeOrdenPDF++
         }else{
-
+          abrochado="abrochado"
           sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a) /4  * precioCompiasApaisado  * spanCantidadJuegos.value));
           numeroDeOrdenPDF++
         }
@@ -193,11 +196,12 @@ switch (option){
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
         
           if(activarAnillado()){
-
+            abrochado="anillado"
                result.value =  (parseInt(a /4 -0.25)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
                sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a /4 -0.25)  * precioCompiasApaisado  + correcionPrecionporHojaImparApaisado   + precioAnillado * spanCantidadJuegos.value));
                numeroDeOrdenPDF++
           }else{  
+            abrochado="abrochado"
             sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /4 -0.25)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
             numeroDeOrdenPDF++
 
@@ -218,13 +222,13 @@ switch (option){
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
           
            if(activarAnillado()){
-
+            abrochado="anillado"
             result.value = (parseInt(a /4 -0.50)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado *spanCantidadJuegos.value);
             sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a /4 -0.50)  * precioCompiasApaisado  + correcionPrecionporHojaImparApaisado  + precioAnillado * spanCantidadJuegos.value));
             numeroDeOrdenPDF++
 
            }else{
-
+            abrochado="abrochado"
             sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a /4 -0.50)  * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
             numeroDeOrdenPDF++
            }
@@ -241,14 +245,14 @@ switch (option){
         document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
        
         if(activarAnillado()){
-
+          abrochado="anillado"
           result.value =  (parseInt(a ) /2  *  precioCopiasSimples * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
           sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a) /2  *   precioCopiasSimples + precioAnillado * spanCantidadJuegos.value));
           numeroDeOrdenPDF++
           
         }else{
          
-        
+          abrochado="abrochado"
        sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a) /2  *   precioCopiasSimples * spanCantidadJuegos.value));
        numeroDeOrdenPDF++
        }
@@ -266,11 +270,12 @@ switch (option){
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
           
             if(activarAnillado()){
-  
+              abrochado="anillado"
                  result.value =  (parseInt(a /2 -0.25)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
                  sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a /2 -0.25)  *   precioCopiasSimples  + correcionPrecioPorHojaImparDoblefaz + precioAnillado * spanCantidadJuegos.value));
                  numeroDeOrdenPDF++
             }else{  
+              abrochado="abrochado"
               sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.25)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecioPorHojaImparDoblefaz * spanCantidadJuegos.value));
               numeroDeOrdenPDF++
             }
@@ -288,11 +293,12 @@ switch (option){
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
         
           if(activarAnillado()){
-
+            abrochado="anillado"
                result.value =  (parseInt(a /2 -0.5)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
                sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a /2 -0.5)  *   precioCopiasSimples  + correcionPrecioPorHojaImparDoblefaz + precioAnillado * spanCantidadJuegos.value));
                numeroDeOrdenPDF++
           }else{  
+            abrochado="abrochado"
             sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.5)  * precioCopiasSimples * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
             numeroDeOrdenPDF++
           }
@@ -310,11 +316,12 @@ switch (option){
             document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCopiasSimples;
           
             if(activarAnillado()){
-  
+              abrochado="anillado"
                  result.value =  (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
                  sumaTotalDelosPdf += parseInt( result.value =  (parseInt(a /2 -0.75) *   precioCopiasSimples  + correcionPrecioPorHojaImparDoblefaz + precioAnillado * spanCantidadJuegos.value));
                  numeroDeOrdenPDF++
             }else{  
+              abrochado="abrochado"
               sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /2 -0.75)  * precioCompiasDobleFaz * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
               numeroDeOrdenPDF++
             }
@@ -337,13 +344,13 @@ switch (option){
           document.getElementById('precioPorHoja').innerHTML= 'Precio por hoja $' + precioCompiasApaisado;
           
           if(activarAnillado()){
-
+            abrochado="anillado"
             result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value + precioAnillado * spanCantidadJuegos.value);
             sumaTotalDelosPdf += parseInt(result.value =  (parseInt(a /4 -0.75)  * precioCompiasApaisado  + correcionPrecionporHojaImparApaisado  + precioAnillado * spanCantidadJuegos.value));
             numeroDeOrdenPDF++
 
           }else{
-
+            abrochado="abrochado"
             sumaTotalDelosPdf += parseInt(result.value = (parseInt(a /4 -0.75)   * precioCompiasApaisado * spanCantidadJuegos.value  + correcionPrecionporHojaImparApaisado * spanCantidadJuegos.value));
             numeroDeOrdenPDF++;
           }
