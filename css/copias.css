@@ -17,7 +17,7 @@ body{
         flex-wrap: wrap;
         padding: 0;
         height: 20rem;
-        overflow: hidden;
+       /* overflow: hidden;*/
  }
 /*---------------------------------Final -----------------------------------*/
 
@@ -63,6 +63,9 @@ body{
 /*--Estilos de las principales opciones de la pagina como cantidad de hojas,numero de juegos,anillado,hoja a4 oficio--*/
 .estilo-de-contenido-imput-option-label{
         height: 3em;
+}
+.opcionesModosDeImpresionOcultado{
+        display: none;
 }
 /*---------------------------------Final -----------------------------------*/
 
@@ -188,6 +191,8 @@ output{
 /*------Final de los Estilos del boton deslizante anillado------*/ 
 
 @media (max-width: 500px){
+       
+
         body{
                 overflow: auto;
         }
@@ -325,3 +330,4 @@ th{
 
      
 }
+

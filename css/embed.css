@@ -1,0 +1,9 @@
+.vistaPreviaPDF{  
+        width:50%;
+        height: 400px;
+        display: block;
+}
+
+.mostrarOcultarsVistaPDF{
+        color:blue;
+}
