@@ -5,19 +5,19 @@ let abrochado = "abrochado"
 function calcular_precio_fotocopias() {
   let a = document.getElementById("a").value;
    //var cantidadDecompias = document.getElementById("numerodejuegos").value;
-   let precioCopiasSimples = 35;
-   let precioCompiasDobleFaz = 40;
-   var precioCompiasApaisado = 40; 
+   let precioCopiasSimples = 60;
+   let precioCompiasDobleFaz = 70;
+   var precioCompiasApaisado = 70; 
    var cantidad_copias_default =1;
-   var correcionPrecioPorHojaImparDoblefaz= 40;
-   var correcionPrecionporHojaImparApaisado =40;
+   var correcionPrecioPorHojaImparDoblefaz= 60;
+   var correcionPrecionporHojaImparApaisado =60;
    var maximascopiasPermitidasaimprimir = 9000;
-   var precioAnillado = 700;
+   var precioAnillado = 2000;
    let select = document.getElementById("select");
    let option = select.options[select.selectedIndex].text;
    var result = document.getElementById("result");
  
-  
+ descuento()
    activarAnillado();
    if(spanCantidadJuegos.value <1){
     spanCantidadJuegos.value=1;

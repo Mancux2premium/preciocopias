@@ -11,3 +11,22 @@
  }
  /*--Final-*/
 
+
+ function descuento (){
+        if(document.getElementById("vistaprevia").checked)
+        {   
+               
+                console.log("verdadero")
+                return true;
+              
+                
+        }else{
+             
+                console.log("false")
+                return false
+
+        }
+        
+    
+     }
+

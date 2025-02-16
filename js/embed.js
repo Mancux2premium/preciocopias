@@ -19,5 +19,5 @@ function vistaPreviaPDF(){
  miBoton.addEventListener("click", function() {
     console.log("click")
    // Cambiar el valor de display del div a "none"
-   miDiv.style.display = "none";
+   //miDiv.style.display = "none";
  });
